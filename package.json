@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "convert-css": "sass src/style/sass/style.scss src/style/style.css",
+    "convert-css": "sass src/style/sass/style.scss src/style/style.css --watch",
     "findbugs": "npx eslint \\\"src/**/*.js\\"
   },
   "bugs": {
