@@ -1,5 +1,5 @@
 // class Data {
-//     public url: string
+//     public url:string;
 //     constructor(url: string) {
 //         this.url = url
 //     }

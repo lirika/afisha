@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["es2015", "dom"],
     "target": "es2015",
     "module": "commonjs",
     "sourceRoot": "src/ts",
@@ -16,6 +17,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
-  "include": ["src"],
+  "include": ["src/ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }

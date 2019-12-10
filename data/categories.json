@@ -1,28 +1,40 @@
-{
-  "music": [
-    {
-      "rock": [
-        {
-          "title": "rock",
-          "events": [
-            {
-              "title": "Killjoys Live Vocal",
-              "status": "online",
-              "genre": "Guitar,vocal and slow time",
-              "date": "7.30 PM",
-              "place": "Royal Festival Hall,Moscow",
-              "img": "https://img.gazeta.ru/files3/531/10640531/upload-Andrei_Eremenko-pic905-895x505-92665.jpg"
-            }
-          ]
-        }
-      ],
-      "classic": [{}]
-    }
-  ],
-  "movies": [
-    {
-      "comedy": [{}],
-      "action": [{}]
-    }
-  ]
-}
+//{
+//  [
+//    {
+//      "title": music,
+//      "id": 12123,
+//      "subCat": [
+//        {
+//
+//        }
+//      ]
+//    },
+//
+//  ]
+//  "music": [
+//    {
+//      "rock": [
+//        {
+//          "title": "rock",
+//          "events": [
+//            {
+//              "title": "Killjoys Live Vocal",
+//              "status": "online",
+//              "genre": "Guitar,vocal and slow time",
+//              "date": "7.30 PM",
+//              "place": "Royal Festival Hall,Moscow",
+//              "img": "https://img.gazeta.ru/files3/531/10640531/upload-Andrei_Eremenko-pic905-895x505-92665.jpg"
+//            }
+//          ]
+//        }
+//      ],
+//      "classic": [{}]
+//    }
+//  ],
+//  "movies": [
+//    {
+//      "comedy": [{}],
+//      "action": [{}]
+//    }
+//  ]
+//}
