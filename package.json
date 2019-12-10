@@ -6,7 +6,8 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "convert-css": "sass src/style/sass/style.scss src/style/style.css --watch",
-    "findbugs": "npx eslint \\\"src/**/*.js\\"
+    "findbugs": "npx eslint \\\"src/**/*.js\\",
+    "json:server": "json-server --watch ./data/categories.json"
   },
   "bugs": {
     "url": "https://github.com/lirika/afisha/issues"
