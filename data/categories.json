@@ -1,40 +1,48 @@
-//{
-//  [
-//    {
-//      "title": music,
-//      "id": 12123,
-//      "subCat": [
-//        {
-//
-//        }
-//      ]
-//    },
-//
-//  ]
-//  "music": [
-//    {
-//      "rock": [
-//        {
-//          "title": "rock",
-//          "events": [
-//            {
-//              "title": "Killjoys Live Vocal",
-//              "status": "online",
-//              "genre": "Guitar,vocal and slow time",
-//              "date": "7.30 PM",
-//              "place": "Royal Festival Hall,Moscow",
-//              "img": "https://img.gazeta.ru/files3/531/10640531/upload-Andrei_Eremenko-pic905-895x505-92665.jpg"
-//            }
-//          ]
-//        }
-//      ],
-//      "classic": [{}]
-//    }
-//  ],
-//  "movies": [
-//    {
-//      "comedy": [{}],
-//      "action": [{}]
-//    }
-//  ]
-//}
+{
+  "categories": [
+    {
+      "title": "music",
+      "subCategories": [
+        {
+          "title": "rock",
+          "events": [
+            {
+              "title": "Killjoys Live Vocal",
+              "status": "visiting artist",
+              "genre": "Guitar,vocal and slow time",
+              "date": "23 FEBRUARY 2019, SATURDAY",
+              "time": "7:30 PM",
+              "place": "Royal Festival Hall,Moscow",
+              "img": "https://img.gazeta.ru/files3/531/10640531/upload-Andrei_Eremenko-pic905-895x505-92665.jpg"
+            },
+            {
+              "title": "Beethoven Piano Concerto Cycle",
+              "status": "live stream",
+              "genre": "Javier Perianes performs Beethoven’s piano concertos",
+              "date": "RIGHT NOW, ON YOUTUBE",
+              "img": ""
+            },
+            {
+              "title": "The Emperor",
+              "status": "classical music",
+              "genre": "Beethoven Piano Concerto Cycle",
+              "date": "27 FEBRUARY 2019, WEDNESDAY",
+              "time": "7:30 PM",
+              "place": "Royal Festival Hall, Moscow",
+              "img": ""
+            },
+            {
+              "title": "Poetry and passion",
+              "status": "classical music",
+              "genre": "Beethoven Piano in Dance",
+              "date": "27 FEBRUARY 2019, WEDNESDAY",
+              "time": "7:30 PM",
+              "place": "Royal Festival Hall, Moscow",
+              "img": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
