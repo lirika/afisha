@@ -8,6 +8,7 @@
     "build": "webpack --config webpack.config.js --env.prod",
     "lint": "tslint --config tslint.json 'src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "events-css": "sass src/styles/events.scss src/styles/events.css --watch",
     "pretty-quick": "pretty-quick --staged"
   },
   "bugs": {

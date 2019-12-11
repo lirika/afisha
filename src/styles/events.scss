@@ -1,0 +1,150 @@
+*,
+*:before,
+*after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(70, 66, 66);
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  border: 1px solid green;
+  display: flex;
+  width: 1260px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.all_items {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 45px;
+  font-size: 18px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 48px 45px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.item:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.event-info {
+  display: flex;
+  align-items: center;
+  border: 2px solid red;
+  height: 52vh;
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  width: 575px;
+  height: 288px;
+  border: 2px solid red;
+  margin-left: 170px;
+}
+
+.wrap-items {
+  border: 2px solid red;
+  height: 29vh;
+  position: relative;
+
+/*   .items{
+    border: 2px solid rgb(117, 161, 66);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+  } */
+
+  .arrow{
+    position: absolute;
+    top: 70px;
+    padding:0;
+    background: #444;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+/*     color: #444; */
+    display: block;
+  }
+
+  .arrow:focus{
+    outline: none;
+  }
+
+  .arrow:hover{
+    background: #ccc;
+    cursor:pointer;
+  }
+
+  .prev{
+    left: 15px;
+  }
+
+  .next{
+    right: 15px;
+  }
+
+  .items{
+    border: 2px solid rgb(103, 149, 202);
+    width: 93%;
+    overflow: hidden;
+    margin: auto;
+
+    ul{
+      margin: 0;
+      padding: 0;
+      height: 190px;
+      width: 100%;
+      border: 2px solid rgb(103, 202, 103);
+      list-style: none;
+      transition: margin-left 250ms;
+    }
+
+    li{
+      display: inline-block;
+      border: 2px solid rgb(103, 202, 103);
+      height: 100%;
+      width: 345px;
+      margin: 0;
+    }
+
+  }
+}

@@ -1,18 +1,18 @@
 *,
 *:before,
-*after {
+* after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
   color: white;
-  font-family: 'Roboto', sans-serif;
-  background-color: rgb(70, 66, 66);
+  font-family: "Roboto", sans-serif;
+  background-color: #464242;
   font-style: normal;
 }
 
@@ -21,7 +21,6 @@ header {
   height: 18vh;
   display: flex;
   justify-content: center;
-  border: 2px solid red;
 }
 
 .navbar {
@@ -79,7 +78,65 @@ header {
   margin-left: 170px;
 }
 
-.event-items {
+.wrap-items {
   border: 2px solid red;
-  height: 25vh;
+  height: 29vh;
+  position: relative;
+  /*   .items{
+      border: 2px solid rgb(117, 161, 66);
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+
+    } */
 }
+.wrap-items .arrow {
+  position: absolute;
+  top: 70px;
+  padding: 0;
+  background: #444;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px;
+  /*     color: #444; */
+  display: block;
+}
+.wrap-items .arrow:focus {
+  outline: none;
+}
+.wrap-items .arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+.wrap-items .prev {
+  left: 15px;
+}
+.wrap-items .next {
+  right: 15px;
+}
+.wrap-items .items {
+  border: 2px solid #6795ca;
+  width: 93%;
+  overflow: hidden;
+  margin: auto;
+}
+.wrap-items .items ul {
+  margin: 0;
+  padding: 0;
+  height: 190px;
+  width: 100%;
+  border: 2px solid #67ca67;
+  list-style: none;
+  transition: margin-left 250ms;
+}
+.wrap-items .items li {
+  display: inline-block;
+  border: 2px solid #67ca67;
+  height: 100%;
+  width: 345px;
+  margin: 0;
+}
+
+/*# sourceMappingURL=events.css.map */
