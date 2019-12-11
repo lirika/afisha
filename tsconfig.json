@@ -1,22 +1,25 @@
 {
   "compilerOptions": {
-    "lib": ["es2015", "dom"],
-    "target": "es2015",
-    "module": "commonjs",
-    "sourceRoot": "src/ts",
-    "declaration": true,
-    "outDir": "./dist",
-    "sourceMap": false,
-    "inlineSourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "skipLibCheck": true,
     "noImplicitAny": true,
-    "experimentalDecorators": true,
-    "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strictPropertyInitialization": false,
+    "module": "esnext",
+    "lib": ["es2020.string", "es2017", "dom"],
+    "target": "es5",
+    "jsx": "react",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["*"]
+    },
+    "moduleResolution": "node",
+    "downlevelIteration": true
   },
-  "include": ["src/ts"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "dist"]
 }

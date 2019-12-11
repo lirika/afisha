@@ -1,5 +1,4 @@
-export interface Category {
-  title: string;
-  id: string;
-  subCategory: [];
+export default interface Category {
+    title: string;
+    id: string;
 }
