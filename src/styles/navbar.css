@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  width: 1260px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+.all_items {
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  font-weight: 400;
+  transition: 0.5s;
+  padding: 10px 45px;
+  font-size: 18px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 48px 45px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.item:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+body {
+  height: 1080px;
+  background: url('https://public-v2links.adobecc.com/caa9f9fa-eddb-41b7-63f1-5ed6d0c556ff/component?params=component_id%3A39fb6b07-af7f-41ed-9d34-946ada492ea9&params=version%3A0&token=1576047474_da39a3ee_098acc53dd2f4eaf3573643722970b74a4dfe377&api_key=CometServer1');
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
