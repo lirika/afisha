@@ -8,6 +8,7 @@
     "build": "webpack --config webpack.config.js --env.prod",
     "lint": "tslint --config tslint.json 'src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "contact-css" : "sass src/styles/contact.scss src/styles/contact.css --watch",
     "pretty-quick": "pretty-quick --staged"
   },
   "bugs": {
