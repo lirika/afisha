@@ -56,7 +56,7 @@ header {
 
 body {
   height: 1080px;
-  background: url('https://public-v2links.adobecc.com/caa9f9fa-eddb-41b7-63f1-5ed6d0c556ff/component?params=component_id%3A39fb6b07-af7f-41ed-9d34-946ada492ea9&params=version%3A0&token=1576047474_da39a3ee_098acc53dd2f4eaf3573643722970b74a4dfe377&api_key=CometServer1');
+  background-color: grey;
   -moz-background-size: 100%; /* Firefox 3.6+ */
   -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
   -o-background-size: 100%; /* Opera 9.6+ */
