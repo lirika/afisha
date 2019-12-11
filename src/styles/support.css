@@ -4,24 +4,24 @@
   font-family: sans-serif;
 }
 
-.contact-section {
+.support-section {
   background: url(https://media.istockphoto.com/photos/contact-us-picture-id1049658692?k=6&m=1049658692&s=612x612&w=0&h=Os6Ii7LoUA-7c4CxnGYZzGqKJqGZIPgCOnXsD30EBbo=) no-repeat center;
   background-size: cover;
   padding: 40px 0;
   height: 100vh;
 }
-.contact-section h1 {
+.support-section h1 {
   text-align: center;
   color: white;
 }
 
-.contact-form {
+.support-form {
   max-width: 600px;
   margin: auto;
   padding: 0 10px;
   overflow: hidden;
 }
-.contact-form .contact-form-text {
+.support-form .support-form-text {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -32,7 +32,7 @@
   outline: none;
   color: darkgray;
 }
-.contact-form .contact-form-btn {
+.support-form .support-form-btn {
   float: right;
   border: 0;
   padding: 12px 50px;
@@ -40,4 +40,4 @@
   cursor: pointer;
 }
 
-/*# sourceMappingURL=contact.css.map */
+/*# sourceMappingURL=support.css.map */
