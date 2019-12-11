@@ -55,7 +55,7 @@ module.exports = env => {
         hot: true,
         host: 'localhost',
         historyApiFallback: true,
-        port: 3001,
+        port: 3010,
         /*        proxy: {
           '/api': {
             target: 'https://localhost:8080',

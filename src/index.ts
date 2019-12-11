@@ -1,6 +1,4 @@
 import './styles/style.scss';
-import showData from './services/renderCategory'
+import showData from './services/renderCategory';
 
-window.addEventListener('load', showData)
-
-
+window.addEventListener('load', showData);
