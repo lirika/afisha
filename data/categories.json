@@ -2,19 +2,23 @@
   "categories": [
     {
       "id": "0",
-      "title": "music"
+      "title": "music",
+      "img": "https://wallpaperscave.ru/images/thumbs/wp-preview/800x500/18/03-30/music-guitar-35325.jpg"
     },
     {
       "id": "1",
-      "title": "movie"
+      "title": "movie",
+      "img": "http://media.filmz.ru/photos/full/filmz.ru_f_51571.jpg"
     },
     {
       "id": "2",
-      "title": "art"
+      "title": "art",
+      "img": "https://i.pinimg.com/originals/a7/94/04/a794047570121ac419ac9c7debe981e7.jpg"
     },
     {
       "id": "3",
-      "title": "home"
+      "title": "sport",
+      "img": "https://cdn22.img.ria.ru/images/rsport/113897/03/1138970310_0:0:2615:1624_600x600_80_0_1_3303d47a50ae6f032cd9342de1a12806.jpg"
     }
   ],
   "subCategories": [

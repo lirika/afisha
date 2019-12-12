@@ -44,14 +44,14 @@ body {
   margin-top: 20vh;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid rgb(19, 0, 128); */
+  /*   border: 2px solid rgb(19, 0, 128); */
   width: 100%;
   height: 50vh;
   position: absolute;
   /* overflow: auto; */
 }
 .menu .category {
-  /*     border: 1px solid yellow; */
+  /*     border: 1px solid rgb(177, 177, 50); */
   text-transform: uppercase;
   height: 20%;
   text-align: center;
@@ -66,16 +66,17 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   transition: 0.2s;
+  cursor: pointer;
 }
 .menu .category .subcategories {
-  /*       border: 1px solid rgb(10, 187, 89); */
-  /*display: none;*/
+  /*     border: 1px solid rgb(10, 187, 89); */
+  display: none;
   font-size: 0.7em;
   padding-top: 0px;
   width: 90%;
 }
 .menu .category .subcategories span {
-  /*    border: 1px solid red; */
+  /*      border: 1px solid red; */
   margin-left: 2%;
   margin-right: 2%;
 }
@@ -94,4 +95,4 @@ body {
   backdrop-filter: blur(5px);
 }
 
-/*# sourceMappingURL=categoties.css.map */
+/*# sourceMappingURL=categories.css.map */

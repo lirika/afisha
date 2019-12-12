@@ -129,7 +129,6 @@ var CategoryPage = /** @class */ (function() {
   CategoryPage.prototype.renderCategory = function(category) {
     var _this = this;
     var menu = document.querySelector('.menu');
-    var title;
     var Category = new DataService_1['default']();
     category.forEach(function(item, id) {
       return __awaiter(_this, void 0, void 0, function() {
@@ -137,34 +136,65 @@ var CategoryPage = /** @class */ (function() {
         return __generator(this, function(_a) {
           categoryItem = document.createElement('div');
           categoryItem.classList.add('category');
-          categoryItem.setAttribute('id', '' + id);
-          categoryItem.innerHTML = '\n          <h1>' + item.title + '</h1>\n\n      ';
+          categoryItem.innerHTML =
+            '\n          <h1>' + item.title + '</h1>\n          <div class="subcategories" id="sub' + id + '"></div>';
           menu.appendChild(categoryItem);
           return [2 /*return*/];
         });
       });
     });
-    document.querySelectorAll('.category').forEach(function(div) {
-      div.addEventListener('click', function() {
+    document.querySelectorAll('.subcategories').forEach(function(subDiv) {
+      (function() {
         return __awaiter(_this, void 0, void 0, function() {
           var subCat;
           return __generator(this, function(_a) {
             switch (_a.label) {
               case 0:
-                return [4 /*yield*/, Category.getSubCategory(div.id)];
+                return [4 /*yield*/, Category.getSubCategory(subDiv.id.substr(-1))];
               case 1:
                 subCat = _a.sent();
                 subCat.forEach(function(item) {
-                  console.log(item);
-                  if (item.categoryId == div.id) {
-                    var span = document.createElement('span');
-                    span.innerHTML += item.title;
-                    div.appendChild(span);
-                  }
+                  var span = document.createElement('span');
+                  span.innerHTML += item.title;
+                  subDiv.appendChild(span);
                 });
                 return [2 /*return*/];
             }
           });
+        });
+      })();
+    });
+    var parentH1;
+    var sub;
+    var bgr = document.querySelector('.bgr');
+    var main = document.querySelector('.main');
+    menu.addEventListener('click', function(event) {
+      return __awaiter(_this, void 0, void 0, function() {
+        var el, Cat, url, topBgr;
+        return __generator(this, function(_a) {
+          switch (_a.label) {
+            case 0:
+              el = event.target;
+              if (el.tagName !== 'H1') {
+                return [2 /*return*/];
+              }
+              if (parentH1) {
+                parentH1.classList.remove('selected');
+                sub.setAttribute('style', 'display: none');
+              }
+              parentH1 = el.parentElement;
+              sub = parentH1.lastElementChild;
+              return [4 /*yield*/, Category.getCategory()];
+            case 1:
+              Cat = _a.sent();
+              url = Cat[Number(sub.id.substr(-1))].img;
+              main.setAttribute('style', 'background-image: url(' + url + ')');
+              parentH1.classList.add('selected');
+              topBgr = menu.offsetTop + parentH1.offsetTop;
+              sub.setAttribute('style', 'display: block');
+              bgr.setAttribute('style', ' display: inline;\n                                  top: ' + topBgr + 'px;');
+              return [2 /*return*/];
+          }
         });
       });
     });

@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.config.js --env.prod",
     "lint": "tslint --config tslint.json 'src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "pretty-quick": "pretty-quick --staged"
+    "pretty-quick": "pretty-quick --staged",
+    "compile-css": "sass src/styles/categories.scss src/styles/categories.css --watch"
   },
   "bugs": {
     "url": "https://github.com/lirika/afisha/issues"
