@@ -39,18 +39,48 @@
     },
     {
       "id": "0",
-      "title": "das",
+      "title": "comedy",
       "categoryId": "1"
     },
     {
       "id": "1",
-      "title": "asd",
+      "title": "horror",
       "categoryId": "1"
     },
     {
       "id": "2",
-      "title": "das",
+      "title": "documentary",
       "categoryId": "1"
+    },
+    {
+      "id": "0",
+      "title": "photography",
+      "categoryId": "2"
+    },
+    {
+      "id": "1",
+      "title": "sculpture",
+      "categoryId": "2"
+    },
+    {
+      "id": "2",
+      "title": "painting",
+      "categoryId": "2"
+    },
+    {
+      "id": "0",
+      "title": "box",
+      "categoryId": "3"
+    },
+    {
+      "id": "1",
+      "title": "football",
+      "categoryId": "3"
+    },
+    {
+      "id": "2",
+      "title": "swimming",
+      "categoryId": "3"
     }
   ],
   "events": [
