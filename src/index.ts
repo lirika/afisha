@@ -1,5 +1,4 @@
 import './styles/style.scss';
+import showData from './services/renderCategoryPage';
 
-// console.log('Hello world!');
-
-document.getElementById('root')!.innerText = 'Test';
+window.addEventListener('load', showData);

@@ -1,0 +1,112 @@
+$backgroundMusic: url(http://hq-oboi.ru/photo/foto_pianino_cherno_belye_muzyka_1680x1050.jpg);
+$contentColor: white;
+$fontH: 'Roboto', sans-serif;
+
+$b: 2px solid green;
+
+*,
+*:before,
+*after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: $fontH;
+}
+
+/* ::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(83, 48, 48, 0.3);
+    border-radius: 15px;
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(83, 48, 48, 0.8);
+} */
+
+.main {
+  height: 100vh;
+  min-height: 600px;
+  background: $backgroundMusic no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  color: $contentColor;
+  transition: 0.5s;
+}
+
+.menu {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  /*   border: 2px solid rgb(19, 0, 128); */
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  /* overflow: auto; */
+
+  .category {
+    /*     border: 1px solid rgb(177, 177, 50); */
+    text-transform: uppercase;
+    height: 20%;
+
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .category h1 {
+    /*       border: 1px solid rgb(10, 187, 89); */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  .category .subcategories {
+    /*     border: 1px solid rgb(10, 187, 89); */
+    display: none;
+    font-size: 0.7em;
+    padding-top: 0px;
+
+    width: 90%;
+
+    span {
+      /*      border: 1px solid red; */
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+  }
+
+  .selected {
+    margin-bottom: 20px;
+    height: 40%;
+    font-size: 1.6em;
+  }
+
+  .bgr {
+    position: fixed;
+    width: 100%;
+    height: 22%;
+    background: rgba(59, 54, 38, 0.2);
+    transition: 0.3s;
+    display: none;
+    backdrop-filter: blur(5px);
+  }
+}

@@ -20,7 +20,7 @@ module.exports = env => {
     new CheckerPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: 'public/index.html',
+      template: 'public/categories.html',
     }),
   ];
 
@@ -55,7 +55,7 @@ module.exports = env => {
         hot: true,
         host: 'localhost',
         historyApiFallback: true,
-        port: 3000,
+        port: 3010,
         /*        proxy: {
           '/api': {
             target: 'https://localhost:8080',
