@@ -30,7 +30,7 @@ setNavbar();
 function burgerHide() {
   burger.classList.remove('burger-active');
   header.classList.remove('header-animation');
-  burger_active = false;
+  burgerActive = false;
   dark.style.display = 'none';
 }
 
