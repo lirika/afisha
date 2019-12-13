@@ -53,17 +53,21 @@ var next = document.querySelector('.next');
 var scrollThumb = document.querySelector('.scroll-thumb');
 listLi.forEach(function (li) {
     li.addEventListener('click', function (event) {
-        /*  alert(li.offsetTop);
-          wrap.scrollBy(0, li.offsetTop); */
         scrollThumb.style.marginLeft = (li.offsetLeft - ul.offsetLeft) + "px";
     });
 });
 var position = 0;
 prev.addEventListener('click', function (event) {
+    if (ul.offsetTop > 0) {
+        return;
+    }
     position += 190;
     ul.style.marginTop = position + "px";
 });
 next.addEventListener('click', function (event) {
+    if (ul.offsetTop < (-(ul.offsetHeight - 190 * 2))) {
+        return;
+    }
     position -= 190;
     ul.style.marginTop = position + "px";
 });

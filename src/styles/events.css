@@ -167,7 +167,7 @@ header {
   margin-top: 30px;
 }
 .wrap-items .items {
-  /*       border: 2px solid rgb(103, 149, 202); */
+  border: 2px solid transparent;
   width: 93%;
   height: 190px;
   overflow: hidden;
@@ -176,11 +176,12 @@ header {
 .wrap-items .items ul {
   margin: 0;
   padding: 0;
-  height: 190px;
-  /*       border: 2px solid rgb(110, 50, 116); */
+  /*   height: 190px; */
+  border: 2px solid transparent;
   list-style: none;
   font-size: 0;
   margin-top: 0px;
+  margin-bottom: 0px;
   transition: 0.5s;
 }
 .wrap-items .items li {

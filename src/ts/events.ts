@@ -1,13 +1,13 @@
-const burger: HTMLElement = document.getElementById('burger');
-const header: HTMLElement = document.getElementById('header');
-const dark: HTMLElement = document.getElementById('dark');
-const navbar: HTMLElement = document.getElementById('navbar');
+const burger = document.getElementById('burger') as HTMLDivElement;
+const header: HTMLElement= document.getElementById('header');
+const dark = document.getElementById('dark') as HTMLDivElement;
+const navbar = document.getElementById('navbar') as HTMLDivElement;
 
 let burgerActive = false;
 
 function setNavbar() {
   let selected: HTMLElement;
-  navbar.addEventListener('click', (ev: MouseEvent) => {
+  navbar.addEventListener('click', (ev) => {
     const targetItem = ev.target;
     // @ts-ignore
     if (targetItem.className !== 'item') {
@@ -65,9 +65,6 @@ const scrollThumb = document.querySelector('.scroll-thumb') as HTMLDivElement;
 
 listLi.forEach(li => {
     li.addEventListener('click', (event) => {
-    /*  alert(li.offsetTop);
-      wrap.scrollBy(0, li.offsetTop); */
-
       scrollThumb.style.marginLeft = (li.offsetLeft - ul.offsetLeft) + "px";
     });
 });
@@ -75,11 +72,19 @@ listLi.forEach(li => {
 let position :number = 0;
 
 prev.addEventListener('click', (event) => {
+    if(ul.offsetTop > 0){
+      return;
+    }
     position += 190;
     ul.style.marginTop = position + "px"; 
 });
 
 next.addEventListener('click', (event) => {
+  if(ul.offsetTop < (-(ul.offsetHeight - 190*2))){
+    return;
+  }
+
+  
     position -= 190;
     ul.style.marginTop = position + "px"; 
 });
