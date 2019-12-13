@@ -41,7 +41,7 @@ module.exports = env => {
       stats: { modules: false },
       entry: ['./src/index.ts'],
       resolve: {
-        extensions: ['.ts', '.jsx', '.ts'],
+        extensions: ['.js', '.jsx', '.ts'],
         alias: {
           '@app': resolve(__dirname, '..'),
         },
@@ -49,7 +49,7 @@ module.exports = env => {
       output: {
         path: buildPath,
         publicPath: deployUrl,
-        filename: 'bundle-[hash].ts',
+        filename: 'bundle-[hash].js',
       },
       devServer: {
         hot: true,

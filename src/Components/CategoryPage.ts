@@ -1,5 +1,6 @@
 import DataService from '../services/DataService';
 import '../styles/categories.css';
+
 export default class CategoryPage {
   renderCategory(category: T[]): void {
     const menu = document.querySelector('.menu') as HTMLDivElement;
@@ -17,6 +18,7 @@ export default class CategoryPage {
       (async () => {
         const subCat: T[] = await Category.getSubCategory(subDiv.id.substr(-1));
         subCat.forEach(item => {
+          console.log(item.id)
           const span = document.createElement('span');
           span.innerHTML += item.title;
           subDiv.appendChild(span);
