@@ -13,13 +13,22 @@ const root = document.querySelector('#root') as HTMLDivElement;
 root.addEventListener('click', async(event) => {
   let target = event.target as HTMLElement; 
 
-  if(target.tagName != 'SPAN')
-    return;
+  switch(target.className){
 
-  let subIdStr:string = target.id.slice(4);
-  root.innerHTML = ``;
+    case 'subcategoryHomePage':
+      let subIdStr:string = target.id.slice(4);
+      root.innerHTML = ``;
+      await renderEventsPage(subIdStr);
+      break;
 
-  await renderEventsPage(subIdStr);
+    case 'item homePage': 
+      init();
+      break;
+
+  }
+   
+
+  
 });
 
 

@@ -68,6 +68,7 @@ var CategoryPage = /** @class */ (function () {
                             subCat.forEach(function (item) {
                                 var span = document.createElement('span');
                                 span.id = "span" + item.id;
+                                span.classList.add('subcategoryHomePage');
                                 span.innerHTML += item.title;
                                 subDiv.appendChild(span);
                             });
@@ -98,7 +99,7 @@ var CategoryPage = /** @class */ (function () {
                         return [4 /*yield*/, Category.getCategory()];
                     case 1:
                         Cat = _a.sent();
-                        url = Cat[Number(sub.id.substr(-1))].img;
+                        url = Cat[Number(sub.id.slice(3))].img;
                         main.setAttribute("style", "background-image: url(" + url + ")");
                         parentH1.classList.add('selected');
                         topBgr = menu.offsetTop + parentH1.offsetTop;

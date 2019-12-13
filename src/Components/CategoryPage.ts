@@ -27,6 +27,7 @@ export default class CategoryPage {
         subCat.forEach(item => {
           const span = document.createElement('span');
           span.id = `span${item.id}`;
+          span.classList.add('subcategoryHomePage');
           span.innerHTML += item.title;
           subDiv.appendChild(span);
         });
@@ -53,7 +54,7 @@ export default class CategoryPage {
       sub = parentH1.lastElementChild;
 
       const Cat: T[] = await Category.getCategory();
-      const url = Cat[Number(sub.id.substr(-1))].img;
+      const url = Cat[Number(sub.id.slice(3))].img;
 
       main.setAttribute(`style`, `background-image: url(${url})`);
 
