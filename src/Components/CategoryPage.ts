@@ -3,6 +3,13 @@ import '../styles/categories.css';
 
 export default class CategoryPage {
   renderCategory(category: T[]): void {
+    const root = document.querySelector('#root') as HTMLDivElement;
+    root.innerHTML = `<div class="main">
+                        <div class="menu">
+                          <div class="bgr"></div>
+                        </div>
+                      </div>`;
+
     const menu = document.querySelector('.menu') as HTMLDivElement;
     const Category = new DataService();
     category.forEach(async (item, id) => {
