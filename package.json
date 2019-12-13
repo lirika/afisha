@@ -9,6 +9,7 @@
     "lint": "tslint --config tslint.json 'src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "events-css": "sass src/styles/events.scss src/styles/events.css --watch",
+    "events-js" : "tsc src/ts/events.ts --watch",
     "pretty-quick": "pretty-quick --staged"
   },
   "bugs": {
