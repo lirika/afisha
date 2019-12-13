@@ -10,8 +10,10 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "events-css": "sass src/styles/events.scss src/styles/events.css --watch",
     "events-js": "tsc src/ts/events.ts --watch",
+    "index-js": "tsc src/index.ts --watch",
     "render-events-js": "tsc src/services/renderEventsPage.ts --watch",
     "render-category-js": "tsc src/Components/CategoryPage.ts --watch",
+    "server": "json-server data/categories.json --watch",
     "pretty-quick": "pretty-quick --staged",
     "compile-css": "sass src/styles/categories.scss src/styles/categories.css --watch"
   },

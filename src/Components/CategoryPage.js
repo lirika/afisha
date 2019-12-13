@@ -66,8 +66,8 @@ var CategoryPage = /** @class */ (function () {
                         case 1:
                             subCat = _a.sent();
                             subCat.forEach(function (item) {
-                                console.log(item.id);
                                 var span = document.createElement('span');
+                                span.id = "span" + item.id;
                                 span.innerHTML += item.title;
                                 subDiv.appendChild(span);
                             });

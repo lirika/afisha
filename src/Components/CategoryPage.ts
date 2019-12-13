@@ -25,8 +25,8 @@ export default class CategoryPage {
       (async () => {
         const subCat: T[] = await Category.getSubCategory(subDiv.id.substr(-1));
         subCat.forEach(item => {
-          console.log(item.id)
           const span = document.createElement('span');
+          span.id = `span${item.id}`;
           span.innerHTML += item.title;
           subDiv.appendChild(span);
         });

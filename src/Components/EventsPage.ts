@@ -2,7 +2,8 @@ import DataService from '../services/DataService';
 import '../styles/events.css';
 
 export default class EventsPage {
-  renderEventsList() {
+  renderEventsList(events: T[]) {
+    /* alert(events[0].title); */
     const root = document.querySelector('#root') as HTMLDivElement;
     root.innerHTML = `    <div class="dark" id="dark"></div>
     <div class="burger-icon" id="burger">

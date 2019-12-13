@@ -36,16 +36,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+var DataService_1 = require("./DataService");
 var EventsPage_1 = require("../Components/EventsPage");
-function renderEventsPage( /* id */) {
+function renderEventsPage(subId) {
     return __awaiter(this, void 0, void 0, function () {
-        var EvPage;
+        var dataService, events, EvPage;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    EvPage = new EventsPage_1["default"]();
-                    return [4 /*yield*/, EvPage.renderEventsList( /* id */)];
+                    dataService = new DataService_1["default"]();
+                    return [4 /*yield*/, dataService.getEvents(subId)];
                 case 1:
+                    events = _a.sent();
+                    EvPage = new EventsPage_1["default"]();
+                    return [4 /*yield*/, EvPage.renderEventsList(events)];
+                case 2:
                     _a.sent();
                     return [2 /*return*/];
             }

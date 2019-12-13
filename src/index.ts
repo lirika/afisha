@@ -16,9 +16,10 @@ root.addEventListener('click', async(event) => {
   if(target.tagName != 'SPAN')
     return;
 
+  let subIdStr:string = target.id.slice(4);
   root.innerHTML = ``;
 
-  await renderEventsPage(/* id */);
+  await renderEventsPage(subIdStr);
 });
 
 
