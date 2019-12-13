@@ -1,4 +1,5 @@
 import DataService from '../services/DataService';
+import '../styles/categories.css';
 export default class CategoryPage {
   renderCategory(category: T[]): void {
     const menu = document.querySelector('.menu') as HTMLDivElement;

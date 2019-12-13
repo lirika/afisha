@@ -1,10 +1,7 @@
 import DataService from './DataService';
 import CategoryPage from '../Components/CategoryPage';
-import './../styles/categories.css';
 
-window.addEventListener('load', showData);
-
-export default async function showData() {
+export default async function renderCategoryPage() {
   const Category = new DataService();
   const categories: T[] = await Category.getCategory();
   const Page = new CategoryPage();

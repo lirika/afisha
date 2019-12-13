@@ -20,8 +20,8 @@ var DataService = /** @class */ (function() {
       return response.json();
     });
   };
-  DataService.prototype.getEvents = function() {
-    return fetch(this.baseUrl + 'events').then(function(response) {
+  DataService.prototype.getEvents = function(id) {
+    return fetch(this.baseUrl + 'subCategories/' + id + '/events').then(function(response) {
       if (!response.ok) {
         throw new Error(response.statusText);
       }

@@ -124,6 +124,7 @@ var __generator =
   };
 exports.__esModule = true;
 var DataService_1 = require('../services/DataService');
+require('../styles/categories.css');
 var CategoryPage = /** @class */ (function() {
   function CategoryPage() {}
   CategoryPage.prototype.renderCategory = function(category) {

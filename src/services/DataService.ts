@@ -1,4 +1,3 @@
-
 export default class DataService {
   public readonly baseUrl: string = 'http://localhost:3000/';
 
@@ -20,8 +19,8 @@ export default class DataService {
     });
   }
 
-  getEvents<T>(): Promise<T> {
-    return fetch(this.baseUrl + 'events').then(response => {
+  getEvents<T>(id: string): Promise<T> {
+    return fetch(this.baseUrl + 'subCategories/' + id + '/events').then(response => {
       if (!response.ok) {
         throw new Error(response.statusText);
       }

@@ -1,4 +1,7 @@
-import './styles/style.scss';
-import showData from './services/renderCategoryPage';
+import renderCategoryPage from './services/renderCategoryPage';
 
-window.addEventListener('load', showData);
+window.addEventListener('load', init);
+
+async function init() {
+  await renderCategoryPage();
+}

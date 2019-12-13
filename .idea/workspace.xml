@@ -2,28 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48689f57-aa0d-499d-9afe-9608e89af958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/CategoryPage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Category.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Event.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SubCategory.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/DataService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/DataService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/renderCategory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/renderCategoryPage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/categories.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/categories.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/categories.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/categories.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CategoryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CategoryPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CategoryPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CategoryPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/DataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/DataService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/DataService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/DataService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/renderCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/renderCategoryPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/renderCategoryPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/renderCategoryPage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,18 +77,26 @@
       <workItem from="1576092647787" duration="350000" />
       <workItem from="1576093954192" duration="4001000" />
       <workItem from="1576164610319" duration="920000" />
+      <workItem from="1576168255925" duration="5828000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/services/renderCategoryPage.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -116,22 +115,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="190" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576097741271" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1576087663620">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576169855900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576087663620" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1576087663619">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576169855900" />
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1576168836706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576087663619" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1576087663617">
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
+    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1576168836706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576087663617" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1576087663619">
+    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
+    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1576168836706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576087663619" />
+    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
+    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1576168836706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
     <state x="184" y="85" key="MergeDialog" timestamp="1576165527195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
