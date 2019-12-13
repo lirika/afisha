@@ -24,24 +24,9 @@ export default class EventsPage {
 
     <div class="event-info">
       <div class="info">
-        <div class="main-info">
-          <div class="title">
-            Star Wars
-          </div>
-          <div class="description">
-            Movie about Jedis
-          </div>
-        </div>
-        <div class="data-time-location">
-          7:30 PM, Silver Screen, Minsk
-        </div>
-        <div class="button-all">
-          <div class="button buy">Buy now</div>
-          <div class="button more-info">More info</div>
-        </div>
       </div>
     </div>
-
+     
     <div class="scroll">
       <div class="scroll-thumb"></div>
     </div>
@@ -50,45 +35,6 @@ export default class EventsPage {
     <div class="wrap-items">
         <div class="items">
             <ul class="events">
-              <li class="e">
-                    <div class="event-type">Title1</div>
-                    <div class="event-description">
-                     <b>title</b><br> description
-                    </div>
-                    <div class="event-date">data</div>
-                </li>
-
-              <li>
-                <div class="event-type">Title2</div>
-                <div class="event-description">
-                 <b>title</b><br> description
-                </div>
-                <div class="event-date">data</div>
-              </li>
-
-              <li>
-                <div class="event-type">Title3</div>
-                <div class="event-description">
-                  <b>title</b><br> description
-                </div>
-                <div class="event-date">data</div>
-              </li>
-
-              <li>
-                <div class="event-type">Title4</div>
-                <div class="event-description">
-                  <b>title</b><br> description
-                </div>
-                <div class="event-date">data</div>
-              </li>
-
-              <li>
-                <div class="event-type">Title5</div>
-                <div class="event-description">
-                  <b>title</b><br> description
-                </div>
-                <div class="event-date">data</div>
-              </li>
 
             </ul>
         </div>
@@ -97,6 +43,26 @@ export default class EventsPage {
       <button class="arrow next">⮟</button>
     </div>
     `;
+
+////////////////////// code for load data to blocks /////////////////////////
+  const ul = document.querySelector('.wrap-items ul') as HTMLUListElement;
+  events.forEach((event) => {
+    let liHTMLelem = document.createElement('li');
+    liHTMLelem.id = `li${event.id}`;
+    let liContent :string = `<div class="event-type">${event.status}</div>
+                                <div class="event-description">
+                                <b>${event.title}</b><br>${event.genre}
+                                </div>
+                                <div class="event-date">
+                                ${event.date}
+                                </div>
+                            `;
+    liHTMLelem.innerHTML = liContent;
+    ul.appendChild(liHTMLelem);
+  });
+
+
+////////////////////////////////////////////////////////////////////////////
 
     const burger = document.getElementById('burger') as HTMLDivElement;
     const header: HTMLElement= document.getElementById('header');
@@ -156,16 +122,18 @@ export default class EventsPage {
 
     const wrap = document.querySelector('.wrap-items') as HTMLDivElement;
     const items = document.querySelector('.items') as HTMLDivElement;
-    const ul = document.querySelector('.wrap-items ul') as HTMLUListElement;
     const listLi = document.querySelectorAll<HTMLElement>('.events li');
     const prev = document.querySelector('.prev') as HTMLButtonElement;
     const next = document.querySelector('.next') as HTMLButtonElement;
 
     const scrollThumb = document.querySelector('.scroll-thumb') as HTMLDivElement;
-
+    
     listLi.forEach(li => {
       li.addEventListener('click', (event) => {
         scrollThumb.style.marginLeft = (li.offsetLeft - ul.offsetLeft) + "px";
+
+        let urlImg = (events[Number(li.id.slice(2))].img);
+        document.body.setAttribute(`style`, `background-image: url(${urlImg})`);
       });
     });
 

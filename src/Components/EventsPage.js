@@ -7,7 +7,17 @@ var EventsPage = /** @class */ (function () {
     EventsPage.prototype.renderEventsList = function (events) {
         /* alert(events[0].title); */
         var root = document.querySelector('#root');
-        root.innerHTML = "    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item\">PLAN YOUR VISIT</div>\n          <div class=\"item\">SIMPHANIC</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item\">DONATE</div>\n        </div>\n      </div>\n    </header>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n        <div class=\"main-info\">\n          <div class=\"title\">\n            Star Wars\n          </div>\n          <div class=\"description\">\n            Movie about Jedis\n          </div>\n        </div>\n        <div class=\"data-time-location\">\n          7:30 PM, Silver Screen, Minsk\n        </div>\n        <div class=\"button-all\">\n          <div class=\"button buy\">Buy now</div>\n          <div class=\"button more-info\">More info</div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n              <li class=\"e\">\n                    <div class=\"event-type\">Title1</div>\n                    <div class=\"event-description\">\n                     <b>title</b><br> description\n                    </div>\n                    <div class=\"event-date\">data</div>\n                </li>\n\n              <li>\n                <div class=\"event-type\">Title2</div>\n                <div class=\"event-description\">\n                 <b>title</b><br> description\n                </div>\n                <div class=\"event-date\">data</div>\n              </li>\n\n              <li>\n                <div class=\"event-type\">Title3</div>\n                <div class=\"event-description\">\n                  <b>title</b><br> description\n                </div>\n                <div class=\"event-date\">data</div>\n              </li>\n\n              <li>\n                <div class=\"event-type\">Title4</div>\n                <div class=\"event-description\">\n                  <b>title</b><br> description\n                </div>\n                <div class=\"event-date\">data</div>\n              </li>\n\n              <li>\n                <div class=\"event-type\">Title5</div>\n                <div class=\"event-description\">\n                  <b>title</b><br> description\n                </div>\n                <div class=\"event-date\">data</div>\n              </li>\n\n            </ul>\n        </div>\n        \n      <button class=\"arrow prev\">\u2B9D</button>\n      <button class=\"arrow next\">\u2B9F</button>\n    </div>\n    ";
+        root.innerHTML = "    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item\">PLAN YOUR VISIT</div>\n          <div class=\"item\">SIMPHANIC</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item\">DONATE</div>\n        </div>\n      </div>\n    </header>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n\n            </ul>\n        </div>\n        \n      <button class=\"arrow prev\">\u2B9D</button>\n      <button class=\"arrow next\">\u2B9F</button>\n    </div>\n    ";
+        ////////////////////// code for load data to blocks /////////////////////////
+        var ul = document.querySelector('.wrap-items ul');
+        events.forEach(function (event) {
+            var liHTMLelem = document.createElement('li');
+            liHTMLelem.id = "li" + event.id;
+            var liContent = "<div class=\"event-type\">" + event.status + "</div>\n                                <div class=\"event-description\">\n                                <b>" + event.title + "</b><br>" + event.genre + "\n                                </div>\n                                <div class=\"event-date\">\n                                " + event.date + "\n                                </div>\n                            ";
+            liHTMLelem.innerHTML = liContent;
+            ul.appendChild(liHTMLelem);
+        });
+        ////////////////////////////////////////////////////////////////////////////
         var burger = document.getElementById('burger');
         var header = document.getElementById('header');
         var dark = document.getElementById('dark');
@@ -56,7 +66,6 @@ var EventsPage = /** @class */ (function () {
         var count = 4;
         var wrap = document.querySelector('.wrap-items');
         var items = document.querySelector('.items');
-        var ul = document.querySelector('.wrap-items ul');
         var listLi = document.querySelectorAll('.events li');
         var prev = document.querySelector('.prev');
         var next = document.querySelector('.next');
@@ -64,6 +73,8 @@ var EventsPage = /** @class */ (function () {
         listLi.forEach(function (li) {
             li.addEventListener('click', function (event) {
                 scrollThumb.style.marginLeft = (li.offsetLeft - ul.offsetLeft) + "px";
+                var urlImg = (events[Number(li.id.slice(2))].img);
+                document.body.setAttribute("style", "background-image: url(" + urlImg + ")");
             });
         });
         var position = 0;
