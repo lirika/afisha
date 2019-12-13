@@ -1,8 +1,102 @@
 import DataService from '../services/DataService';
-import '../styles/categories.css';
+import '../styles/events.css';
 
 export default class EventsPage {
   renderEventsList() {
+    const root = document.querySelector('#root') as HTMLDivElement;
+    root.innerHTML = `    <div class="dark" id="dark"></div>
+    <div class="burger-icon" id="burger">
+      <div class="burger-line"></div>
+    </div>
+    <header id="header">
+      <div class="navbar" id="navbar">
+        <div class="all-items">
+          <div class="item">CONCERTS & TICKETS</div>
+          <div class="item">PLAN YOUR VISIT</div>
+          <div class="item">SIMPHANIC</div>
+          <div class="item">SUPPORT US</div>
+          <div class="item">ABOUT US</div>
+          <div class="item">DONATE</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="event-info">
+      <div class="info">
+        <div class="main-info">
+          <div class="title">
+            Star Wars
+          </div>
+          <div class="description">
+            Movie about Jedis
+          </div>
+        </div>
+        <div class="data-time-location">
+          7:30 PM, Silver Screen, Minsk
+        </div>
+        <div class="button-all">
+          <div class="button buy">Buy now</div>
+          <div class="button more-info">More info</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <div class="scroll-thumb"></div>
+    </div>
+<!--////////////  items   ///////////////  -->
+
+    <div class="wrap-items">
+        <div class="items">
+            <ul class="events">
+              <li class="e">
+                    <div class="event-type">Title1</div>
+                    <div class="event-description">
+                     <b>title</b><br> description
+                    </div>
+                    <div class="event-date">data</div>
+                </li>
+
+              <li>
+                <div class="event-type">Title2</div>
+                <div class="event-description">
+                 <b>title</b><br> description
+                </div>
+                <div class="event-date">data</div>
+              </li>
+
+              <li>
+                <div class="event-type">Title3</div>
+                <div class="event-description">
+                  <b>title</b><br> description
+                </div>
+                <div class="event-date">data</div>
+              </li>
+
+              <li>
+                <div class="event-type">Title4</div>
+                <div class="event-description">
+                  <b>title</b><br> description
+                </div>
+                <div class="event-date">data</div>
+              </li>
+
+              <li>
+                <div class="event-type">Title5</div>
+                <div class="event-description">
+                  <b>title</b><br> description
+                </div>
+                <div class="event-date">data</div>
+              </li>
+
+            </ul>
+        </div>
+        
+      <button class="arrow prev">⮝</button>
+      <button class="arrow next">⮟</button>
+    </div>
+    `;
+
     const burger = document.getElementById('burger') as HTMLDivElement;
     const header: HTMLElement= document.getElementById('header');
     const dark = document.getElementById('dark') as HTMLDivElement;

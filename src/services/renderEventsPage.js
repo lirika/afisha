@@ -36,10 +36,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-function renderEventsPage() {
+var EventsPage_1 = require("../Components/EventsPage");
+function renderEventsPage( /* id */) {
     return __awaiter(this, void 0, void 0, function () {
+        var EvPage;
         return __generator(this, function (_a) {
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    EvPage = new EventsPage_1["default"]();
+                    return [4 /*yield*/, EvPage.renderEventsList( /* id */)];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
         });
     });
 }
