@@ -89,7 +89,7 @@ header {
 .event-info {
   display: flex;
   align-items: center;
-  height: 52vh;
+  height: 65vh;
   position: relative;
   z-index: 1;
 }
@@ -121,7 +121,7 @@ header {
 
 .wrap-items {
   /*   border: 2px solid red; */
-  height: 29vh;
+  height: 20vh;
   position: relative;
 }
 .wrap-items ::-webkit-scrollbar {

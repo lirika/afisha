@@ -74,7 +74,10 @@ var EventsPage = /** @class */ (function () {
             li.addEventListener('click', function (event) {
                 scrollThumb.style.marginLeft = (li.offsetLeft - ul.offsetLeft) + "px";
                 var urlImg = (events[Number(li.id.slice(2))].img);
-                document.body.setAttribute("style", "background-image: url(" + urlImg + ")");
+                // document.body.setAttribute(`style`, `background: linear-gradient(0deg, black, transparent), url(${urlImg})`);
+                document.body.style.background = "linear-gradient(to bottom, transparent, rgba(0,0,0,.99) 75%), url(" + urlImg + ")";
+                document.body.style.backgroundRepeat = 'no-repeat';
+                document.body.style.backgroundSize = 'cover';
             });
         });
         var position = 0;
