@@ -12,8 +12,8 @@ export default class EventsPage {
     <header id="header">
       <div class="navbar" id="navbar">
         <div class="all-items">
+          <div class="item homePage">HOME PAGE</div>
           <div class="item">CONCERTS & TICKETS</div>
-          <div class="item">PLAN YOUR VISIT</div>
           <div class="item">SIMPHANIC</div>
           <div class="item">SUPPORT US</div>
           <div class="item">ABOUT US</div>
