@@ -6,8 +6,6 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(0deg, rgb(0, 0, 0), transparent),
-    url('https://i.pinimg.com/originals/d3/af/2b/d3af2bde0480a5faabaf188c5a2be3bb.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
@@ -45,6 +43,7 @@ header {
 }
 
 .navbar {
+/*   border: 2px solid red; */
   display: flex;
   width: 1260px;
   height: 120px;
@@ -89,6 +88,7 @@ header {
 }
 
 .event-info {
+/*   border: 2px solid red; */
   display: flex;
   align-items: center;
   height: 52vh;
@@ -97,13 +97,14 @@ header {
 }
 
 .info {
+/*   border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: absolute;
   max-width: 575px;
   height: 288px;
-  margin-left: 170px;
+  margin-left: 10%;
 }
 
 ///////////////////  event items /////////////////////////////
@@ -146,7 +147,7 @@ header {
 }
 
 .wrap-items {
-  /*   border: 2px solid red; */
+/*     border: 2px solid red; */
   height: 29vh;
   position: relative;
   @include scrollbar(.5em, rgb(122, 118, 117));
@@ -159,7 +160,7 @@ header {
     cursor: pointer;
     width: 20px;
     height: 20px;
-    margin-right: 6%;
+    margin-right: 3%;
 
     border: solid rgba(255, 255, 255, 0.6);
     border-width: 0 5px 5px 0;
@@ -249,7 +250,7 @@ header {
       .circle {
         width: 10px;
         height: 10px;
-        background: rgb(240, 37, 37);
+   /*      background: rgb(240, 37, 37); */
         border-radius: 50px;
         margin-right: 7px;
       }
@@ -421,31 +422,34 @@ header {
 
 /*----------------------------------INFO-EVENT------------------------------------*/
 .title {
-  font-size: 56px;
+  font-size: 3em;
   font-weight: 700;
 }
 
 .description {
-  font-size: 42px;
+  font-size: 2.5em;
   font-weight: 400;
 }
 
 .data-time-location {
   color: white;
-  font-size: 28px;
+  font-size: 1.2em;
   font-weight: 400;
   opacity: 0.7;
 }
+
 .button-all {
+ /*  border: 1px solid red; */
   display: flex;
+  padding-top: 20px;
 }
 .button {
   display: flex;
   justify-content: center;
   margin-right: 20px;
   align-items: center;
-  width: 180px;
-  height: 46px;
+  width: 150px;
+  height: 35px;
   border-radius: 100px;
   font-size: 18px;
   font-weight: 500;
@@ -457,6 +461,15 @@ header {
 .buy {
   background: #4444ff 0% 0% no-repeat padding-box;
 }
+
+.watch{
+  transition: 0.7s;
+  background: #FF0000;
+  &:hover{
+    background: darkred;
+  }
+}
+
 .buy:hover {
   transition: 0.7s;
   background: #181869 0% 0% no-repeat padding-box;

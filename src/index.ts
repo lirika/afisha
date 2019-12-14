@@ -5,6 +5,7 @@ window.addEventListener('load', init);
 
 async function init() {
   await renderCategoryPage();
+/* await renderEventsPage(1, "classic"); */
 }
 
 const root = document.querySelector('#root') as HTMLDivElement;
