@@ -112,7 +112,48 @@ export default class EventsPage {
       ul.appendChild(liHTMLelem);
     });
 
-    ////////////////////////////////////////////////////////////////////////////
+/////////////////  buttons visibility  /////////////////
+
+    let btnUp = document.querySelector('.prev') as HTMLDivElement;
+    let btnDown = document.querySelector('.next') as HTMLDivElement;
+    let liArray :any = ul.children;
+
+    (function buttonsVisibility(){
+      if(events.length > 5){
+        visibility('visible');
+      }else{
+        if(isNot4InRow()){
+          visibility('visible');
+        }
+
+        window.addEventListener('resize', () => {
+          if(isNot4InRow()){
+              visibility('visible');
+          }
+          else{
+            visibility('hidden');
+          }
+        });
+      }
+    })();
+    
+    function isNot4InRow():boolean{
+      let b:boolean = false;
+
+      for(let i=1; i < liArray.length; i++)
+        if(liArray[i].offsetLeft === liArray[0].offsetLeft){
+          b = true;
+          return b;
+        }
+      return b;
+    }
+
+    function visibility(val:string){
+      btnUp.style.visibility = val;
+      btnDown.style.visibility = val;
+    }
+ 
+    //////////////////////////////////
 
     const burger = document.getElementById('burger') as HTMLDivElement;
     const header = document.getElementById('header') as HTMLElement;
