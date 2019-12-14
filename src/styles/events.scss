@@ -6,8 +6,6 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(0deg, rgb(0, 0, 0), transparent),
-    url('https://i.pinimg.com/originals/d3/af/2b/d3af2bde0480a5faabaf188c5a2be3bb.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1;
@@ -409,8 +407,16 @@ header {
 .buy {
   background: #4444ff 0% 0% no-repeat padding-box;
 }
-.buy:hover {
+
+.watch {
   transition: 0.7s;
+  background: #FF0000;
+  &:hover {
+    background: darkred;
+}
+}
+.buy:hover {
+  transition: 0.5s;
   background: #181869 0% 0% no-repeat padding-box;
 }
 .more-info:hover {

@@ -9,7 +9,6 @@
     "lint": "tslint --config tslint.json 'src/**/*.{ts,tsx}'",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "events-css": "sass src/styles/events.scss src/styles/events.css --watch",
-    "events-js": "tsc src/ts/events.ts --watch",
     "index-js": "tsc src/index.ts --watch",
     "render-events-js": "tsc src/services/renderEventsPage.ts --watch",
     "render-category-js": "tsc src/Components/CategoryPage.ts --watch",

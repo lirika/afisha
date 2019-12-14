@@ -88,7 +88,7 @@
       "id": "0",
       "title": "Nickelback",
       "status": "visiting artist",
-      "genre": "",
+      "genre": "Guitar,rock",
       "date": "13 FEBRUARY 2019, SUNDAY",
       "time": "10:30 PM",
       "place": "Re:public ,Minsk",
@@ -231,7 +231,9 @@
       "title": "Black Eyed Peas ",
       "status": "live stream",
       "genre": "Rock",
-      "date": "RIGHT NOW, ON YOUTUBE",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://ua.news/wp-content/uploads/2019/03/blackeyedpeas-hero-108801906.jpg",
       "subCategoryId": "2",
       "online": false
@@ -241,8 +243,10 @@
       "title": "Scary movie",
       "status": "comedy",
       "genre": "comedy",
-      "date": "RIGHT NOW, ON YOUTUBE",
-      "img": "https://citaty.info/files/posters/38750.jpg",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
+      "img": "https://occ-0-586-590.1.nflxso.net/dnm/api/v6/5e0byrbbfBPBmtxyXMpKqMuqOQY/AAAABX97yMs-QGIE-VETU7rUsMZIla5L-z7bT5ooLmvHe5D0EFi9mBE5IWZHySzsOaHf3o1Gf8NFM7Grl9awythgmLbIF-X4r-euY-qD.png?r=946",
       "subCategoryId": "3",
       "online": false
     },
@@ -251,8 +255,10 @@
       "title": "Hangover",
       "status": "comedy",
       "genre": "comedy",
-      "date": "RIGHT NOW, ON YOUTUBE",
-      "img": "https://m.media-amazon.com/images/M/MV5BNGQwZjg5YmYtY2VkNC00NzliLTljYTctNzI5NmU3MjE2ODQzXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
+      "img": "https://thenypost.files.wordpress.com/2015/12/hangover1a.jpg?quality=80&strip=all",
       "subCategoryId": "3",
       "online": false
     },
@@ -261,7 +267,9 @@
       "title": "It",
       "status": "horror",
       "genre": "horror",
-      "date": "RIGHT NOW, ON YOUTUBE",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://img5.goodfon.ru/wallpaper/nbig/8/30/it-it-chapter-two-ono-2.jpg",
       "subCategoryId": "4",
       "online": false
@@ -271,7 +279,9 @@
       "title": "INSIDIOUS",
       "status": "horror",
       "genre": "horror",
-      "date": "RIGHT NOW, ON YOUTUBE",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "http://straightfromamovie.com/wp-content/uploads/2018/01/Insidious-4.jpg",
       "subCategoryId": "4",
       "online": false
@@ -279,9 +289,11 @@
     {
       "id": "0",
       "title": "Apollo",
-      "status": "horror",
-      "genre": "horror",
-      "date": "RIGHT NOW, ON YOUTUBE",
+      "status": "Documentary",
+      "genre": "Documentary",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://www.indiewire.com/wp-content/uploads/2017/01/national-geographic-documentary-films.jpg?w=780",
       "subCategoryId": "5",
       "online": false
@@ -289,9 +301,11 @@
     {
       "id": "1",
       "title": "Documentary2",
-      "status": "horror",
-      "genre": "horror",
+      "status": "Documentary",
+      "genre": "Documentary",
       "date": "RIGHT NOW, ON YOUTUBE",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://cardiff.imgix.net/__data/assets/image/0009/1434096/Janet_Iraq_Documentary.jpg?w=570&h=321&fit=crop&q=60&auto=format",
       "subCategoryId": "5",
       "online": true
@@ -321,10 +335,12 @@
       "title": "Painting",
       "status": "Painting",
       "genre": "Painting",
-      "date": "RIGHT NOW, ON YOUTUBE",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://afremov.com/images/product/image_2347.jpeg",
       "subCategoryId": "8",
-      "online": true
+      "online": false
     },
     {
       "id": "0",
@@ -332,7 +348,9 @@
       "status": "Boxing",
       "genre": "Boxing",
       "date": "RIGHT NOW, ON YOUTUBE",
-      "img": "https://i.ytimg.com/vi/dNnVOxpGCH4/maxresdefault.jpg",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
+      "img": "https://www.boxingnews24.com/wp-content/uploads/2019/10/0-prograis-taylor6-1300x903.jpg",
       "subCategoryId": "9",
       "online": true
     },
@@ -341,10 +359,12 @@
       "title": "Football",
       "status": "Football",
       "genre": "Football",
-      "date": "RIGHT NOW, ON YOUTUBE",
+      "date": "25 DECEMBER 2019, SATURDAY",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg",
       "subCategoryId": "10",
-      "online": true
+      "online": false
     },
     {
       "id": "0",
@@ -352,6 +372,8 @@
       "status": "Swimming",
       "genre": "Swimming",
       "date": "RIGHT NOW, ON YOUTUBE",
+      "time": "10:30 PM",
+      "place": "Royal Festival Hall,Moscow",
       "img": "https://cdn.swimswam.com/wp-content/uploads/2019/07/20190706_GSca_KA17442-1.jpg",
       "subCategoryId": "11",
       "online": true
