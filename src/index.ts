@@ -11,14 +11,16 @@ const root = document.querySelector('#root') as HTMLDivElement;
 
 root.addEventListener('click', async event => {
   let target = event.target as HTMLElement;
-  switch (target.className) {
+  switch(target.className){
+
     case 'subcategoryHomePage':
-      let subIdStr: string = target.id.slice(4);
+      let subIdStr:string = target.id.slice(4);
       root.innerHTML = ``;
-      await renderEventsPage(subIdStr);
+      await renderEventsPage(subIdStr, target.innerHTML);
       break;
-    case 'item homePage':
-      await init();
+
+    case 'item homePage': 
+      init();
       break;
   }
 });

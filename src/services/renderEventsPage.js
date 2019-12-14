@@ -38,7 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var DataService_1 = require("./DataService");
 var EventsPage_1 = require("../Components/EventsPage");
-function renderEventsPage(subId) {
+function renderEventsPage(subId, subTitle) {
     return __awaiter(this, void 0, void 0, function () {
         var dataService, events, EvPage;
         return __generator(this, function (_a) {
@@ -49,7 +49,7 @@ function renderEventsPage(subId) {
                 case 1:
                     events = _a.sent();
                     EvPage = new EventsPage_1["default"]();
-                    return [4 /*yield*/, EvPage.renderEventsList(events)];
+                    return [4 /*yield*/, EvPage.renderEventsList(events, subTitle)];
                 case 2:
                     _a.sent();
                     return [2 /*return*/];

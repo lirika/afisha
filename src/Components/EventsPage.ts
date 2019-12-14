@@ -1,7 +1,7 @@
 import '../styles/events.css';
 
 export default class EventsPage {
-  renderEventsList(events: T[]) {
+  renderEventsList(events: T[], subTitle:string) {
     const defaultItem = events[0];
 
     /////// set base Background ////
@@ -41,16 +41,17 @@ export default class EventsPage {
         `;
 
     const root = document.querySelector('#root') as HTMLDivElement;
-    root.innerHTML = `    <div class="dark" id="dark"></div>
+    root.innerHTML = ` 
+    <div class="dark" id="dark"></div>
     <div class="burger-icon" id="burger">
       <div class="burger-line"></div>
     </div>
-    <header id="header">    
+    <header id="header">
       <div class="navbar" id="navbar">
         <div class="all-items">
           <div class="item homePage">HOME PAGE</div>
           <div class="item">CONCERTS & TICKETS</div>
-          <div class="item">SIMPHANIC</div>
+          <div class="item active">${subTitle}</div>
           <div class="item">SUPPORT US</div>
           <div class="item">ABOUT US</div>
           <div class="item">DONATE</div>
@@ -75,24 +76,38 @@ export default class EventsPage {
             </ul>
         </div>
         
-      <button class="arrow prev">⮝</button>
-      <button class="arrow next">⮟</button>
+        <div class="arrow prev"></div>
+        <div class="arrow next"></div>
     </div>
     `;
 
     ////////////////////// code for load data to blocks /////////////////////////
     const ul = document.querySelector('.wrap-items ul') as HTMLUListElement;
-    events.forEach(event => {
+    events.forEach((event) => {
       let liHTMLelem = document.createElement('li');
       liHTMLelem.id = `li${event.id}`;
-      let liContent: string = `<div class="event-type">${event.status}</div>
-                                <div class="event-description">
-                                <b>${event.title}</b><br>${event.genre}
-                                </div>
-                                <div class="event-date">
-                                ${event.date}
-                                </div>
-                            `;
+      let liContent :string = `<div class="event-type">`;
+  
+      if(event.hasOwnProperty("place")){
+        liContent += `<div class="colorStatus">${event.status}</div>`;
+      }   
+      else{
+        liContent += `<div class="circle"></div>${event.status}`;
+      }                        
+  
+      liContent +=`</div>
+                    <div class="event-description">
+                    <b>${event.title}</b><br>${event.genre}
+                    </div>
+                    <div class="event-date">
+                    <div class="date">${event.date}</div>`;
+  
+     if(event.hasOwnProperty("place")){
+      liContent += `<div class="place-time">${event.time}, ${event.place}</div>`;
+     }
+                  
+     liContent +=  `</div>`;
+  
       liHTMLelem.innerHTML = liContent;
       ul.appendChild(liHTMLelem);
     });
@@ -103,13 +118,15 @@ export default class EventsPage {
     const header = document.getElementById('header') as HTMLElement;
     const dark = document.getElementById('dark') as HTMLDivElement;
     const navbar = document.getElementById('navbar') as HTMLDivElement;
+    const subTitleActive = document.querySelector('.active') as HTMLDivElement;
 
     let burgerActive = false;
 
     function setNavbar() {
-      let selected: HTMLElement;
-      navbar.addEventListener('click', ev => {
-        const targetItem = ev.target as HTMLDivElement;
+      let selected: HTMLElement = subTitleActive;
+      navbar.addEventListener('click', (ev) => {
+        const targetItem = ev.target;
+        // @ts-ignore
         if (targetItem.className !== 'item') {
           return;
         }

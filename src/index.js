@@ -63,19 +63,18 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                     case 'subcategoryHomePage': return [3 /*break*/, 1];
                     case 'item homePage': return [3 /*break*/, 3];
                 }
-                return [3 /*break*/, 5];
+                return [3 /*break*/, 4];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
-                return [4 /*yield*/, renderEventsPage_1["default"](subIdStr)];
+                return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 5];
-            case 3: return [4 /*yield*/, init()];
-            case 4:
-                _b.sent();
-                return [3 /*break*/, 5];
-            case 5: return [2 /*return*/];
+                return [3 /*break*/, 4];
+            case 3:
+                init();
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
         }
     });
 }); });

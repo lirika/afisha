@@ -40,7 +40,7 @@ require("../styles/events.css");
 var EventsPage = /** @class */ (function () {
     function EventsPage() {
     }
-    EventsPage.prototype.renderEventsList = function (events) {
+    EventsPage.prototype.renderEventsList = function (events, subTitle) {
         var _this = this;
         var defaultItem = events[0];
         /////// set base Background ////
@@ -59,13 +59,24 @@ var EventsPage = /** @class */ (function () {
         }
         var defaultTemplate = "\n                         <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + defaultItem.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + defaultItem.genre + "\n                          </div>\n                           " + defaultDate + "\n                     </div>\n                      <div class=\"button-all\">\n                      " + defaultButtons + "\n</div>\n        ";
         var root = document.querySelector('#root');
-        root.innerHTML = "    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">    \n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item\">SIMPHANIC</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item\">DONATE</div>\n        </div>\n      </div>\n    </header>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n      " + defaultTemplate + "\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n            </ul>\n        </div>\n        \n      <button class=\"arrow prev\">\u2B9D</button>\n      <button class=\"arrow next\">\u2B9F</button>\n    </div>\n    ";
+        root.innerHTML = " \n    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item active\">" + subTitle + "</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item\">DONATE</div>\n        </div>\n      </div>\n    </header>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n      " + defaultTemplate + "\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n            </ul>\n        </div>\n        \n        <div class=\"arrow prev\"></div>\n        <div class=\"arrow next\"></div>\n    </div>\n    ";
         ////////////////////// code for load data to blocks /////////////////////////
         var ul = document.querySelector('.wrap-items ul');
         events.forEach(function (event) {
             var liHTMLelem = document.createElement('li');
             liHTMLelem.id = "li" + event.id;
-            var liContent = "<div class=\"event-type\">" + event.status + "</div>\n                                <div class=\"event-description\">\n                                <b>" + event.title + "</b><br>" + event.genre + "\n                                </div>\n                                <div class=\"event-date\">\n                                " + event.date + "\n                                </div>\n                            ";
+            var liContent = "<div class=\"event-type\">";
+            if (event.hasOwnProperty("place")) {
+                liContent += "<div class=\"colorStatus\">" + event.status + "</div>";
+            }
+            else {
+                liContent += "<div class=\"circle\"></div>" + event.status;
+            }
+            liContent += "</div>\n                    <div class=\"event-description\">\n                    <b>" + event.title + "</b><br>" + event.genre + "\n                    </div>\n                    <div class=\"event-date\">\n                    <div class=\"date\">" + event.date + "</div>";
+            if (event.hasOwnProperty("place")) {
+                liContent += "<div class=\"place-time\">" + event.time + ", " + event.place + "</div>";
+            }
+            liContent += "</div>";
             liHTMLelem.innerHTML = liContent;
             ul.appendChild(liHTMLelem);
         });
@@ -74,11 +85,13 @@ var EventsPage = /** @class */ (function () {
         var header = document.getElementById('header');
         var dark = document.getElementById('dark');
         var navbar = document.getElementById('navbar');
+        var subTitleActive = document.querySelector('.active');
         var burgerActive = false;
         function setNavbar() {
-            var selected;
+            var selected = subTitleActive;
             navbar.addEventListener('click', function (ev) {
                 var targetItem = ev.target;
+                // @ts-ignore
                 if (targetItem.className !== 'item') {
                     return;
                 }
