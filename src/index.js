@@ -38,6 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var renderCategoryPage_1 = require("./services/renderCategoryPage");
 var renderEventsPage_1 = require("./services/renderEventsPage");
+var renderBuyPage_1 = require("./services/renderBuyPage");
 window.addEventListener('load', init);
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -62,19 +63,23 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                 switch (_a) {
                     case 'subcategoryHomePage': return [3 /*break*/, 1];
                     case 'item homePage': return [3 /*break*/, 3];
+                    case 'button buy': return [3 /*break*/, 4];
                 }
-                return [3 /*break*/, 4];
+                return [3 /*break*/, 5];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 4];
+                return [3 /*break*/, 5];
             case 3:
                 init();
-                return [3 /*break*/, 4];
-            case 4: return [2 /*return*/];
+                return [3 /*break*/, 5];
+            case 4:
+                renderBuyPage_1["default"]();
+                return [3 /*break*/, 5];
+            case 5: return [2 /*return*/];
         }
     });
 }); });
