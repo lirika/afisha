@@ -156,6 +156,7 @@ header {
   display: inline-block;
   padding: 3px;
   right: 15px;
+  visibility: hidden;
   transition: 0.3s;
 }
 .wrap-items .arrow:focus {
@@ -200,7 +201,7 @@ header {
 .wrap-items .items li {
   font-size: 15px;
   display: inline-block;
-  /*     border: 1px solid rgb(103, 202, 103); */
+  /*        border: 1px solid rgb(103, 202, 103); */
   height: 190px;
   width: 348px;
   margin: 0;
@@ -229,7 +230,7 @@ header {
 .wrap-items .items .circle {
   width: 10px;
   height: 10px;
-  /*      background: rgb(240, 37, 37); */
+  background: #f02525;
   border-radius: 50px;
   margin-right: 7px;
 }

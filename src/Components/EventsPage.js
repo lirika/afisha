@@ -80,7 +80,42 @@ var EventsPage = /** @class */ (function () {
             liHTMLelem.innerHTML = liContent;
             ul.appendChild(liHTMLelem);
         });
-        ////////////////////////////////////////////////////////////////////////////
+        /////////////////  buttons visibility  /////////////////
+        var btnUp = document.querySelector('.prev');
+        var btnDown = document.querySelector('.next');
+        var liArray = ul.children;
+        (function buttonsVisibility() {
+            if (events.length > 5) {
+                visibility('visible');
+            }
+            else {
+                if (isNot4InRow()) {
+                    visibility('visible');
+                }
+                window.addEventListener('resize', function () {
+                    if (isNot4InRow()) {
+                        visibility('visible');
+                    }
+                    else {
+                        visibility('hidden');
+                    }
+                });
+            }
+        })();
+        function isNot4InRow() {
+            var b = false;
+            for (var i = 1; i < liArray.length; i++)
+                if (liArray[i].offsetLeft === liArray[0].offsetLeft) {
+                    b = true;
+                    return b;
+                }
+            return b;
+        }
+        function visibility(val) {
+            btnUp.style.visibility = val;
+            btnDown.style.visibility = val;
+        }
+        //////////////////////////////////
         var burger = document.getElementById('burger');
         var header = document.getElementById('header');
         var dark = document.getElementById('dark');
