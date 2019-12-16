@@ -82,6 +82,9 @@ export default class CategoryPage {
         sub.setAttribute('style', 'display: none');
       }
 
+      let h = parentH1.offsetHeight/2;
+
+
       parentH1 = el.parentElement;
       sub = parentH1.lastElementChild;
 
@@ -90,14 +93,19 @@ export default class CategoryPage {
 
       main.setAttribute(`style`, `background-image: url(${url})`);
       setSelected();
+
+      if(parentH1.classList.contains('first')){
+        bgr.setAttribute('style', `display: inline; top: ${(parentH1.offsetTop)}px;`);
+      }
+      else{
+        bgr.setAttribute('style', `display: inline; top: ${(parentH1.offsetTop - h)}px;`);
+      }
+      
     });
 
     function setSelected(){
       parentH1.classList.add('selected');
-
-      const topBgr = menu.offsetTop + parentH1.offsetTop;
       sub.setAttribute('style', 'display: block');
-      bgr.setAttribute('style', `display: inline; top: ${topBgr}px;`);
     }
 
     const up = document.querySelector('.up') as HTMLDivElement;
@@ -125,6 +133,7 @@ export default class CategoryPage {
       
       let url = category[block4].img;
       main.setAttribute(`style`, `background-image: url(${url})`);
+      bgr.setAttribute('style', `display: inline; top: ${arrCategories[block4].offsetTop}px;`);
 
       pos += 441;
       menu.style.marginTop = pos + 'px';
@@ -158,6 +167,11 @@ export default class CategoryPage {
       block4 += 4;
       let url = category[block4].img;
       main.setAttribute(`style`, `background-image: url(${url})`);
+
+
+/*       alert(arrCategories[block4].offsetTop); */
+ 
+      bgr.setAttribute('style', `display: inline; top: ${arrCategories[block4].offsetTop}px;`);
 
       pos -= 441;
       menu.style.marginTop = pos + 'px';

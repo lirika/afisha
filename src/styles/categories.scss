@@ -65,7 +65,7 @@ body {
   border: 2px solid rgb(117, 0, 128) transparent;
   width: 100%;
   /* overflow: auto; */
-  position: absolute;
+  position: relative;
   transition: 0.5s;
 
   .category {
@@ -111,20 +111,20 @@ body {
   .selected {
     height: 40%;
     font-size: 1.6em;
-    background: rgba(59, 54, 38, 0.4);
+   /*  background: rgba(59, 54, 38, 0.4); */
   }
 
-/*   .bgr {
-    position: fixed;
-    top: 10px;
+  .bgr {
+    position: absolute;
+    top: 0px;
     width: 100%;
     height: 40%;
     background: rgba(59, 54, 38, 0.2);
     transition: 0.3s;
-    display: none;
+  /*   display: none; */
     backdrop-filter: blur(5px);
     z-index: 1;
-  } */
+  }
 }
 
 .changeCategories{

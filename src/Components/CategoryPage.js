@@ -96,7 +96,7 @@ var CategoryPage = /** @class */ (function () {
             setSelected();
         });
         menu.addEventListener('click', function (event) { return __awaiter(_this, void 0, void 0, function () {
-            var el, url;
+            var el, h, url;
             return __generator(this, function (_a) {
                 el = event.target;
                 if (el.tagName !== 'H1') {
@@ -114,19 +114,24 @@ var CategoryPage = /** @class */ (function () {
                     parentH1.classList.remove('selected');
                     sub.setAttribute('style', 'display: none');
                 }
+                h = parentH1.offsetHeight / 2;
                 parentH1 = el.parentElement;
                 sub = parentH1.lastElementChild;
                 url = category[Number(sub.id.slice(3))].img;
                 main.setAttribute("style", "background-image: url(" + url + ")");
                 setSelected();
+                if (parentH1.classList.contains('first')) {
+                    bgr.setAttribute('style', "display: inline; top: " + (parentH1.offsetTop) + "px;");
+                }
+                else {
+                    bgr.setAttribute('style', "display: inline; top: " + (parentH1.offsetTop - h) + "px;");
+                }
                 return [2 /*return*/];
             });
         }); });
         function setSelected() {
             parentH1.classList.add('selected');
-            var topBgr = menu.offsetTop + parentH1.offsetTop;
             sub.setAttribute('style', 'display: block');
-            bgr.setAttribute('style', "display: inline; top: " + topBgr + "px;");
         }
         var up = document.querySelector('.up');
         var down = document.querySelector('.down');
@@ -147,6 +152,7 @@ var CategoryPage = /** @class */ (function () {
             });
             var url = category[block4].img;
             main.setAttribute("style", "background-image: url(" + url + ")");
+            bgr.setAttribute('style', "display: inline; top: " + arrCategories[block4].offsetTop + "px;");
             pos += 441;
             menu.style.marginTop = pos + 'px';
             /* alert(menu.offsetTop); */
@@ -171,6 +177,8 @@ var CategoryPage = /** @class */ (function () {
             block4 += 4;
             var url = category[block4].img;
             main.setAttribute("style", "background-image: url(" + url + ")");
+            /*       alert(arrCategories[block4].offsetTop); */
+            bgr.setAttribute('style', "display: inline; top: " + arrCategories[block4].offsetTop + "px;");
             pos -= 441;
             menu.style.marginTop = pos + 'px';
         });
