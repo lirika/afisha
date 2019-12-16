@@ -96,7 +96,7 @@ var CategoryPage = /** @class */ (function () {
             setSelected();
         });
         menu.addEventListener('click', function (event) { return __awaiter(_this, void 0, void 0, function () {
-            var el, h, url;
+            var el, h, prev, url;
             return __generator(this, function (_a) {
                 el = event.target;
                 if (el.tagName !== 'H1') {
@@ -115,12 +115,13 @@ var CategoryPage = /** @class */ (function () {
                     sub.setAttribute('style', 'display: none');
                 }
                 h = parentH1.offsetHeight / 2;
+                prev = parentH1;
                 parentH1 = el.parentElement;
                 sub = parentH1.lastElementChild;
                 url = category[Number(sub.id.slice(3))].img;
                 main.setAttribute("style", "background-image: url(" + url + ")");
                 setSelected();
-                if (parentH1.classList.contains('first')) {
+                if (parentH1.classList.contains('first') || parentH1.offsetTop <= prev.offsetTop) {
                     bgr.setAttribute('style', "display: inline; top: " + (parentH1.offsetTop) + "px;");
                 }
                 else {

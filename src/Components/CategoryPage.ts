@@ -84,7 +84,7 @@ export default class CategoryPage {
 
       let h = parentH1.offsetHeight/2;
 
-
+      let prev = parentH1;
       parentH1 = el.parentElement;
       sub = parentH1.lastElementChild;
 
@@ -94,7 +94,7 @@ export default class CategoryPage {
       main.setAttribute(`style`, `background-image: url(${url})`);
       setSelected();
 
-      if(parentH1.classList.contains('first')){
+      if(parentH1.classList.contains('first') || parentH1.offsetTop <= prev.offsetTop){
         bgr.setAttribute('style', `display: inline; top: ${(parentH1.offsetTop)}px;`);
       }
       else{
