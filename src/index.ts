@@ -1,5 +1,6 @@
 import renderCategoryPage from './services/renderCategoryPage';
 import renderEventsPage from './services/renderEventsPage';
+import renderBuyPage from './services/renderBuyPage';
 
 window.addEventListener('load', init);
 
@@ -12,6 +13,7 @@ const root = document.querySelector('#root') as HTMLDivElement;
 
 root.addEventListener('click', async event => {
   let target = event.target as HTMLElement;
+
   switch(target.className){
 
     case 'subcategoryHomePage':
@@ -22,6 +24,10 @@ root.addEventListener('click', async event => {
 
     case 'item homePage': 
       init();
+      break;
+
+    case 'button buy':
+     renderBuyPage()
       break;
   }
 });
