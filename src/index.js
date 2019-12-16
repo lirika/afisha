@@ -37,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var renderCategoryPage_1 = require("./services/renderCategoryPage");
-var renderEventsPage_1 = require("./services/renderEventsPage");
 window.addEventListener('load', init);
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -52,29 +51,18 @@ function init() {
     });
 }
 var root = document.querySelector('#root');
-root.addEventListener('click', function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var target, _a, subIdStr;
-    return __generator(this, function (_b) {
-        switch (_b.label) {
-            case 0:
-                target = event.target;
-                _a = target.className;
-                switch (_a) {
-                    case 'subcategoryHomePage': return [3 /*break*/, 1];
-                    case 'item homePage': return [3 /*break*/, 3];
-                }
-                return [3 /*break*/, 4];
-            case 1:
-                subIdStr = target.id.slice(4);
-                root.innerHTML = "";
-                return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
-            case 2:
-                _b.sent();
-                return [3 /*break*/, 4];
-            case 3:
-                init();
-                return [3 /*break*/, 4];
-            case 4: return [2 /*return*/];
-        }
-    });
-}); });
+/* root.addEventListener('click', async event => {
+  let target = event.target as HTMLElement;
+  switch(target.className){
+
+    case 'subcategoryHomePage':
+      let subIdStr:string = target.id.slice(4);
+      root.innerHTML = ``;
+      await renderEventsPage(subIdStr, target.innerHTML);
+      break;
+
+    case 'item homePage':
+      init();
+      break;
+  }
+}); */

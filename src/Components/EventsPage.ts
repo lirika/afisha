@@ -119,7 +119,7 @@ export default class EventsPage {
     let liArray :any = ul.children;
 
     (function buttonsVisibility(){
-      if(events.length > 5){
+      if(events.length >= 5){
         visibility('visible');
       }else{
         if(isNot4InRow()){
@@ -131,6 +131,9 @@ export default class EventsPage {
               visibility('visible');
           }
           else{
+            if(ul.offsetTop < 0){
+              ul.style.marginTop = 0 + 'px';
+            }
             visibility('hidden');
           }
         });
@@ -263,7 +266,7 @@ export default class EventsPage {
     let position: number = 0;
 
     prev.addEventListener('click', event => {
-      if (ul.offsetTop > 0) {
+      if (ul.offsetTop > 0 || ul.offsetTop > -188) {
         return;
       }
       position += 190;

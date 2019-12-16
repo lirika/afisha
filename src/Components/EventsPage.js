@@ -85,7 +85,7 @@ var EventsPage = /** @class */ (function () {
         var btnDown = document.querySelector('.next');
         var liArray = ul.children;
         (function buttonsVisibility() {
-            if (events.length > 5) {
+            if (events.length >= 5) {
                 visibility('visible');
             }
             else {
@@ -97,6 +97,9 @@ var EventsPage = /** @class */ (function () {
                         visibility('visible');
                     }
                     else {
+                        if (ul.offsetTop < 0) {
+                            ul.style.marginTop = 0 + 'px';
+                        }
                         visibility('hidden');
                     }
                 });
@@ -198,7 +201,7 @@ var EventsPage = /** @class */ (function () {
         });
         var position = 0;
         prev.addEventListener('click', function (event) {
-            if (ul.offsetTop > 0) {
+            if (ul.offsetTop > 0 || ul.offsetTop > -188) {
                 return;
             }
             position += 190;

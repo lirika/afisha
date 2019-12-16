@@ -44,14 +44,19 @@ var CategoryPage = /** @class */ (function () {
     CategoryPage.prototype.renderCategory = function (category) {
         var _this = this;
         var root = document.querySelector('#root');
-        root.innerHTML = "<div class=\"main\">\n                        <div class=\"menu\">\n                          <div class=\"bgr\"></div>\n                        </div>\n                      </div>";
+        root.innerHTML = "<div class=\"main\">\n                        <div class=\"menu-wrap\">\n                          <div class=\"menu\">\n                            <div class=\"bgr\"></div>\n                          </div>\n                        </div>\n                        <div class=\"changeCategories up\"></div>\n                        <div class=\"changeCategories down\"></div>\n                      </div>";
         var menu = document.querySelector('.menu');
         var Category = new DataService_1["default"]();
+        var first = 0;
         category.forEach(function (item, id) { return __awaiter(_this, void 0, void 0, function () {
             var categoryItem;
             return __generator(this, function (_a) {
                 categoryItem = document.createElement('div');
                 categoryItem.classList.add('category');
+                if (first === id) {
+                    categoryItem.classList.add('first');
+                    first += 4;
+                }
                 categoryItem.innerHTML = "\n          <h1>" + item.title + "</h1>\n          <div class=\"subcategories\" id=\"sub" + id + "\"></div>";
                 menu.appendChild(categoryItem);
                 return [2 /*return*/];
@@ -77,18 +82,35 @@ var CategoryPage = /** @class */ (function () {
                 });
             }); })();
         });
-        var parentH1;
-        var sub;
+        /*  const parentH1;
+         const sub; */
         var bgr = document.querySelector('.bgr');
         var main = document.querySelector('.main');
+        var wrap = document.querySelector('.menu-wrap');
+        var parentH1;
+        var sub;
+        var firstCategories = document.querySelectorAll('.first');
+        firstCategories.forEach(function (firstElement) {
+            parentH1 = firstElement;
+            sub = firstElement.lastElementChild;
+            setSelected();
+        });
         menu.addEventListener('click', function (event) { return __awaiter(_this, void 0, void 0, function () {
-            var el, Cat, url, topBgr;
+            var el, Cat, url;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         el = event.target;
                         if (el.tagName !== 'H1') {
                             return [2 /*return*/];
+                        }
+                        if (parentH1.classList.contains("first")) {
+                            firstCategories.forEach(function (frst) {
+                                if (frst.offsetTop < el.offsetTop) {
+                                    parentH1 = frst;
+                                    sub = frst.lastElementChild;
+                                }
+                            });
                         }
                         if (parentH1) {
                             parentH1.classList.remove('selected');
@@ -101,14 +123,54 @@ var CategoryPage = /** @class */ (function () {
                         Cat = _a.sent();
                         url = Cat[Number(sub.id.slice(3))].img;
                         main.setAttribute("style", "background-image: url(" + url + ")");
-                        parentH1.classList.add('selected');
-                        topBgr = menu.offsetTop + parentH1.offsetTop;
-                        sub.setAttribute('style', 'display: block');
-                        bgr.setAttribute('style', " display: inline;\n                                  top: " + topBgr + "px;");
+                        setSelected();
                         return [2 /*return*/];
                 }
             });
         }); });
+        function setSelected() {
+            parentH1.classList.add('selected');
+            var topBgr = menu.offsetTop + parentH1.offsetTop;
+            sub.setAttribute('style', 'display: block');
+            bgr.setAttribute('style', "display: inline; top: " + topBgr + "px;");
+        }
+        var up = document.querySelector('.up');
+        var down = document.querySelector('.down');
+        var arrCategories = document.querySelectorAll('.category');
+        var pos = 0;
+        up.addEventListener('click', function (event) {
+            if (menu.offsetTop > -1 || menu.offsetTop > -351) {
+                return;
+            }
+            parentH1.classList.remove('selected');
+            sub.setAttribute('style', 'display: none');
+            firstCategories.forEach(function (firstElement) {
+                parentH1 = firstElement;
+                sub = firstElement.lastElementChild;
+                setSelected();
+            });
+            pos += 351;
+            menu.style.marginTop = pos + 'px';
+            /* alert(menu.offsetTop); */
+        });
+        down.addEventListener('click', function (event) {
+            var allHeight = 0;
+            arrCategories.forEach(function (el) {
+                allHeight += el.offsetHeight;
+            });
+            if (menu.offsetTop < -allHeight + 556) {
+                return;
+            }
+            parentH1.classList.remove('selected');
+            sub.setAttribute('style', 'display: none');
+            firstCategories.forEach(function (firstElement) {
+                parentH1 = firstElement;
+                sub = firstElement.lastElementChild;
+                setSelected();
+            });
+            pos -= 351;
+            menu.style.marginTop = pos + 'px';
+        });
     };
     return CategoryPage;
 }());
