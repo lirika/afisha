@@ -5,29 +5,30 @@ import renderBuyPage from './services/renderBuyPage';
 window.addEventListener('load', init);
 
 async function init() {
-  await renderCategoryPage();
-/* await renderEventsPage(1, "classic"); */
+    await renderCategoryPage();
+    /* await renderEventsPage(1, "classic"); */
 }
 
 const root = document.querySelector('#root') as HTMLDivElement;
 
 root.addEventListener('click', async event => {
-  let target = event.target as HTMLElement;
+    let target = event.target as HTMLElement;
 
-  switch(target.className){
+    switch (target.className) {
 
-    case 'subcategoryHomePage':
-      let subIdStr:string = target.id.slice(4);
-      root.innerHTML = ``;
-      await renderEventsPage(subIdStr, target.innerHTML);
-      break;
+        case 'subcategoryHomePage':
+            let subIdStr: string = target.id.slice(4);
+            root.innerHTML = ``;
+            await renderEventsPage(subIdStr, target.innerHTML);
+            break;
 
-    case 'item homePage': 
-      init();
-      break;
+        case 'item homePage':
+            init();
+            break;
 
-    case 'button buy':
-     renderBuyPage()
-      break;
-  }
+        case 'button buy':
+            let buttonBuyId: string = target.id.slice(3)
+            await renderBuyPage(buttonBuyId)
+            break;
+    }
 });

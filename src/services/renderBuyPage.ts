@@ -1,8 +1,9 @@
 import BuyPop from "../Components/BuyPop"
+import DataService from "./DataService";
 
-export default function renderBuyPage() {
+export default async function renderBuyPage() {
     var child: HTMLElement = document.createElement("DIV")
-    child.innerHTML = `<p>This is Buy Page</p>
+    child.innerHTML = `<p>Some text</p>
            <p>Some Text</p>
            <button type="submit">Submit</button>
         `
