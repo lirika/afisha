@@ -133,7 +133,6 @@ body {
 .changeCategories:hover {
   border-color: white;
   cursor: pointer;
-  right: 10px;
   width: 30px;
   height: 30px;
   border-width: 0 7px 7px 0;

@@ -3,6 +3,8 @@ import '../styles/events.css';
 export default class EventsPage {
   renderEventsList(events: T[], subTitle:string) {
     const defaultItem = events[0];
+
+    document.body.style.background = `linear-gradient(to bottom, rgba(0,0,0,.0), rgba(0,0,0,.99) 75%),linear-gradient(to top,  rgba(0,0,0,.0), rgba(0,0,0,.5) 90%)`;
     /////// set base Background ////
     const defaultBg = events[0].img;
     /////// set base Template //////
