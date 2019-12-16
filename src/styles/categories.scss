@@ -43,6 +43,7 @@ body {
   background: $backgroundMusic no-repeat center;
   background-size: cover;
   position: relative;
+
   color: $contentColor;
   transition: 0.5s;
 }
@@ -51,27 +52,28 @@ body {
   margin-top: 30vh;
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(19, 0, 128) transparent;
+    border: 2px solid rgb(19, 0, 128);
   width: 100%;
-  height: 537px;
+  height: 450px;
   position: absolute;
   overflow: hidden;
 }
 
 .menu{
   margin-top: 0px;
-  height: 50vh;
-  border: 2px solid rgb(117, 0, 128) transparent;
+  height: 445px;
+  border: 2px solid rgb(117, 0, 128) ;
   width: 100%;
   /* overflow: auto; */
   position: absolute;
   transition: 0.5s;
 
   .category {
-        border: 1px solid rgb(177, 177, 50) transparent;
+        border: 1px solid rgb(177, 177, 50);
     text-transform: uppercase;
     height: 20%;
 
+    margin-top: 0;
     text-align: center;
     flex-direction: column;
     display: flex;
@@ -87,6 +89,7 @@ body {
     margin-bottom: 10px;
     transition: 0.2s;
     cursor: pointer;
+    z-index: 2;
   }
 
   .category .subcategories {
@@ -96,6 +99,7 @@ body {
     padding-top: 0px;
 
     width: 90%;
+    z-index: 2;
 
     span {
       /*      border: 1px solid red; */
@@ -109,14 +113,15 @@ body {
     font-size: 1.6em;
   }
 
-/*   .bgr {
-    position: fixed;
+ /*  .bgr {
+    position: absolute;
     width: 100%;
-    height: 22%;
+    height: 40%;
     background: rgba(59, 54, 38, 0.2);
     transition: 0.3s;
     display: none;
     backdrop-filter: blur(5px);
+    z-index: 1;
   } */
 }
 
@@ -128,15 +133,15 @@ body {
   cursor: pointer;
   width: 20px;
   height: 20px;
-  margin-right: 48.5vw;
+  margin-left: 49vw;
 
   border: solid rgba(255, 255, 255, 0.6);
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 3px;
-  right: 15px;
- 
-  transition: 0.3s;
+
+  transition-property: border-color, right, width, height, border-width;
+  transition-duration: 0.3s;
 }
 
 .changeCategories:focus{

@@ -61,7 +61,7 @@ export default class CategoryPage {
       setSelected();
     });
 
-    menu.addEventListener('click', async event => {
+    menu.addEventListener('click', async(event) => {
       const el = event.target;
 
       if (el.tagName !== 'H1') {
@@ -85,8 +85,8 @@ export default class CategoryPage {
       parentH1 = el.parentElement;
       sub = parentH1.lastElementChild;
 
-      const Cat: T[] = await Category.getCategory();
-      const url = Cat[Number(sub.id.slice(3))].img;
+ /*      const Cat: T[] = await Category.getCategory(); */
+      const url = category[Number(sub.id.slice(3))].img;
 
       main.setAttribute(`style`, `background-image: url(${url})`);
       setSelected();
@@ -108,7 +108,7 @@ export default class CategoryPage {
 
 
     up.addEventListener('click', event => {
-      if (menu.offsetTop > -1 || menu.offsetTop > -351) {
+      if (menu.offsetTop > -1 || menu.offsetTop > -441) {
         return;
       }
 
@@ -121,13 +121,18 @@ export default class CategoryPage {
         setSelected();
       });
       
-      pos += 351;
+      pos += 441;
       menu.style.marginTop = pos + 'px';
       /* alert(menu.offsetTop); */
     });
 
+
+
     down.addEventListener('click', event => {
       let allHeight:number = 0;
+/*
+      alert(sub); */
+
       arrCategories.forEach((el) => {
         allHeight += el.offsetHeight;
       });
@@ -144,7 +149,7 @@ export default class CategoryPage {
         setSelected();
       });
 
-      pos -= 355;
+      pos -= 441;
       menu.style.marginTop = pos + 'px';
     }); 
   }

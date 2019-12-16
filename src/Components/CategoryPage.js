@@ -96,36 +96,30 @@ var CategoryPage = /** @class */ (function () {
             setSelected();
         });
         menu.addEventListener('click', function (event) { return __awaiter(_this, void 0, void 0, function () {
-            var el, Cat, url;
+            var el, url;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        el = event.target;
-                        if (el.tagName !== 'H1') {
-                            return [2 /*return*/];
-                        }
-                        if (parentH1.classList.contains("first")) {
-                            firstCategories.forEach(function (frst) {
-                                if (frst.offsetTop < el.offsetTop) {
-                                    parentH1 = frst;
-                                    sub = frst.lastElementChild;
-                                }
-                            });
-                        }
-                        if (parentH1) {
-                            parentH1.classList.remove('selected');
-                            sub.setAttribute('style', 'display: none');
-                        }
-                        parentH1 = el.parentElement;
-                        sub = parentH1.lastElementChild;
-                        return [4 /*yield*/, Category.getCategory()];
-                    case 1:
-                        Cat = _a.sent();
-                        url = Cat[Number(sub.id.slice(3))].img;
-                        main.setAttribute("style", "background-image: url(" + url + ")");
-                        setSelected();
-                        return [2 /*return*/];
+                el = event.target;
+                if (el.tagName !== 'H1') {
+                    return [2 /*return*/];
                 }
+                if (parentH1.classList.contains("first")) {
+                    firstCategories.forEach(function (frst) {
+                        if (frst.offsetTop < el.offsetTop) {
+                            parentH1 = frst;
+                            sub = frst.lastElementChild;
+                        }
+                    });
+                }
+                if (parentH1) {
+                    parentH1.classList.remove('selected');
+                    sub.setAttribute('style', 'display: none');
+                }
+                parentH1 = el.parentElement;
+                sub = parentH1.lastElementChild;
+                url = category[Number(sub.id.slice(3))].img;
+                main.setAttribute("style", "background-image: url(" + url + ")");
+                setSelected();
+                return [2 /*return*/];
             });
         }); });
         function setSelected() {
@@ -139,7 +133,7 @@ var CategoryPage = /** @class */ (function () {
         var arrCategories = document.querySelectorAll('.category');
         var pos = 0;
         up.addEventListener('click', function (event) {
-            if (menu.offsetTop > -1 || menu.offsetTop > -351) {
+            if (menu.offsetTop > -1 || menu.offsetTop > -441) {
                 return;
             }
             parentH1.classList.remove('selected');
@@ -149,12 +143,14 @@ var CategoryPage = /** @class */ (function () {
                 sub = firstElement.lastElementChild;
                 setSelected();
             });
-            pos += 351;
+            pos += 441;
             menu.style.marginTop = pos + 'px';
             /* alert(menu.offsetTop); */
         });
         down.addEventListener('click', function (event) {
             var allHeight = 0;
+            /*
+                  alert(sub); */
             arrCategories.forEach(function (el) {
                 allHeight += el.offsetHeight;
             });
@@ -168,7 +164,7 @@ var CategoryPage = /** @class */ (function () {
                 sub = firstElement.lastElementChild;
                 setSelected();
             });
-            pos -= 351;
+            pos -= 441;
             menu.style.marginTop = pos + 'px';
         });
     };
