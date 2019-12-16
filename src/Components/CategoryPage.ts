@@ -146,7 +146,7 @@ export default class CategoryPage {
         setSelected();
       });
 
-      pos -= 351;
+      pos -= 355;
       menu.style.marginTop = pos + 'px';
     }); 
   }

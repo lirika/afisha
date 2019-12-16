@@ -45,9 +45,6 @@ var EventsPage = /** @class */ (function () {
         var defaultItem = events[0];
         /////// set base Background ////
         var defaultBg = events[0].img;
-        document.body.style.background = "linear-gradient(to bottom, transparent, rgba(0,0,0,.99) 75%), linear-gradient(to top, transparent, rgba(0,0,0,.5) 90%) ,url(" + defaultBg + ")";
-        document.body.style.backgroundRepeat = 'no-repeat';
-        document.body.style.backgroundSize = 'cover';
         /////// set base Template //////
         if (defaultItem.online) {
             var defaultDate = "<div class=\"data-time-location\">" + defaultItem.date + "</div>";
@@ -59,12 +56,15 @@ var EventsPage = /** @class */ (function () {
         }
         var defaultTemplate = "\n                         <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + defaultItem.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + defaultItem.genre + "\n                          </div>\n                           " + defaultDate + "\n                     </div>\n                      <div class=\"button-all\">\n                      " + defaultButtons + "\n</div>\n        ";
         var root = document.querySelector('#root');
-        root.innerHTML = " \n    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item active\">" + subTitle + "</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item\">DONATE</div>\n        </div>\n      </div>\n    </header>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n      " + defaultTemplate + "\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n            </ul>\n        </div>\n        \n        <div class=\"arrow prev\"></div>\n        <div class=\"arrow next\"></div>\n    </div>\n    ";
+        root.innerHTML = " \n    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item active\">" + subTitle + "</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item\">DONATE</div>\n        </div>\n      </div>\n    </header>\n    <div class=\"screen\"><img src=" + defaultBg + "  alt=img class=\"bg-event-img\" style=\"display: block; width: 100%; height: 100%\"></div>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n      " + defaultTemplate + "\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n            </ul>\n        </div>\n        \n        <div class=\"arrow prev\"></div>\n        <div class=\"arrow next\"></div>\n    </div>\n    ";
         ////////////////////// code for load data to blocks /////////////////////////
         var ul = document.querySelector('.wrap-items ul');
+        ////// save bg images in wrapper////
+        var screen = document.querySelector('.screen');
         events.forEach(function (event) {
             var liHTMLelem = document.createElement('li');
             liHTMLelem.id = "li" + event.id;
+            liHTMLelem.classList.add('event-item');
             var liContent = "<div class=\"event-type\">";
             if (event.hasOwnProperty("place")) {
                 liContent += "<div class=\"colorStatus\">" + event.status + "</div>";
@@ -77,6 +77,7 @@ var EventsPage = /** @class */ (function () {
                 liContent += "<div class=\"place-time\">" + event.time + ", " + event.place + "</div>";
             }
             liContent += "</div>";
+            liContent += "<img class=\"bg-event-img\" alt=img src=" + event.img + ">";
             liHTMLelem.innerHTML = liContent;
             ul.appendChild(liHTMLelem);
         });
@@ -165,10 +166,7 @@ var EventsPage = /** @class */ (function () {
             burgerHide();
         });
         //events items
-        // const count: number = 4;
-        var infoWrap = document.querySelector('.info');
-        // const wrap = document.querySelector('.wrap-items') as HTMLDivElement;
-        // const items = document.querySelector('.items') as HTMLDivElement;
+        var infoWrap = document.querySelector('.event-info');
         var listLi = document.querySelectorAll('.events li');
         var prev = document.querySelector('.prev');
         var next = document.querySelector('.next');
@@ -180,11 +178,9 @@ var EventsPage = /** @class */ (function () {
                     scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
                     information = events[Number(li.id.slice(2))];
                     urlImg = events[Number(li.id.slice(2))].img;
-                    document.body.style.background = "linear-gradient(to bottom, transparent, rgba(0,0,0,.99) 75%),linear-gradient(to top, transparent, rgba(0,0,0,.5) 90%) , url(" + urlImg + ")";
-                    document.body.style.backgroundRepeat = 'no-repeat';
-                    document.body.style.backgroundSize = 'cover';
+                    screen.innerHTML = "<img src=" + urlImg + " alt=img class=\"bg-event-img\" style=\"display: block; width: 100%; height: 100%\">";
                     /////// Change info by click on event item///////////
-                    infoWrap.innerHTML = "\n                       <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + information.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + information.genre + "\n                          </div>\n                           <div class=\"data-time-location\">\n                              " + information.time + ", " + information.place + "<br>\n                              " + information.date + "\n                            </div>\n                     </div>\n                      <div class=\"button-all\"></div>\n                ";
+                    infoWrap.innerHTML = "\n                      <div class=\"info\">\n                       <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + information.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + information.genre + "\n                          </div>\n                           <div class=\"data-time-location\">\n                              " + information.time + ", " + information.place + "<br>\n                              " + information.date + "\n                            </div>\n                     </div>\n                      <div class=\"button-all\"></div>\n</div>\n                ";
                     dateWrap = document.querySelector('.data-time-location');
                     buttonWrapper = document.querySelector('.button-all');
                     if (information.online) {

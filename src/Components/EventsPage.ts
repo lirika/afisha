@@ -3,15 +3,9 @@ import '../styles/events.css';
 export default class EventsPage {
   renderEventsList(events: T[], subTitle:string) {
     const defaultItem = events[0];
-
     /////// set base Background ////
     const defaultBg = events[0].img;
-    document.body.style.background = `linear-gradient(to bottom, transparent, rgba(0,0,0,.99) 75%), linear-gradient(to top, transparent, rgba(0,0,0,.5) 90%) ,url(${defaultBg})`;
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundSize = 'cover';
-
     /////// set base Template //////
-
     if (defaultItem.online) {
       var defaultDate = `<div class="data-time-location">${defaultItem.date}</div>`;
       var defaultButtons = `<div class="button watch">Watch now</div>`;
@@ -58,6 +52,7 @@ export default class EventsPage {
         </div>
       </div>
     </header>
+    <div class="screen"><img src=${defaultBg}  alt=img class="bg-event-img" style="display: block; width: 100%; height: 100%"></div>
 
     <div class="event-info">
       <div class="info">
@@ -83,34 +78,43 @@ export default class EventsPage {
 
     ////////////////////// code for load data to blocks /////////////////////////
     const ul = document.querySelector('.wrap-items ul') as HTMLUListElement;
+
+    ////// save bg images in wrapper////
+
+    const screen = document.querySelector('.screen')
+
+
+
     events.forEach((event) => {
       let liHTMLelem = document.createElement('li');
       liHTMLelem.id = `li${event.id}`;
+      liHTMLelem.classList.add('event-item')
       let liContent :string = `<div class="event-type">`;
-  
       if(event.hasOwnProperty("place")){
         liContent += `<div class="colorStatus">${event.status}</div>`;
-      }   
+      }
       else{
         liContent += `<div class="circle"></div>${event.status}`;
-      }                        
-  
+      }
+
       liContent +=`</div>
                     <div class="event-description">
                     <b>${event.title}</b><br>${event.genre}
                     </div>
                     <div class="event-date">
                     <div class="date">${event.date}</div>`;
-  
+
      if(event.hasOwnProperty("place")){
       liContent += `<div class="place-time">${event.time}, ${event.place}</div>`;
      }
-                  
+
      liContent +=  `</div>`;
-  
+     liContent += `<img class="bg-event-img" alt=img src=${event.img}>`
+
       liHTMLelem.innerHTML = liContent;
       ul.appendChild(liHTMLelem);
     });
+
 
 /////////////////  buttons visibility  /////////////////
 
@@ -139,7 +143,7 @@ export default class EventsPage {
         });
       }
     })();
-    
+
     function isNot4InRow():boolean{
       let b:boolean = false;
 
@@ -155,7 +159,7 @@ export default class EventsPage {
       btnUp.style.visibility = val;
       btnDown.style.visibility = val;
     }
- 
+
     //////////////////////////////////
 
     const burger = document.getElementById('burger') as HTMLDivElement;
@@ -212,27 +216,24 @@ export default class EventsPage {
 
     //events items
 
-    // const count: number = 4;
-    const infoWrap = document.querySelector('.info') as HTMLDivElement;
-    // const wrap = document.querySelector('.wrap-items') as HTMLDivElement;
-    // const items = document.querySelector('.items') as HTMLDivElement;
+    const infoWrap = document.querySelector('.event-info') as HTMLDivElement;
     const listLi = document.querySelectorAll<HTMLElement>('.events li');
     const prev = document.querySelector('.prev') as HTMLButtonElement;
     const next = document.querySelector('.next') as HTMLButtonElement;
-
     const scrollThumb = document.querySelector('.scroll-thumb') as HTMLDivElement;
+
+
     listLi.forEach(li => {
       li.addEventListener('click', async event => {
         scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
         let information = events[Number(li.id.slice(2))];
         let urlImg = events[Number(li.id.slice(2))].img;
-        document.body.style.background = `linear-gradient(to bottom, transparent, rgba(0,0,0,.99) 75%),linear-gradient(to top, transparent, rgba(0,0,0,.5) 90%) , url(${urlImg})`;
-        document.body.style.backgroundRepeat = 'no-repeat';
-        document.body.style.backgroundSize = 'cover';
+        screen.innerHTML = `<img src=${urlImg} alt=img class="bg-event-img" style="display: block; width: 100%; height: 100%">`
 
         /////// Change info by click on event item///////////
 
         infoWrap.innerHTML = `
+                      <div class="info">
                        <div class="main-info">
                           <div class="title">
                             ${information.title}
@@ -246,6 +247,7 @@ export default class EventsPage {
                             </div>
                      </div>
                       <div class="button-all"></div>
+</div>
                 `;
         const dateWrap = document.querySelector('.data-time-location') as HTMLDivElement;
         const buttonWrapper = document.querySelector('.button-all') as HTMLDivElement;

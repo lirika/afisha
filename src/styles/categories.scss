@@ -43,7 +43,6 @@ body {
   background: $backgroundMusic no-repeat center;
   background-size: cover;
   position: relative;
-
   color: $contentColor;
   transition: 0.5s;
 }
@@ -52,9 +51,9 @@ body {
   margin-top: 30vh;
   display: flex;
   flex-direction: column;
-    border: 2px solid rgb(19, 0, 128) transparent;
+  border: 2px solid rgb(19, 0, 128) transparent;
   width: 100%;
-  height: 50vh;
+  height: 537px;
   position: absolute;
   overflow: hidden;
 }
