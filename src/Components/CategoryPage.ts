@@ -126,8 +126,6 @@ export default class CategoryPage {
       /* alert(menu.offsetTop); */
     });
 
-
-
     down.addEventListener('click', event => {
       let allHeight:number = 0;
       arrCategories.forEach((el) => {
