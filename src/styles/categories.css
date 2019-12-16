@@ -44,7 +44,7 @@ body {
   margin-top: 30vh;
   display: flex;
   flex-direction: column;
-  border: 2px solid #130080;
+  border: 2px solid #130080 transparent;
   width: 100%;
   height: 450px;
   position: absolute;
@@ -54,24 +54,25 @@ body {
 .menu {
   margin-top: 0px;
   height: 445px;
-  border: 2px solid #750080;
+  border: 2px solid #750080 transparent;
   width: 100%;
   /* overflow: auto; */
   position: absolute;
   transition: 0.5s;
-  /*  .bgr {
-     position: absolute;
-     width: 100%;
-     height: 40%;
-     background: rgba(59, 54, 38, 0.2);
-     transition: 0.3s;
-     display: none;
-     backdrop-filter: blur(5px);
-     z-index: 1;
-   } */
+  /*   .bgr {
+      position: fixed;
+      top: 10px;
+      width: 100%;
+      height: 40%;
+      background: rgba(59, 54, 38, 0.2);
+      transition: 0.3s;
+      display: none;
+      backdrop-filter: blur(5px);
+      z-index: 1;
+    } */
 }
 .menu .category {
-  border: 1px solid #b1b132;
+  border: 1px solid #b1b132 transparent;
   text-transform: uppercase;
   height: 20%;
   margin-top: 0;
@@ -107,6 +108,7 @@ body {
 .menu .selected {
   height: 40%;
   font-size: 1.6em;
+  background: rgba(59, 54, 38, 0.4);
 }
 
 .changeCategories {

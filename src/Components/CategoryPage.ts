@@ -104,13 +104,15 @@ export default class CategoryPage {
     const down = document.querySelector('.down') as HTMLDivElement;
     const arrCategories = document.querySelectorAll('.category');
     let pos: number = 0;
-
+    let block4 :number = 0;
 
 
     up.addEventListener('click', event => {
       if (menu.offsetTop > -1 || menu.offsetTop > -441) {
         return;
       }
+
+      block4 -= 4;
 
       parentH1.classList.remove('selected');
       sub.setAttribute('style', 'display: none');
@@ -121,6 +123,9 @@ export default class CategoryPage {
         setSelected();
       });
       
+      let url = category[block4].img;
+      main.setAttribute(`style`, `background-image: url(${url})`);
+
       pos += 441;
       menu.style.marginTop = pos + 'px';
       /* alert(menu.offsetTop); */
@@ -140,6 +145,7 @@ export default class CategoryPage {
       if (menu.offsetTop < -allHeight + 556) {
         return;
       }
+
       parentH1.classList.remove('selected');
       sub.setAttribute('style', 'display: none');
       
@@ -148,6 +154,10 @@ export default class CategoryPage {
         sub = firstElement.lastElementChild;
         setSelected();
       });
+
+      block4 += 4;
+      let url = category[block4].img;
+      main.setAttribute(`style`, `background-image: url(${url})`);
 
       pos -= 441;
       menu.style.marginTop = pos + 'px';

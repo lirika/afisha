@@ -132,10 +132,12 @@ var CategoryPage = /** @class */ (function () {
         var down = document.querySelector('.down');
         var arrCategories = document.querySelectorAll('.category');
         var pos = 0;
+        var block4 = 0;
         up.addEventListener('click', function (event) {
             if (menu.offsetTop > -1 || menu.offsetTop > -441) {
                 return;
             }
+            block4 -= 4;
             parentH1.classList.remove('selected');
             sub.setAttribute('style', 'display: none');
             firstCategories.forEach(function (firstElement) {
@@ -143,6 +145,8 @@ var CategoryPage = /** @class */ (function () {
                 sub = firstElement.lastElementChild;
                 setSelected();
             });
+            var url = category[block4].img;
+            main.setAttribute("style", "background-image: url(" + url + ")");
             pos += 441;
             menu.style.marginTop = pos + 'px';
             /* alert(menu.offsetTop); */
@@ -164,6 +168,9 @@ var CategoryPage = /** @class */ (function () {
                 sub = firstElement.lastElementChild;
                 setSelected();
             });
+            block4 += 4;
+            var url = category[block4].img;
+            main.setAttribute("style", "background-image: url(" + url + ")");
             pos -= 441;
             menu.style.marginTop = pos + 'px';
         });
