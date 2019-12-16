@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 require("../styles/buyPop.css");
+//
 var BuyPop = /** @class */ (function () {
     function BuyPop(child) {
         this.destroyBoundWithThis = this.destroy.bind(this);

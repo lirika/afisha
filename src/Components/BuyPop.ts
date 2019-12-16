@@ -1,5 +1,5 @@
 import '../styles/buyPop.css';
-
+//
 export default class BuyPop {
     hostElement: HTMLElement
     destroyBoundWithThis = this.destroy.bind(this)

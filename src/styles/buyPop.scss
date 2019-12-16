@@ -9,4 +9,17 @@
   width: 500px;
   height: 400px;
   padding: 20px;
+  animation: .5s ease-in slideInDown;
+}
+
+
+@keyframes slideInDown {
+  from {
+    transform: translate(-50%, -150%);
+    visibility: visible;
+  }
+
+  to {
+      transform: translate(-50%,-50%);
+  }
 }

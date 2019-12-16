@@ -2,7 +2,7 @@ import '../styles/events.css';
 
 export default class EventsPage {
   renderEventsList(events: T[], subTitle:string) {
-    const defaultItem = events[0];
+    const defaultItem = events[0]
 
     document.body.style.background = `linear-gradient(to bottom, rgba(0,0,0,.0), rgba(0,0,0,.99) 75%),linear-gradient(to top,  rgba(0,0,0,.0), rgba(0,0,0,.5) 90%)`;
     /////// set base Background ////
@@ -10,15 +10,15 @@ export default class EventsPage {
     /////// set base Template //////
     if (defaultItem.online) {
       var defaultDate = `<div class="data-time-location">${defaultItem.date}</div>`;
-      var defaultButtons = `<div class="button watch">Watch now</div>`;
+      var defaultButtons = `<div id="watch${events[0].id}" class="button watch">Watch now</div>`;
     } else {
       defaultDate = `<div class="data-time-location">
                               ${defaultItem.time}, ${defaultItem.place}<br>
                               ${defaultItem.date}
                             </div>`;
       defaultButtons = ` 
-                                 <div class="button buy">Buy now</div>
-                                 <div class="button more-info">More info</div>
+                                 <div id="buy${events[0].id}" class="button buy">Buy now</div>
+                                 <div id="more-info${events[0].id}" class="button more-info">More info</div>
                                 `;
     }
     const defaultTemplate = `
@@ -80,19 +80,13 @@ export default class EventsPage {
 
     ////////////////////// code for load data to blocks /////////////////////////
     const ul = document.querySelector('.wrap-items ul') as HTMLUListElement;
-
-    ////// save bg images in wrapper////
-
     const screen = document.querySelector('.screen')
-
-
-
     events.forEach((event) => {
       let liHTMLelem = document.createElement('li');
       liHTMLelem.id = `li${event.id}`;
       liHTMLelem.classList.add('event-item')
       let liContent :string = `<div class="event-type">`;
-      if(event.hasOwnProperty("place")){
+      if(!event.online){
         liContent += `<div class="colorStatus">${event.status}</div>`;
       }
       else{
@@ -224,7 +218,6 @@ export default class EventsPage {
     const next = document.querySelector('.next') as HTMLButtonElement;
     const scrollThumb = document.querySelector('.scroll-thumb') as HTMLDivElement;
 
-
     listLi.forEach(li => {
       li.addEventListener('click', async event => {
         scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
@@ -255,17 +248,20 @@ export default class EventsPage {
         const buttonWrapper = document.querySelector('.button-all') as HTMLDivElement;
         if (information.online) {
           dateWrap.innerHTML = information.date;
-          buttonWrapper.innerHTML = '<div class="button watch">Watch now</div>';
+          buttonWrapper.innerHTML = `<div id="watch${li.id.slice(2)}" class="button watch">Watch now</div>`;
         } else {
           dateWrap.innerHTML = `${information.time}, ${information.place}<br>
                                                                                     ${information.date}`;
           buttonWrapper.innerHTML = ` 
-                                 <div class="button buy">Buy now</div>
-                                 <div class="button more-info">More info</div>
+                                 <div id="buy${li.id.slice(2)}" class="button buy">Buy now</div>
+                                 <div id="more-info${li.id.slice(2)}" class="button more-info">More info</div>
                                 `;
         }
+
       });
     });
+
+
 
     let position: number = 0;
 

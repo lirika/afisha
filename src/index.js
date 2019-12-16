@@ -54,7 +54,7 @@ function init() {
 }
 var root = document.querySelector('#root');
 root.addEventListener('click', function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var target, _a, subIdStr;
+    var target, _a, subIdStr, buttonBuyId;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -65,21 +65,24 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                     case 'item homePage': return [3 /*break*/, 3];
                     case 'button buy': return [3 /*break*/, 4];
                 }
-                return [3 /*break*/, 5];
+                return [3 /*break*/, 6];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 5];
+                return [3 /*break*/, 6];
             case 3:
                 init();
-                return [3 /*break*/, 5];
+                return [3 /*break*/, 6];
             case 4:
-                renderBuyPage_1["default"]();
-                return [3 /*break*/, 5];
-            case 5: return [2 /*return*/];
+                buttonBuyId = target.id.slice(3);
+                return [4 /*yield*/, renderBuyPage_1["default"](buttonBuyId)];
+            case 5:
+                _b.sent();
+                return [3 /*break*/, 6];
+            case 6: return [2 /*return*/];
         }
     });
 }); });
