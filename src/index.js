@@ -38,7 +38,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var renderCategoryPage_1 = require("./services/renderCategoryPage");
 var renderEventsPage_1 = require("./services/renderEventsPage");
-var renderBuyPage_1 = require("./services/renderBuyPage");
 var renderAboutPage_1 = require("./services/renderAboutPage");
 var renderAdminPage_1 = require("./services/renderAdminPage");
 window.addEventListener('load', init);
@@ -56,7 +55,7 @@ function init() {
 }
 var root = document.querySelector('#root');
 root.addEventListener('click', function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var target, _a, subIdStr, buttonBuyId;
+    var target, _a, subIdStr;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -66,38 +65,31 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                     case 'subcategoryHomePage': return [3 /*break*/, 1];
                     case 'item homePage': return [3 /*break*/, 3];
                     case 'btns_more': return [3 /*break*/, 3];
-                    case 'button buy': return [3 /*break*/, 4];
-                    case 'item aboutPage': return [3 /*break*/, 6];
-                    case 'item adminPage': return [3 /*break*/, 8];
+                    case 'item aboutPage': return [3 /*break*/, 4];
+                    case 'item adminPage': return [3 /*break*/, 6];
                 }
-                return [3 /*break*/, 10];
+                return [3 /*break*/, 8];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 10];
+                return [3 /*break*/, 8];
             case 3:
                 init();
-                return [3 /*break*/, 10];
-            case 4:
-                buttonBuyId = target.id.slice(3);
-                return [4 /*yield*/, renderBuyPage_1["default"](buttonBuyId)];
+                return [3 /*break*/, 8];
+            case 4: return [4 /*yield*/, renderAboutPage_1["default"]()];
             case 5:
                 _b.sent();
-                return [3 /*break*/, 10];
-            case 6: return [4 /*yield*/, renderAboutPage_1["default"]()];
-            case 7:
-                _b.sent();
-                return [3 /*break*/, 10];
-            case 8:
+                return [3 /*break*/, 8];
+            case 6:
                 root.innerHTML = "";
                 return [4 /*yield*/, renderAdminPage_1["default"]()];
-            case 9:
+            case 7:
                 _b.sent();
-                return [3 /*break*/, 10];
-            case 10: return [2 /*return*/];
+                return [3 /*break*/, 8];
+            case 8: return [2 /*return*/];
         }
     });
 }); });

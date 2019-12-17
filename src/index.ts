@@ -28,10 +28,9 @@ root.addEventListener('click', async event => {
             init();
             break;
 
-        case 'button buy':
-            let buttonBuyId: string = target.id.slice(3);
-            await renderBuyPage(buttonBuyId);
-            break;
+        // case 'button buy':
+        //  await  console.log(document.querySelector('.modal'))
+        //     break;
         
         case 'item aboutPage':
             await renderAboutPage();

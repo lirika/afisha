@@ -230,6 +230,12 @@ export default class EventsPage {
 
         infoWrap.innerHTML = `
                       <div class="info">
+                      <div class="modal">
+                          <p>${information.title}</p>
+                          <p>${information.place}</p>
+                          <p>${information.date}</p>
+                        <button>Close</button>
+                       </div>
                        <div class="main-info">
                           <div class="title">
                             ${information.title}
@@ -259,7 +265,12 @@ export default class EventsPage {
                                 `;
         }
 
+        document.querySelector('.buy').addEventListener('click',() => {
+          document.querySelector('.modal').style.display = 'block';
+        })
+
       });
+
     });
 
 
