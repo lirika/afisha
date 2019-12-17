@@ -24,8 +24,7 @@
       "id": "4",
       "title": "lectures",
       "img": "http://prowomen.by/wp-content/uploads/2019/10/68632310_1326606577513472_1424945736495136768_o.jpg"
-    }
-    ,
+    },
     {
       "id": "5",
       "title": "charity",
@@ -413,6 +412,42 @@
       "img": "https://cdn.swimswam.com/wp-content/uploads/2019/07/20190706_GSca_KA17442-1.jpg",
       "subCategoryId": "11",
       "online": true
+    },
+    {
+      "id": "7",
+      "title": "Верстка сайтов | HTML5 \\ CSS3 \\ JS(JQuery).",
+      "status": "ok",
+      "genre": "rock",
+      "date": "2019-09-28",
+      "time": "10.30pm",
+      "place": "Minsk",
+      "img": "http://htmlbook.ru/files/images/html/tag_input_1.png",
+      "online": "true",
+      "subCategoryId": "0"
+    },
+    {
+      "id": "1",
+      "title": "Веб-разработчик",
+      "status": "ok",
+      "genre": "rock",
+      "date": "2019-09-28",
+      "time": "10.30pm",
+      "place": "Minsk",
+      "img": "http://htmlbook.ru/files/images/html/tag_input_1.png",
+      "online": "true",
+      "subCategoryId": "8"
+    },
+    {
+      "id": "8",
+      "title": "ugol 72",
+      "status": "ok",
+      "genre": "dasdasdas",
+      "date": "2019-09-08",
+      "time": "dasdas",
+      "place": "dasdas",
+      "img": "https://st.depositphotos.com/2452105/2733/v/600/depositphotos_27334525-stock-video-abstract-aura-star-shine-bg.jpg",
+      "online": "false",
+      "subCategoryId": "0"
     }
   ],
   "contacts": {

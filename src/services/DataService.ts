@@ -19,6 +19,15 @@ export default class DataService {
     });
   }
 
+  getAllSubCategory<T>(): Promise<T> {
+    return fetch(this.baseUrl + 'subCategories').then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    });
+  }
+
   getEvents<T>(id: string): Promise<T> {
     return fetch(this.baseUrl + 'subCategories/' + id + '/events').then(response => {
       if (!response.ok) {
@@ -27,4 +36,28 @@ export default class DataService {
       return response.json();
     });
   }
+
+  getAllEvents<T>(): Promise<T> {
+    return fetch(this.baseUrl + 'events').then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    });
+  }
+
+
+
+  async sendEvents<T>(id:string, value:string): Promise<T> {
+   const response = await fetch(this.baseUrl + 'subCategories/' + id + '/events',{
+     method: 'POST',
+     body: JSON.stringify(value),
+     headers: {
+       'Content-Type': 'application/json'
+     }
+   });
+   const data =  await response.json()
+    console.log(data)
+  }
+
 }

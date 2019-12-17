@@ -1,6 +1,7 @@
 import renderCategoryPage from './services/renderCategoryPage';
 import renderEventsPage from './services/renderEventsPage';
 import renderBuyPage from './services/renderBuyPage';
+import renderAdminPage from "./services/renderAdminPage";
 
 window.addEventListener('load', init);
 
@@ -28,7 +29,11 @@ root.addEventListener('click', async event => {
 
         case 'button buy':
             let buttonBuyId: string = target.id.slice(3)
-            await renderBuyPage(buttonBuyId)
+            await renderBuyPage()
             break;
+        case 'item adminPage':
+            root.innerHTML = ``;
+            await renderAdminPage()
+            break
     }
 });
