@@ -1,0 +1,425 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900);
+$neon: #66E8E4;
+$dradient: linear-gradient(to top, rgba(102, 232, 228, 0.3),  rgba(102, 232, 228,0.3));
+
+body{
+    background: grey;
+    background-color: #191929;
+    color: white;
+    font-size: 17px;
+}
+
+.main-about{
+      font-family: Lato, sans-serif;
+      height: 100vh;
+      width: 80vw;
+      float:left;
+/*       border: 2px solid red; */
+
+      position: relative;
+
+      .aboutContent-photo{
+          height: 60%;
+         /*  border: 2px solid rgb(48, 85, 24); */
+          display: flex;
+          align-items: center;
+
+          @media screen and (max-width: 690px) {
+            height: 50%;
+          }
+
+          .aboutContent{
+            height: 95%;
+            width: 40%;
+         /*    border: 2px solid rgb(32, 7, 143); */
+            position: relative;
+            text-align: right;
+            font-weight: bold;
+            padding: 10px;
+            padding-right: 40px;
+
+            @media screen and (max-width: 690px) {
+              font-size: 2.5rem;
+              width: 100%;
+            }
+
+            .contentTitle{
+              margin-top: 5%;
+              margin-bottom: 5%;
+              width: 100%;
+              font-size: 5rem;
+              text-transform: uppercase;
+              color: $neon;
+     /*          border: 2px solid rgb(32, 7, 143); */
+              
+              @media screen and (max-width: 1350px) {
+                font-size: 3rem;
+              }
+
+              @media screen and (max-width: 690px) {
+                font-size: 3rem;
+                width: 100%;
+              }
+
+            }
+            .contentText{
+/*               border: 2px solid rgb(32, 7, 143); */
+              padding-left: 20%;
+              font-size: 2rem;
+
+              @media screen and (max-width: 1350px) {
+                font-size: 1.5rem;
+              }
+
+              @media screen and (max-width: 785px) {
+                font-size: 1.1rem;
+              }
+
+              @media screen and (max-width: 690px) {
+                font-size: 1.2rem;
+              }
+            }
+          }
+
+          .photo{
+            height: 95%;
+            width: 60%;
+          /*   border: 2px solid rgb(143, 7, 86); */
+            background-color:#2f3238;
+            text-align:center;
+
+            @media screen and (max-width: 1350px) {
+              font-size: 3rem;
+            }
+
+            @media screen and (max-width: 690px) {
+              display: none;
+            }
+
+            #image_01{
+              background: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg") no-repeat center;
+              background-size: cover;
+              width:100%;
+              height:100%;
+              margin:auto;
+              text-align:center;
+              transition: all 0.4s;
+              position: relative;
+              border: 2px solid white;
+            }
+
+            #image_01:hover #image_01_hover03{
+              opacity:0.3;
+              cursor: pointer;
+            }
+
+            #image_01:hover #image_01_hover{
+              opacity:1.0;
+              left:-60px;
+            }
+
+            #image_01:hover #image_01_hover02{
+                left:60px;
+                opacity: 1.0;
+            }
+
+            p1{
+              position: relative;
+              top:15px;
+              left:15px;
+            }
+
+            #image_01_hover{
+              width:200px;
+              height: 100px;
+              background-color:transparent;
+
+              border-left:4px solid #fff;
+              border-top:4px solid #fff;
+              border-bottom:4px solid #fff;
+              border-right:0px solid #fff;
+              
+              position: relative;
+              top:150px;
+              left:-170px;
+              margin:auto;
+              padding:auto;
+              opacity: 0.0;
+              transition: all 0.4s;
+              color:#fff;
+              font-size:40px;
+              font-family: Lato, sans-serif;
+              font-weight: 600;
+              padding-right: 50px;
+            }
+
+            #image_01_hover02{
+              width:200px;
+              height: 100px;
+
+              background-color:transparent;
+              border-left:0px solid #fff;
+              border-top:4px solid #fff;
+              border-bottom:4px solid #fff;
+              border-right:4px solid #fff;
+              position: relative;
+              top:50px;
+              left:170px;
+              margin:auto;
+              padding:auto;
+              opacity: 0.0;
+              transition: all 0.4s;
+              color:#fff;
+              font-size:40px; 
+              font-family: Lato, sans-serif;
+              font-weight: 600;
+            }
+
+            #image_01_hover03{
+              background-color:#fff;
+              width:100%;
+              height:100%;
+              text-align:center;
+              transition: all 0.4s;
+              position: absolute;
+              top:0;
+              opacity:0.0;
+            }
+            
+          }
+      }
+
+
+
+      .title-about{
+        height: 10%;
+    /*     border: 2px solid rgb(48, 85, 24); */
+        
+        display: flex;
+       /*  justify-content: center; */
+   /*      align-items: center; */
+       /*  background: rgba(255, 255, 255, 0.1); */
+        font-size: 40px;
+        padding-left: 62%;
+
+        @media screen and (max-width: 785px) {
+          font-size: 32px;
+        }
+
+        @media screen and (max-width: 690px) {
+          height: 5%;
+          font-size: 27px;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          transition: all .8s ease;
+        }
+
+        .rotating-text {
+            font-family: Lato, sans-serif;
+            font-weight: 600;
+            color: $neon;
+            transform: translateX(-80px);
+          
+            p {
+              display: inline-flex;
+              margin: 0;
+              vertical-align: top;
+          
+              .word {
+                position: absolute;
+                display: flex;
+                opacity: 0;
+          
+                .letter {
+                  transform-origin: center center 25px;
+          
+                  &.out {
+                    transform: rotateX(90deg);
+                    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+                  }
+                  &.in {
+                    transition: 0.38s ease;
+                  }
+                  &.behind {
+                    transform: rotateX(-90deg);
+                  }
+                }
+              }
+            }
+          }
+          
+          .alizarin {
+            color: #e74c3c;
+          }
+          
+          .wisteria {
+            color: #8e44ad;
+          }
+          
+          .peter-river {
+            color: #3498db;
+          }
+          
+          .emerald {
+            color: #2ecc71;
+          }
+          
+          .sun-flower {
+            color: #f1c40f;
+          }
+      }
+
+      .members-wrap{
+        height: 30%;
+/*         border: 2px solid rgb(48, 85, 24); */
+
+        @media screen and (max-width: 690px) {
+          height: 45%;
+        }
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 15px;
+        padding: 10px 60px;
+
+        .member{
+          font-family: Lato, sans-serif;
+          border-radius: 5px;
+     /*      border: 2px solid $neon; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .member .member-photo{
+          width: 110px;
+          height: 110px;
+          border: 2px solid $neon;
+          margin-right: 20px;
+          border-radius: 50%;
+
+          @media screen and (max-width: 690px) {
+            width: 90%;
+           height: 90%;
+          }
+
+          background: url("https://cdn.patchcdn.com/assets/layout/contribute/user-default.png") no-repeat center;
+          background-size: cover;
+        }
+
+        .member .member-info{
+          width: 60%;
+          height: 110px;
+     /*      border: 2px solid $neon; */
+          padding-top: 20px;
+  
+
+          @media screen and (max-width: 690px) {
+            display: none;
+          }
+
+          strong{
+            text-transform: uppercase;
+            margin-bottom: 5px;
+          }
+        }
+      }
+}
+
+
+
+.side-bar{
+    height: 100vh;
+    width: 20vw;
+/*     border: 2px solid red; */
+    float: right;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .photoSide{
+      margin-top: 17px;
+      width: 88%;
+      height: 200px;
+      border: 2px solid white;
+      transition: 0.5s;
+
+      background-repeat:  no-repeat; 
+      position:center;
+      background-size: cover;
+    }
+
+    .photo1{
+      margin-top: 10px;
+    }
+
+    .photoSide:hover{
+      width: 95%;
+      height: 210px;
+      border: 3px solid $neon;
+    }
+
+}
+
+.btns {
+  height: 100px;
+  position: relative;
+  width: 200px;
+/*   border: 1px solid red; */
+}
+
+.btns_more {
+  background: transparent;
+  border: 2px solid $neon;
+  border-radius: 50px;
+  padding: 8px 12px;
+  color: $neon;
+  font-size: 25px;
+  text-transform: uppercase;
+  position: relative;
+  outline: none;
+  transform: translateY(50px);
+  animation: slideUp .8s ease-in-out  forwards 1s;
+  margin-top: -40px;
+}
+
+.photo1{
+  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo2{
+  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo3{
+  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo4{
+  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo1:hover{
+  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo2:hover{
+  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo3:hover{
+  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+
+.photo4:hover{
+  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+}
+

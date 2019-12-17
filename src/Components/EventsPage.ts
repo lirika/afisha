@@ -49,7 +49,7 @@ export default class EventsPage {
           <div class="item">CONCERTS & TICKETS</div>
           <div class="item active">${subTitle}</div>
           <div class="item">SUPPORT US</div>
-          <div class="item">ABOUT US</div>
+          <div class="item aboutPage">ABOUT US</div>
           <div class="item">DONATE</div>
         </div>
       </div>

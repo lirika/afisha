@@ -17,7 +17,9 @@
     "render-renderbuy-js": "tsc src/services/renderBuyPage.ts --watch",
     "server": "json-server data/categories.json --watch",
     "pretty-quick": "pretty-quick --staged",
-    "compile-css": "sass src/styles/categories.scss src/styles/categories.css --watch"
+    "compile-css": "sass src/styles/categories.scss src/styles/categories.css --watch",
+    "about-js": "tsc src/Components/AboutPage.ts --watch",
+    "about-css": "sass src/styles/about.scss src/styles/about.css --watch"
   },
   "bugs": {
     "url": "https://github.com/lirika/afisha/issues"
