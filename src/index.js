@@ -67,29 +67,36 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                     case 'btns_more': return [3 /*break*/, 3];
                     case 'button buy': return [3 /*break*/, 4];
                     case 'item aboutPage': return [3 /*break*/, 6];
+                    case 'item adminPage': return [3 /*break*/, 8];
                 }
-                return [3 /*break*/, 8];
+                return [3 /*break*/, 10];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 8];
+                return [3 /*break*/, 10];
             case 3:
                 init();
-                return [3 /*break*/, 8];
+                return [3 /*break*/, 10];
             case 4:
                 buttonBuyId = target.id.slice(3);
                 return [4 /*yield*/, renderBuyPage_1["default"](buttonBuyId)];
             case 5:
                 _b.sent();
-                return [3 /*break*/, 8];
+                return [3 /*break*/, 10];
             case 6: return [4 /*yield*/, renderAboutPage_1["default"]()];
             case 7:
                 _b.sent();
-                return [3 /*break*/, 8];
-            case 8: return [2 /*return*/];
+                return [3 /*break*/, 10];
+            case 8:
+                root.innerHTML = "";
+                return [4 /*yield*/, renderAdminPage()];
+            case 9:
+                _b.sent();
+                return [3 /*break*/, 10];
+            case 10: return [2 /*return*/];
         }
     });
 }); });

@@ -223,6 +223,7 @@ export default class EventsPage {
         scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
         let information = events[Number(li.id.slice(2))];
         let urlImg = events[Number(li.id.slice(2))].img;
+        console.log(li.id.slice(2))
         screen.innerHTML = `<img src=${urlImg} alt=img class="bg-event-img" style="display: block; width: 100%; height: 100%">`
 
         /////// Change info by click on event item///////////

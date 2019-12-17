@@ -178,6 +178,7 @@ var EventsPage = /** @class */ (function () {
                     scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
                     information = events[Number(li.id.slice(2))];
                     urlImg = events[Number(li.id.slice(2))].img;
+                    console.log(li.id.slice(2));
                     screen.innerHTML = "<img src=" + urlImg + " alt=img class=\"bg-event-img\" style=\"display: block; width: 100%; height: 100%\">";
                     /////// Change info by click on event item///////////
                     infoWrap.innerHTML = "\n                      <div class=\"info\">\n                       <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + information.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + information.genre + "\n                          </div>\n                           <div class=\"data-time-location\">\n                              " + information.time + ", " + information.place + "<br>\n                              " + information.date + "\n                            </div>\n                     </div>\n                      <div class=\"button-all\"></div>\n</div>\n                ";
