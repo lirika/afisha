@@ -90,7 +90,7 @@ var AdminPage = /** @class */ (function () {
                             select.appendChild(option);
                         });
                         root = document.getElementById('root');
-                        root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item \">Events</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
+                        root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item\">Events</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
                         root.appendChild(mainWrapper);
                         optionInSelect = document.querySelectorAll('select option');
                         ///////////////////////////////// SEN Inputs values////////////////////////////////////////

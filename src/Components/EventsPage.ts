@@ -50,7 +50,7 @@ export default class EventsPage {
           <div class="item active">${subTitle}</div>
           <div class="item">SUPPORT US</div>
           <div class="item aboutPage">ABOUT US</div>
-          <div class="item">DONATE</div>
+          <div class="item adminPage">ADMIN PAGE</div>
         </div>
       </div>
     </header>

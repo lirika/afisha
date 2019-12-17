@@ -64,9 +64,9 @@ export default class AdminPage {
         <div class="all-items">
           <div class="item homePage">HOME PAGE</div>
           <div class="item">CONCERTS & TICKETS</div>
-          <div class="item ">Events</div>
+          <div class="item">Events</div>
           <div class="item">SUPPORT US</div>
-          <div class="item">ABOUT US</div>
+          <div class="item aboutPage">ABOUT US</div>
           <div class="item adminPage active">ADMIN PAGE</div>
         </div>
       </div>

@@ -1,11 +1,8 @@
 import renderCategoryPage from './services/renderCategoryPage';
 import renderEventsPage from './services/renderEventsPage';
 import renderBuyPage from './services/renderBuyPage';
-<<<<<<< HEAD
 import renderAboutPage from './services/renderAboutPage';
-=======
 import renderAdminPage from "./services/renderAdminPage";
->>>>>>> 01e94cea7b827e3390c91b3ffc8f9ae851c136a9
 
 window.addEventListener('load', init);
 

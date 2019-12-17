@@ -40,6 +40,7 @@ var renderCategoryPage_1 = require("./services/renderCategoryPage");
 var renderEventsPage_1 = require("./services/renderEventsPage");
 var renderBuyPage_1 = require("./services/renderBuyPage");
 var renderAboutPage_1 = require("./services/renderAboutPage");
+var renderAdminPage_1 = require("./services/renderAdminPage");
 window.addEventListener('load', init);
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -92,7 +93,7 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                 return [3 /*break*/, 10];
             case 8:
                 root.innerHTML = "";
-                return [4 /*yield*/, renderAdminPage()];
+                return [4 /*yield*/, renderAdminPage_1["default"]()];
             case 9:
                 _b.sent();
                 return [3 /*break*/, 10];
