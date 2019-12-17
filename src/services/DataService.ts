@@ -48,7 +48,7 @@ export default class DataService {
 
 
 
-  async sendEvents<T>(id:string, value:string): Promise<T> {
+  async sendEvents<T>(id:string, value:string):Promise<void> {
    const response = await fetch(this.baseUrl + 'subCategories/' + id + '/events',{
      method: 'POST',
      body: JSON.stringify(value),

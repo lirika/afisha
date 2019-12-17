@@ -43,38 +43,46 @@ var AdminPage = /** @class */ (function () {
     }
     AdminPage.prototype.renderPage = function (data) {
         return __awaiter(this, void 0, void 0, function () {
-            var form, select, btn, inputDiv, events, results, root, optionInSelect;
+            var mainWrapper, addForm, select, btn, inputDiv, events, results, root, optionInSelect;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        form = document.createElement('form');
+                        mainWrapper = document.createElement('div');
+                        mainWrapper.classList.add('main-wrapper');
+                        addForm = document.createElement('form');
+                        addForm.classList.add('add-form');
+                        addForm.innerHTML = "<h2>Add events</h2>";
                         select = document.createElement('select');
                         btn = document.createElement('button');
+                        btn.classList.add('button');
                         inputDiv = document.createElement('div');
                         inputDiv.classList.add('input-wrapper');
+                        btn.innerHTML = 'send';
+                        inputDiv.appendChild(select);
+                        addForm.appendChild(inputDiv);
+                        addForm.appendChild(btn);
+                        mainWrapper.appendChild(addForm);
                         events = new DataService_1["default"]();
                         return [4 /*yield*/, events.getAllEvents()];
                     case 1:
                         results = _a.sent();
-                        btn.innerHTML = 'send';
-                        form.appendChild(select);
-                        form.appendChild(inputDiv);
-                        form.appendChild(btn);
+                        /////////////////// render input fields////////////////////////
                         Object.keys(results[0]).forEach(function (key) {
                             if (key === 'subCategoryId') {
                                 return;
                             }
                             var inputWrapper = document.createElement('div');
+                            inputWrapper.classList.add('field');
                             var h5 = document.createElement('h5');
-                            h5.innerHTML = key;
+                            h5.innerHTML = key + ':  ';
                             var input = document.createElement('input');
                             input.id = key;
                             inputWrapper.appendChild(h5);
                             inputWrapper.appendChild(input);
                             inputDiv.appendChild(inputWrapper);
-                            inputDiv.appendChild(input);
                         });
+                        ////////////////render options//////////////////////////////
                         data.forEach(function (item) {
                             var option = document.createElement('option');
                             option.innerHTML = item.title;
@@ -83,9 +91,10 @@ var AdminPage = /** @class */ (function () {
                         });
                         root = document.getElementById('root');
                         root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item \">Events</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
-                        root.appendChild(form);
+                        root.appendChild(mainWrapper);
                         optionInSelect = document.querySelectorAll('select option');
-                        form.addEventListener('submit', function (e) { return __awaiter(_this, void 0, void 0, function () {
+                        ///////////////////////////////// SEN Inputs values////////////////////////////////////////
+                        addForm.addEventListener('submit', function (e) { return __awaiter(_this, void 0, void 0, function () {
                             var id, inputId, inpTitle, inputStatus, inputGenre, inputDate, inputTime, inputPlace, inputImg, inputOnline, value;
                             return __generator(this, function (_a) {
                                 e.preventDefault();

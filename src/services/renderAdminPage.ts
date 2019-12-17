@@ -5,5 +5,5 @@ export default async function renderAdminPage() {
     const dataService = new DataService()
     const events:Array<object> = await dataService.getAllSubCategory()
     const Admin = new AdminPage();
-    Admin.renderPage(events)
+     await Admin.renderPage(events)
 }

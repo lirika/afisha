@@ -49,7 +49,9 @@ function renderAdminPage() {
                 case 1:
                     events = _a.sent();
                     Admin = new AdminPage_1["default"]();
-                    Admin.renderPage(events);
+                    return [4 /*yield*/, Admin.renderPage(events)];
+                case 2:
+                    _a.sent();
                     return [2 /*return*/];
             }
         });

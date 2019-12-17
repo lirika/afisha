@@ -1,6 +1,55 @@
+$fontH: 'Roboto', sans-serif;
+
 .input-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.add-form {
+  font-family: $fontH;
+  margin-left: 40px;
+  h2 {
+    text-transform: uppercase;
+
+  }
+
+  input {
+    border: none;
+    max-width: 300px;
+    margin-left: 5px;
+    padding: 5px;
+    background: transparent;
+    border-bottom: 1px solid #FF0000;
+    outline: none;
+    color: #ffffff;
+    transition: .4s;
+    &:hover {
+      border-bottom: 1px solid darkred;
+    }
+  }
+  
+  button {
+    background: #FF0000;
+    color: #ffffff;
+    border:none;
+    outline:none;
+
+    &:hover {
+      background: darkred;
+    }
+  }
+
+
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.field {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
