@@ -43,8 +43,7 @@ var EventsPage = /** @class */ (function () {
     EventsPage.prototype.renderEventsList = function (events, subTitle) {
         var _this = this;
         var currentEvent = events[0];
-        var payBlock = "\n<div class=\"row\">\n            <div class=\"col-75\">\n              <div class=\"container-form\">\n                <form action=\"/action_page.php\">\n          \n                  <div class=\"row\">\n                    <div class=\"col-50\">\n                      <h3>Billing Address</h3>\n                      <label for=\"fname\"><i class=\"fa fa-user\"></i> Full Name</label>\n                      <input type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"John M. Doe\">\n                      <label for=\"email\"><i class=\"fa fa-envelope\"></i> Email</label>\n                      <input type=\"text\" id=\"email\" name=\"email\" placeholder=\"john@example.com\">\n                      <label for=\"adr\"><i class=\"fa fa-address-card-o\"></i> Address</label>\n                      <input type=\"text\" id=\"adr\" name=\"address\" placeholder=\"542 W. 15th Street\">\n                      <label for=\"city\"><i class=\"fa fa-institution\"></i> City</label>\n                      <input type=\"text\" id=\"city\" name=\"city\" placeholder=\"New York\">\n          \n                      <div class=\"row\">\n                        <div class=\"col-50\">\n                          <label for=\"state\">State</label>\n                          <input type=\"text\" id=\"state\" name=\"state\" placeholder=\"NY\">\n                        </div>\n                        <div class=\"col-50\">\n                          <label for=\"zip\">Zip</label>\n                          <input type=\"text\" id=\"zip\" name=\"zip\" placeholder=\"10001\">\n                        </div>\n                      </div>\n                    </div>\n          \n                    <div class=\"col-50\">\n                      <h3>Payment</h3>\n                      <label for=\"fname\">Accepted Cards</label>\n                      <div class=\"icon-container\">\n                        <i class=\"fa fa-cc-visa\" style=\"color:navy;\"></i>\n                        <i class=\"fa fa-cc-amex\" style=\"color:blue;\"></i>\n                        <i class=\"fa fa-cc-mastercard\" style=\"color:red;\"></i>\n                        <i class=\"fa fa-cc-discover\" style=\"color:orange;\"></i>\n                      </div>\n                      <label for=\"cname\">Name on Card</label>\n                      <input type=\"text\" id=\"cname\" name=\"cardname\" placeholder=\"John More Doe\">\n                      <label for=\"ccnum\">Credit card number</label>\n                      <input type=\"text\" id=\"ccnum\" name=\"cardnumber\" placeholder=\"1111-2222-3333-4444\">\n                      <label for=\"expmonth\">Exp Month</label>\n                      <input type=\"text\" id=\"expmonth\" name=\"expmonth\" placeholder=\"September\">\n          \n                      <div class=\"row\">\n                        <div class=\"col-50\">\n                          <label for=\"expyear\">Exp Year</label>\n                          <input type=\"text\" id=\"expyear\" name=\"expyear\" placeholder=\"2018\">\n                        </div>\n                        <div class=\"col-50\">\n                          <label for=\"cvv\">CVV</label>\n                          <input type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"352\">\n                        </div>\n                      </div>\n                    </div>\n          \n                  </div>\n                  <label>\n                    <input type=\"checkbox\" checked=\"checked\" name=\"sameadr\"> Shipping address same as billing\n                  </label>\n                  <input type=\"submit\" value=\"Continue to checkout\" class=\"btn\">\n                </form>\n              </div>\n            </div>\n          </div>\n";
-        /*   let proceModal:number; */
+        var payBlock = "\n        <div class=\"row\">\n            <div class=\"col-75\">\n              <div class=\"container-form\">\n                <form action=\"\">\n                  <div class=\"row\">\n                    <div class=\"col-50\">\n                      <h3>Billing Address</h3>\n                      <label for=\"fname\"><i class=\"fa fa-user\"></i> Full Name</label>\n                      <input type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"John M. Doe\">\n                      <label for=\"email\"><i class=\"fa fa-envelope\"></i> Email</label>\n                      <input type=\"text\" id=\"email\" name=\"email\" placeholder=\"john@example.com\">\n                      <label for=\"adr\"><i class=\"fa fa-address-card-o\"></i> Address</label>\n                      <input type=\"text\" id=\"adr\" name=\"address\" placeholder=\"542 W. 15th Street\">\n                      <label for=\"city\"><i class=\"fa fa-institution\"></i> City</label>\n                      <input type=\"text\" id=\"city\" name=\"city\" placeholder=\"New York\">\n          \n                      <div class=\"row\">\n                        <div class=\"col-50\">\n                          <label for=\"state\">State</label>\n                          <input type=\"text\" id=\"state\" name=\"state\" placeholder=\"NY\">\n                        </div>\n                        <div class=\"col-50\">\n                          <label for=\"zip\">Zip</label>\n                          <input type=\"text\" id=\"zip\" name=\"zip\" placeholder=\"10001\">\n                        </div>\n                      </div>\n                    </div>\n          \n                    <div class=\"col-50\">\n                      <h3>Payment</h3>\n                      <label for=\"fname\">Accepted Cards</label>\n                      <div class=\"icon-container\">\n                        <i class=\"fa fa-cc-visa\" style=\"color:navy;\"></i>\n                        <i class=\"fa fa-cc-amex\" style=\"color:blue;\"></i>\n                        <i class=\"fa fa-cc-mastercard\" style=\"color:red;\"></i>\n                        <i class=\"fa fa-cc-discover\" style=\"color:orange;\"></i>\n                      </div>\n                      <label for=\"cname\">Name on Card</label>\n                      <input type=\"text\" id=\"cname\" name=\"cardname\" placeholder=\"John More Doe\">\n                      <label for=\"ccnum\">Credit card number</label>\n                      <input type=\"text\" id=\"ccnum\" name=\"cardnumber\" placeholder=\"1111-2222-3333-4444\">\n                      <label for=\"expmonth\">Exp Month</label>\n                      <input type=\"text\" id=\"expmonth\" name=\"expmonth\" placeholder=\"September\">\n          \n                      <div class=\"row\">\n                        <div class=\"col-50\">\n                          <label for=\"expyear\">Exp Year</label>\n                          <input type=\"text\" id=\"expyear\" name=\"expyear\" placeholder=\"2018\">\n                        </div>\n                        <div class=\"col-50\">\n                          <label for=\"cvv\">CVV</label>\n                          <input type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"352\">\n                        </div>\n                      </div>\n                    </div>\n          \n                  </div>\n                  <label>\n                    <input type=\"checkbox\" checked=\"checked\" name=\"sameadr\"> Shipping address same as billing\n                  </label>\n                  <input type=\"submit\" value=\"Continue to checkout\" class=\"btn\">\n                </form>\n              </div>\n            </div>\n          </div>\n";
         var defaultItem = events[0];
         document.body.style.background = "linear-gradient(to bottom, rgba(0,0,0,.0), rgba(0,0,0,.99) 75%),linear-gradient(to top,  rgba(0,0,0,.0), rgba(0,0,0,.5) 90%)";
         /////// set base Background ////
@@ -133,7 +132,6 @@ var EventsPage = /** @class */ (function () {
             var selected = subTitleActive;
             navbar.addEventListener('click', function (ev) {
                 var targetItem = ev.target;
-                // @ts-ignore
                 if (targetItem.className !== 'item') {
                     return;
                 }
@@ -177,7 +175,7 @@ var EventsPage = /** @class */ (function () {
         var buyButton;
         var moreButton;
         listLi.forEach(function (li) {
-            li.addEventListener('click', function (event) { return __awaiter(_this, void 0, void 0, function () {
+            li.addEventListener('click', function () { return __awaiter(_this, void 0, void 0, function () {
                 var information, urlImg, dateWrap, buttonWrapper;
                 return __generator(this, function (_a) {
                     scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
@@ -195,10 +193,6 @@ var EventsPage = /** @class */ (function () {
                     }
                     else {
                         dateWrap.innerHTML = information.time + ", " + information.place + "<br>\n                                                                                    " + information.date;
-                        /*  buttonWrapper.innerHTML = `
-                                                <div id="buy${li.id.slice(2)}" class="button buy">Buy now</div>
-                                                <div id="more-info${li.id.slice(2)}" class="button more-info">More info</div>
-                                               `; */
                         buyButton = document.createElement('div');
                         buyButton.id = "buy" + li.id.slice(2);
                         buyButton.classList.add("button");
@@ -218,14 +212,14 @@ var EventsPage = /** @class */ (function () {
             }); });
         });
         var position = 0;
-        prev.addEventListener('click', function (event) {
+        prev.addEventListener('click', function () {
             if (ul.offsetTop > 0 || ul.offsetTop > -188) {
                 return;
             }
             position += 190;
             ul.style.marginTop = position + 'px';
         });
-        next.addEventListener('click', function (event) {
+        next.addEventListener('click', function () {
             if (ul.offsetTop < -(ul.offsetHeight - 190 * 2)) {
                 return;
             }
@@ -235,7 +229,7 @@ var EventsPage = /** @class */ (function () {
         var rootEvent = document.querySelector("#root");
         rootEvent.addEventListener('click', function (event) {
             var container = document.querySelector('.container');
-            var modal = document.querySelector('.modal');
+            // let modal = document.querySelector('.modal') as HTMLDivElement;
             var target = event.target;
             if (target.classList.contains('buy')) {
                 container.classList.add('modal-open');

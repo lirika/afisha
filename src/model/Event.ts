@@ -1,4 +1,4 @@
-export interface IEvent {
+export default interface Event {
   title: string;
   status: string;
   id: string;
@@ -7,5 +7,6 @@ export interface IEvent {
   time: string;
   place: string;
   img: string;
-  subCategoryId: string;
+  subCategoryId?: string;
+  online:boolean,
 }

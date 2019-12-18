@@ -62,31 +62,26 @@ var CategoryPage = /** @class */ (function () {
                 return [2 /*return*/];
             });
         }); });
-        document.querySelectorAll('.subcategories').forEach(function (subDiv) {
-            (function () { return __awaiter(_this, void 0, void 0, function () {
-                var subCat;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0: return [4 /*yield*/, Category.getSubCategory(subDiv.id.substr(-1))];
-                        case 1:
-                            subCat = _a.sent();
-                            subCat.forEach(function (item) {
-                                var span = document.createElement('span');
-                                span.id = "span" + item.id;
-                                span.classList.add('subcategoryHomePage');
-                                span.innerHTML += item.title;
-                                subDiv.appendChild(span);
-                            });
-                            return [2 /*return*/];
-                    }
-                });
-            }); })();
-        });
-        /*  const parentH1;
-         const sub; */
+        document.querySelectorAll('.subcategories').forEach(function (subDiv) { return __awaiter(_this, void 0, void 0, function () {
+            var subCat;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, Category.getSubCategory(subDiv.id.substr(-1))];
+                    case 1:
+                        subCat = _a.sent();
+                        subCat.forEach(function (item) {
+                            var span = document.createElement('span');
+                            span.id = "span" + item.id;
+                            span.classList.add('subcategoryHomePage');
+                            span.innerHTML += item.title;
+                            subDiv.appendChild(span);
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        }); });
         var bgr = document.querySelector('.bgr');
         var main = document.querySelector('.main');
-        var wrap = document.querySelector('.menu-wrap');
         var parentH1;
         var sub;
         var firstCategories = document.querySelectorAll('.first');
@@ -139,7 +134,7 @@ var CategoryPage = /** @class */ (function () {
         var arrCategories = document.querySelectorAll('.category');
         var pos = 0;
         var block4 = 0;
-        up.addEventListener('click', function (event) {
+        up.addEventListener('click', function () {
             if (menu.offsetTop > -1 || menu.offsetTop > -441) {
                 return;
             }
@@ -156,12 +151,9 @@ var CategoryPage = /** @class */ (function () {
             bgr.setAttribute('style', "display: inline; top: " + arrCategories[block4].offsetTop + "px;");
             pos += 441;
             menu.style.marginTop = pos + 'px';
-            /* alert(menu.offsetTop); */
         });
-        down.addEventListener('click', function (event) {
+        down.addEventListener('click', function () {
             var allHeight = 0;
-            /*
-                  alert(sub); */
             arrCategories.forEach(function (el) {
                 allHeight += el.offsetHeight;
             });
@@ -178,7 +170,6 @@ var CategoryPage = /** @class */ (function () {
             block4 += 4;
             var url = category[block4].img;
             main.setAttribute("style", "background-image: url(" + url + ")");
-            /*       alert(arrCategories[block4].offsetTop); */
             bgr.setAttribute('style', "display: inline; top: " + arrCategories[block4].offsetTop + "px;");
             pos -= 441;
             menu.style.marginTop = pos + 'px';

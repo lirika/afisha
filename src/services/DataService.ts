@@ -1,3 +1,5 @@
+import Event from "../model/Event";
+
 export default class DataService {
   public readonly baseUrl: string = 'http://localhost:3000/';
 
@@ -48,7 +50,7 @@ export default class DataService {
 
 
 
-  async sendEvents<T>(id:string, value:string):Promise<void> {
+  async sendEvents<T>(id:string, value:Event):Promise<void> {
    const response = await fetch(this.baseUrl + 'subCategories/' + id + '/events',{
      method: 'POST',
      body: JSON.stringify(value),
@@ -56,8 +58,6 @@ export default class DataService {
        'Content-Type': 'application/json'
      }
    });
-   const data =  await response.json()
-    console.log(data)
+   const data =  await response.json();
   }
-
 }

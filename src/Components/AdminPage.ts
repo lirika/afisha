@@ -1,10 +1,11 @@
 import DataService from "../services/DataService";
 import '../styles/adminPage.css'
+import SubCategory from '../model/SubCategory'
+import Event from '../model/Event'
+
 
 export default class AdminPage {
-
-    async renderPage(data: Array<object>) {
-
+    async renderPage(data: Array<SubCategory>) {
         const mainWrapper = document.createElement('div');
         mainWrapper.classList.add('main-wrapper');
         ///////////////////////// create add events form's elements//////////////////////////
@@ -26,7 +27,7 @@ export default class AdminPage {
         /////////////////////////// create add events form's elements////////////////////////
 
         const events = new DataService();
-        const results = await events.getAllEvents();
+        const results: {} = await events.getAllEvents();
 
         /////////////////// render input fields////////////////////////
 
@@ -35,7 +36,7 @@ export default class AdminPage {
                 return
             }
             const inputWrapper = document.createElement('div');
-            inputWrapper.classList.add('field')
+            inputWrapper.classList.add('field');
             const h5 = document.createElement('h5');
             h5.innerHTML = key + ':  ';
             const input = document.createElement('input');
@@ -43,7 +44,7 @@ export default class AdminPage {
             inputWrapper.appendChild(h5);
             inputWrapper.appendChild(input);
             inputDiv.appendChild(inputWrapper)
-        })
+        });
 
         ////////////////render options//////////////////////////////
 
@@ -52,7 +53,7 @@ export default class AdminPage {
             option.innerHTML = item.title;
             option.id = 'option' + item.id;
             select.appendChild(option)
-        })
+        });
 
         const root = document.getElementById('root') as HTMLDivElement;
         root.innerHTML = ` <div class="dark" id="dark"></div>
@@ -70,32 +71,32 @@ export default class AdminPage {
           <div class="item adminPage active">ADMIN PAGE</div>
         </div>
       </div>
-    </header>`
-        root.appendChild(mainWrapper)
-        const optionInSelect = document.querySelectorAll('select option') as NodeList;
+    </header>`;
+        root.appendChild(mainWrapper);
+        const optionInSelect = document.querySelectorAll('select option') as NodeListOf<HTMLOptionElement>;
 
         ///////////////////////////////// SEN Inputs values////////////////////////////////////////
 
         addForm.addEventListener('submit', async (e) => {
-            e.preventDefault()
-            var id;
+            e.preventDefault();
+            let id: string;
             optionInSelect.forEach(option => {
                 if (option.selected) {
                     id = option.id.slice(6);
                     return id
                 }
-            })
+            });
 
-            var inputId = document.querySelector('#id').value
-            var inpTitle = document.querySelector('#title').value
-            var inputStatus = document.querySelector('#status').value
-            var inputGenre = document.querySelector('#genre').value
-            var inputDate = document.querySelector('#date').value
-            var inputTime = document.querySelector('#time').value
-            var inputPlace = document.querySelector('#place').value
-            var inputImg = document.querySelector('#img').value
-            var inputOnline = document.querySelector('#online').value
-            let value = {
+            const inputId = (document.querySelector('#id') as HTMLInputElement).value;
+            const inpTitle = (document.querySelector('#title') as HTMLInputElement).value;
+            const inputStatus = (document.querySelector('#status') as HTMLInputElement).value;
+            const inputGenre = (document.querySelector('#genre') as HTMLInputElement).value;
+            const inputDate = (document.querySelector('#date') as HTMLInputElement).value;
+            const inputTime = (document.querySelector('#time') as HTMLInputElement).value;
+            const inputPlace = (document.querySelector('#place') as HTMLInputElement).value;
+            const inputImg = (document.querySelector('#img') as HTMLInputElement).value;
+            const inputOnline = (document.querySelector('#online') as HTMLInputElement).value;
+            let value: Event = {
                 id: inputId,
                 title: inpTitle,
                 status: inputStatus,
@@ -104,16 +105,17 @@ export default class AdminPage {
                 time: inputTime,
                 place: inputPlace,
                 img: inputImg,
-                online: inputOnline
-            }
+                online: !!inputOnline
+            };
+            // @ts-ignore
             this.sendEvents(id, value)
         })
 
     }
 
-    async sendEvents(id: string, value: string) {
-        const dataService = new DataService()
-        const result = await dataService.sendEvents(id, value)
+    async sendEvents(id: string, value: Event) {
+        const dataService = new DataService();
+        await dataService.sendEvents(id, value)
     }
 
 }

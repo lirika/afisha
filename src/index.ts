@@ -38,7 +38,7 @@ root.addEventListener('click', async event => {
             break;
         case 'item adminPage':
             root.innerHTML = ``;
-            await renderAdminPage()
+            await renderAdminPage();
             break
     }
 });
