@@ -44,7 +44,7 @@ var CategoryPage = /** @class */ (function () {
     CategoryPage.prototype.renderCategory = function (category) {
         var _this = this;
         var root = document.querySelector('#root');
-        root.innerHTML = "<div class=\"main\">\n                        <div class=\"menu-wrap\">\n                          <div class=\"menu\">\n                            <div class=\"bgr\"></div>\n                          </div>\n                        </div>\n                        <div class=\"changeCategories up\"></div>\n                        <div class=\"changeCategories down\"></div>\n                      </div>";
+        root.innerHTML = "<div class=\"main\">\n                        <div class=\"dark-back\"></div>\n                        <div class=\"menu-wrap\">\n                          <div class=\"menu\">\n                            <div class=\"bgr\"></div>\n                          </div>\n                        </div>\n                        <div class=\"changeCategories up\"></div>\n                        <div class=\"changeCategories down\"></div>\n                      </div>";
         var menu = document.querySelector('.menu');
         var Category = new DataService_1["default"]();
         var first = 0;
@@ -119,7 +119,7 @@ var CategoryPage = /** @class */ (function () {
                 parentH1 = el.parentElement;
                 sub = parentH1.lastElementChild;
                 url = category[Number(sub.id.slice(3))].img;
-                main.setAttribute("style", "background-image: url(" + url + ")");
+                main.setAttribute("style", "background-image: url(" + url + ");");
                 setSelected();
                 if (parentH1.classList.contains('first') || parentH1.offsetTop <= prev.offsetTop) {
                     bgr.setAttribute('style', "display: inline; top: " + (parentH1.offsetTop) + "px;");
