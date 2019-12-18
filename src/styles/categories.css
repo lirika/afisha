@@ -153,6 +153,22 @@ body {
   transform: rotate(45deg);
 }
 
+.subcategoryHomePage {
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 7px;
+  transition: 0.3s;
+}
+
+.subcategoryHomePage:hover {
+  transition: 0.3s;
+  font-size: 22px;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 7px;
+}
+
 /* @media(max-width: 500px){
   .changeCategories{
     margin-right: 45.5vw;

@@ -6,8 +6,8 @@
 
 body {
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background-size: cover;
+  //background-repeat: no-repeat;
   opacity: 1;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -43,7 +43,7 @@ header {
 }
 
 .navbar {
-/*   border: 2px solid red; */
+  /*   border: 2px solid red; */
   display: flex;
   width: 1260px;
   height: 120px;
@@ -88,7 +88,7 @@ header {
 }
 
 .event-info {
-/*   border: 2px solid red; */
+  /*   border: 2px solid red; */
   display: flex;
   align-items: center;
   height: 52vh;
@@ -97,7 +97,7 @@ header {
 }
 
 .info {
-/*   border: 2px solid red; */
+  /*   border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -109,14 +109,14 @@ header {
 }
 
 ///////////////////  event items /////////////////////////////
-.scroll{
+.scroll {
   height: 4px;
   width: 92.5%;
   margin: auto;
   position: relative;
   background-color: rgba(247, 245, 245, 0.2);
-  
-  .scroll-thumb{
+
+  .scroll-thumb {
     width: 150px;
     background-color: rgba(247, 245, 245, 0.7);
     position: absolute;
@@ -127,19 +127,19 @@ header {
 
 @mixin scrollbar($size, $primary, $secondary: lighten($primary, 25%)) {
   ::-webkit-scrollbar {
-		width:  $size;
-		height: $size;
-	}
+    width: $size;
+    height: $size;
+  }
 
-	::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     border-radius: 30px;
-		background: rgb(199, 199, 199);
-	}
+    background: rgb(199, 199, 199);
+  }
 
-	::-webkit-scrollbar-track {
-		background:rgba(202, 202, 202, 0.2);
-	}
-  
+  ::-webkit-scrollbar-track {
+    background: rgba(202, 202, 202, 0.2);
+  }
+
   // For Internet Explorer
   body {
     scrollbar-face-color: $primary;
@@ -148,12 +148,12 @@ header {
 }
 
 .wrap-items {
-/*     border: 2px solid red; */
+  /*     border: 2px solid red; */
   height: 29vh;
   position: relative;
   @include scrollbar(.5em, rgb(122, 118, 117));
 
-  .arrow{
+  .arrow {
     position: absolute;
     top: 70px;
     padding: 2px;
@@ -170,115 +170,115 @@ header {
     right: 15px;
 
     visibility: hidden;
-    
+
     transition: 0.3s;
   }
 
-  .arrow:focus{
+  .arrow:focus {
     outline: none;
   }
 
-  .arrow:hover{
+  .arrow:hover {
     border-color: rgb(255, 255, 255);
-    cursor:pointer;
+    cursor: pointer;
     right: 10px;
     width: 30px;
     height: 30px;
     border-width: 0 7px 7px 0;
   }
 
-  .prev{
+  .prev {
     margin-top: -5px;
     transform: rotate(-135deg);
     transform: rotate(-135deg);
   }
 
-  .next{
+  .next {
     margin-top: 60px;
     transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
-  .items{
+  .items {
     border: 2px solid transparent;
     width: 93%;
     height: 190px;
     overflow: hidden;
     margin: auto;
-  
-      ul{
-        margin: 0;
-        padding: 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
       /*   height: 190px; */
-        border: 2px solid transparent;
-        list-style: none;
-        font-size: 0;
-        margin-top: 0px;  ///this style changed
-        margin-bottom: 0px; 
-        transition: 0.5s;
-      }
-  
-      li{
-        font-size: 15px;
-        display: inline-block;
- /*        border: 1px solid rgb(103, 202, 103); */
-        height: 190px;
-        width: 348px;
-        margin: 0;
-        padding-left: 2px;
-        padding-right: 50px;
-        cursor: pointer;
-      }
-  
-      .event-type{
-/*         border: 1px solid rgb(253, 253, 253); */
-        height: 15%;
-        margin-top: 5%;
-        display: flex;
-        align-items: baseline;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        position: relative;
+      border: 2px solid transparent;
+      list-style: none;
+      font-size: 0;
+      margin-top: 0px; ///this style changed
+      margin-bottom: 0px;
+      transition: 0.5s;
+    }
 
-      }
+    li {
+      font-size: 15px;
+      display: inline-block;
+      /*        border: 1px solid rgb(103, 202, 103); */
+      height: 190px;
+      width: 348px;
+      margin: 0;
+      padding-left: 2px;
+      padding-right: 50px;
+      cursor: pointer;
+    }
 
-      .colorStatus{
-        position: absolute;
-        height:20px;
-        /* width: 90px; */
-        padding-right:7px;
-        padding-left:7px;
-        background-color: rgb(99, 6, 91);
-      }
+    .event-type {
+      /*         border: 1px solid rgb(253, 253, 253); */
+      height: 15%;
+      margin-top: 5%;
+      display: flex;
+      align-items: baseline;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      position: relative;
 
-      .circle {
-        width: 10px;
-        height: 10px;
-        background: rgb(240, 37, 37);
-        border-radius: 50px;
-        margin-right: 7px;
-      }
-  
-      .event-description{
-       /*  border: 1px solid rgb(253, 253, 253); */
-        height: 40%;
-        margin-top: 1%;
-        font-size: 1.1em;
-      }
-  
-      .event-date{
-       /*  border: 1px solid rgb(253, 253, 253); */
-        height: 30%;
-        margin-top: 1%;
-        position: relative;
-        font-size: 0.95em;
-      }
+    }
 
-      .place-time{
-    /*     background-color: rgb(70, 49, 49); */
-        position: absolute;
-        font-size: 0.9em;
-      }
+    .colorStatus {
+      position: absolute;
+      height: 20px;
+      /* width: 90px; */
+      padding-right: 7px;
+      padding-left: 7px;
+      background-color: rgb(99, 6, 91);
+    }
+
+    .circle {
+      width: 10px;
+      height: 10px;
+      background: rgb(240, 37, 37);
+      border-radius: 50px;
+      margin-right: 7px;
+    }
+
+    .event-description {
+      /*  border: 1px solid rgb(253, 253, 253); */
+      height: 40%;
+      margin-top: 1%;
+      font-size: 1.1em;
+    }
+
+    .event-date {
+      /*  border: 1px solid rgb(253, 253, 253); */
+      height: 30%;
+      margin-top: 1%;
+      position: relative;
+      font-size: 0.95em;
+    }
+
+    .place-time {
+      /*     background-color: rgb(70, 49, 49); */
+      position: absolute;
+      font-size: 0.9em;
+    }
   }
 }
 
@@ -373,7 +373,7 @@ header {
 }
 
 @media screen and (max-width: 690px) {
-  .event-info{
+  .event-info {
     height: 69vh;
   }
 
@@ -443,10 +443,11 @@ header {
 }
 
 .button-all {
- /*  border: 1px solid red; */
+  /*  border: 1px solid red; */
   display: flex;
   padding-top: 20px;
 }
+
 .button {
   display: flex;
   justify-content: center;
@@ -466,10 +467,11 @@ header {
   background: #4444ff 0% 0% no-repeat padding-box;
 }
 
-.watch{
+.watch {
   transition: 0.7s;
   background: #FF0000;
-  &:hover{
+
+  &:hover {
     background: darkred;
   }
 }
@@ -478,10 +480,12 @@ header {
   transition: 0.7s;
   background: #181869 0% 0% no-repeat padding-box;
 }
+
 .more-info:hover {
   transition: 0.7s;
   border-color: #181869;
 }
+
 .more-info {
   border: 3px solid #4444ff;
   border-radius: 100px;
@@ -533,10 +537,12 @@ header {
   animation: .3s linear show;
   transform: scale(1.03);
 }
+
 .bg-event-img {
-  width: 100%;
-  height: 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top,
+          left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
   display: none;
+  width: 100%;
   animation: 0.5s linear show;
   z-index: -2;
   transform: scale(1.03);
@@ -563,7 +569,7 @@ header {
   text-align: left;
   background-color: rgb(71, 71, 71);
 
-  .infoEventModal{
+  .infoEventModal {
     width: 70%;
     height: 20%;
     color: white;
@@ -573,19 +579,19 @@ header {
     padding-bottom: 20px;
   }
 
-  .info-modal{
+  .info-modal {
     height: 95%;
     width: 100%;
     border: 2px solid white;
     padding: 20px;
     font-size: 20px;
 
-    strong{
+    strong {
       font-size: 30px;
     }
 
-    .price{
-  /*     background: khaki; */
+    .price {
+      /*     background: khaki; */
       text-align: end;
       text-transform: uppercase;
       font-weight: 700;
@@ -593,8 +599,8 @@ header {
     }
   }
 
-  .payModal{ 
-/*     border: 1px solid rgb(121, 45, 45); */
+  .payModal {
+    /*     border: 1px solid rgb(121, 45, 45); */
     width: 70%;
     height: 75%;;
     position: relative;
@@ -609,35 +615,35 @@ header {
       flex-wrap: wrap;
       margin: 0 -16px;
     }
-    
+
     .col-25 {
       -ms-flex: 25%; /* IE10 */
       flex: 25%;
     }
-    
+
     .col-50 {
       -ms-flex: 50%; /* IE10 */
       flex: 50%;
     }
-    
+
     .col-75 {
       -ms-flex: 75%; /* IE10 */
       flex: 75%;
     }
-    
+
     .col-25,
     .col-50,
     .col-75 {
       padding: 0 16px;
     }
-    
+
     .container-form {
       background-color: #f2f2f2;
       padding: 5px 20px 15px 20px;
       border: 1px solid lightgrey;
       border-radius: 3px;
     }
-    
+
     input[type=text] {
       width: 100%;
       margin-bottom: 20px;
@@ -645,18 +651,18 @@ header {
       border: 1px solid #ccc;
       border-radius: 3px;
     }
-    
+
     label {
       margin-bottom: 10px;
       display: block;
     }
-    
+
     .icon-container {
       margin-bottom: 20px;
       padding: 7px 0;
       font-size: 24px;
     }
-    
+
     .btn {
       background-color: #4CAF50;
       color: white;
@@ -668,16 +674,16 @@ header {
       cursor: pointer;
       font-size: 17px;
     }
-    
+
     .btn:hover {
       background-color: #45a049;
     }
-    
+
     span.price {
       float: right;
       color: grey;
     }
-    
+
     /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
     @media (max-width: 800px) {
       .row {
@@ -702,8 +708,9 @@ header {
   position: fixed;
   transition: all .4s ease;
   cursor: pointer;
+
   &:hover {
-    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
   }
 }
 

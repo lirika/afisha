@@ -127,7 +127,7 @@ let payBlock: string = `
         </div>
       </div>
     </header>
-    <div class="screen"><img src=${defaultBg}  alt=img class="bg-event-img" style="display: block; width: 100%; height: 100%"></div>
+    <div class="screen"><img src=${defaultBg}  alt=img class="bg-event-img" style="display: block;"></div>
 
     <div class="event-info">
     
@@ -317,7 +317,7 @@ let payBlock: string = `
         scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
         let information = events[Number(li.id.slice(2))];
         let urlImg = events[Number(li.id.slice(2))].img;
-        screen.innerHTML = `<img src=${urlImg} alt=img class="bg-event-img" style="display: block; width: 100%; height: 100%">`
+        screen.innerHTML = `<img src=${urlImg} alt=img class="bg-event-img" style="display: block;>`
 
         /////// Change info by click on event item///////////
 
