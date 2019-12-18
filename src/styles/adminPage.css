@@ -1,4 +1,5 @@
 .input-wrapper {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,15 +7,21 @@
 }
 
 .add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   margin-left: 40px;
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 2px;
 }
 .add-form h2 {
   text-transform: uppercase;
 }
 .add-form input {
   border: none;
-  max-width: 300px;
+  width: 100%;
   margin-left: 5px;
   padding: 5px;
   background: transparent;
@@ -26,23 +33,35 @@
 .add-form input:hover {
   border-bottom: 1px solid darkred;
 }
-.add-form button {
+.add-form .button {
+  width: 200px;
   background: #FF0000;
   color: #ffffff;
   border: none;
   outline: none;
 }
-.add-form button:hover {
+.add-form .button:hover {
   background: darkred;
+}
+.add-form select {
+  font-size: 20px;
+  padding: 5px;
+  width: 250px;
+  cursor: pointer;
+}
+.add-form select:focus {
+  outline: 0;
 }
 
 .main-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .field {
+  width: 250px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 

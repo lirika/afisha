@@ -1,6 +1,6 @@
 $fontH: 'Roboto', sans-serif;
-
 .input-wrapper {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,8 +8,15 @@ $fontH: 'Roboto', sans-serif;
 }
 
 .add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: $fontH;
   margin-left: 40px;
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 2px;
+
   h2 {
     text-transform: uppercase;
 
@@ -17,7 +24,7 @@ $fontH: 'Roboto', sans-serif;
 
   input {
     border: none;
-    max-width: 300px;
+    width: 100%;
     margin-left: 5px;
     padding: 5px;
     background: transparent;
@@ -25,31 +32,44 @@ $fontH: 'Roboto', sans-serif;
     outline: none;
     color: #ffffff;
     transition: .4s;
+
     &:hover {
       border-bottom: 1px solid darkred;
     }
   }
-  
-  button {
+
+  .button {
+    width: 200px;
     background: #FF0000;
     color: #ffffff;
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
 
     &:hover {
       background: darkred;
     }
   }
 
+  select {
+    font-size: 20px;
+    padding: 5px;
+    width: 250px;
+    cursor: pointer;
+  }
 
+  select:focus {
+    outline: 0;
+  }
 }
 
 .main-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .field {
+  width: 250px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
