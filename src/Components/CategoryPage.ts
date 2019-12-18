@@ -7,6 +7,7 @@ export default class CategoryPage {
   renderCategory(category:Array<Event>): void {
     const root = document.querySelector('#root') as HTMLDivElement;
     root.innerHTML = `<div class="main">
+                        <div class="dark-back"></div>
                         <div class="menu-wrap">
                           <div class="menu">
                             <div class="bgr"></div>
@@ -88,7 +89,7 @@ export default class CategoryPage {
  /*      const Cat: T[] = await Category.getCategory(); */
       const url = category[Number(sub!.id.slice(3))].img;
 
-      main.setAttribute(`style`, `background-image: url(${url})`);
+      main.setAttribute(`style`, `background-image: url(${url});`);
       setSelected();
 
       if(parentH1!.classList.contains('first') || parentH1!.offsetTop <= prev!.offsetTop){
