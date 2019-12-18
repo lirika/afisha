@@ -7,6 +7,7 @@ import renderAdminPage from "./services/renderAdminPage";
 window.addEventListener('load', init);
 
 async function init() {
+/*     await renderEventsPage(1, "ht"); */
     await renderCategoryPage();
 }
 

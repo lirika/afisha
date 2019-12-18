@@ -42,6 +42,9 @@ var EventsPage = /** @class */ (function () {
     }
     EventsPage.prototype.renderEventsList = function (events, subTitle) {
         var _this = this;
+        var currentEvent = events[0];
+        var payBlock = "\n<div class=\"row\">\n            <div class=\"col-75\">\n              <div class=\"container-form\">\n                <form action=\"/action_page.php\">\n          \n                  <div class=\"row\">\n                    <div class=\"col-50\">\n                      <h3>Billing Address</h3>\n                      <label for=\"fname\"><i class=\"fa fa-user\"></i> Full Name</label>\n                      <input type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"John M. Doe\">\n                      <label for=\"email\"><i class=\"fa fa-envelope\"></i> Email</label>\n                      <input type=\"text\" id=\"email\" name=\"email\" placeholder=\"john@example.com\">\n                      <label for=\"adr\"><i class=\"fa fa-address-card-o\"></i> Address</label>\n                      <input type=\"text\" id=\"adr\" name=\"address\" placeholder=\"542 W. 15th Street\">\n                      <label for=\"city\"><i class=\"fa fa-institution\"></i> City</label>\n                      <input type=\"text\" id=\"city\" name=\"city\" placeholder=\"New York\">\n          \n                      <div class=\"row\">\n                        <div class=\"col-50\">\n                          <label for=\"state\">State</label>\n                          <input type=\"text\" id=\"state\" name=\"state\" placeholder=\"NY\">\n                        </div>\n                        <div class=\"col-50\">\n                          <label for=\"zip\">Zip</label>\n                          <input type=\"text\" id=\"zip\" name=\"zip\" placeholder=\"10001\">\n                        </div>\n                      </div>\n                    </div>\n          \n                    <div class=\"col-50\">\n                      <h3>Payment</h3>\n                      <label for=\"fname\">Accepted Cards</label>\n                      <div class=\"icon-container\">\n                        <i class=\"fa fa-cc-visa\" style=\"color:navy;\"></i>\n                        <i class=\"fa fa-cc-amex\" style=\"color:blue;\"></i>\n                        <i class=\"fa fa-cc-mastercard\" style=\"color:red;\"></i>\n                        <i class=\"fa fa-cc-discover\" style=\"color:orange;\"></i>\n                      </div>\n                      <label for=\"cname\">Name on Card</label>\n                      <input type=\"text\" id=\"cname\" name=\"cardname\" placeholder=\"John More Doe\">\n                      <label for=\"ccnum\">Credit card number</label>\n                      <input type=\"text\" id=\"ccnum\" name=\"cardnumber\" placeholder=\"1111-2222-3333-4444\">\n                      <label for=\"expmonth\">Exp Month</label>\n                      <input type=\"text\" id=\"expmonth\" name=\"expmonth\" placeholder=\"September\">\n          \n                      <div class=\"row\">\n                        <div class=\"col-50\">\n                          <label for=\"expyear\">Exp Year</label>\n                          <input type=\"text\" id=\"expyear\" name=\"expyear\" placeholder=\"2018\">\n                        </div>\n                        <div class=\"col-50\">\n                          <label for=\"cvv\">CVV</label>\n                          <input type=\"text\" id=\"cvv\" name=\"cvv\" placeholder=\"352\">\n                        </div>\n                      </div>\n                    </div>\n          \n                  </div>\n                  <label>\n                    <input type=\"checkbox\" checked=\"checked\" name=\"sameadr\"> Shipping address same as billing\n                  </label>\n                  <input type=\"submit\" value=\"Continue to checkout\" class=\"btn\">\n                </form>\n              </div>\n            </div>\n          </div>\n";
+        /*   let proceModal:number; */
         var defaultItem = events[0];
         document.body.style.background = "linear-gradient(to bottom, rgba(0,0,0,.0), rgba(0,0,0,.99) 75%),linear-gradient(to top,  rgba(0,0,0,.0), rgba(0,0,0,.5) 90%)";
         /////// set base Background ////
@@ -57,7 +60,7 @@ var EventsPage = /** @class */ (function () {
         }
         var defaultTemplate = "\n                         <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + defaultItem.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + defaultItem.genre + "\n                          </div>\n                           " + defaultDate + "\n                     </div>\n                      <div class=\"button-all\">\n                      " + defaultButtons + "\n</div>\n        ";
         var root = document.querySelector('#root');
-        root.innerHTML = " \n    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item active\">" + subTitle + "</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>\n    <div class=\"screen\"><img src=" + defaultBg + "  alt=img class=\"bg-event-img\" style=\"display: block; width: 100%; height: 100%\"></div>\n\n    <div class=\"event-info\">\n      <div class=\"info\">\n      " + defaultTemplate + "\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n            </ul>\n        </div>\n        \n        <div class=\"arrow prev\"></div>\n        <div class=\"arrow next\"></div>\n    </div>\n    ";
+        root.innerHTML = " \n    <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item active\">" + subTitle + "</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>\n    <div class=\"screen\"><img src=" + defaultBg + "  alt=img class=\"bg-event-img\" style=\"display: block; width: 100%; height: 100%\"></div>\n\n    <div class=\"event-info\">\n    \n      <div class=\"container\">\n        <div class=\"modal\">\n            <div class=\"btn-close\">close</div>\n            <div class = \"infoEventModal\">\n            \n              <div class=\"info-modal\">\n                <strong>" + events[0].title + "</strong><br>\n                " + events[0].date + "\n                <div class=\"price\">Price: 12</div>\n              </div>\n\n            </div>\n            <div class = \"payModal\">" + payBlock + "</div>\n        </div>\n      </div>\n\n      <div class=\"info\">\n      " + defaultTemplate + "\n      </div>\n    </div>\n     \n    <div class=\"scroll\">\n      <div class=\"scroll-thumb\"></div>\n    </div>\n<!--////////////  items   ///////////////  -->\n\n    <div class=\"wrap-items\">\n        <div class=\"items\">\n            <ul class=\"events\">\n            </ul>\n        </div>\n        \n        <div class=\"arrow prev\"></div>\n        <div class=\"arrow next\"></div>\n    </div>\n    ";
         ////////////////////// code for load data to blocks /////////////////////////
         var ul = document.querySelector('.wrap-items ul');
         var screen = document.querySelector('.screen');
@@ -171,6 +174,8 @@ var EventsPage = /** @class */ (function () {
         var prev = document.querySelector('.prev');
         var next = document.querySelector('.next');
         var scrollThumb = document.querySelector('.scroll-thumb');
+        var buyButton;
+        var moreButton;
         listLi.forEach(function (li) {
             li.addEventListener('click', function (event) { return __awaiter(_this, void 0, void 0, function () {
                 var information, urlImg, dateWrap, buttonWrapper;
@@ -178,23 +183,36 @@ var EventsPage = /** @class */ (function () {
                     scrollThumb.style.marginLeft = li.offsetLeft - ul.offsetLeft + 'px';
                     information = events[Number(li.id.slice(2))];
                     urlImg = events[Number(li.id.slice(2))].img;
-                    console.log(li.id.slice(2));
                     screen.innerHTML = "<img src=" + urlImg + " alt=img class=\"bg-event-img\" style=\"display: block; width: 100%; height: 100%\">";
                     /////// Change info by click on event item///////////
-                    infoWrap.innerHTML = "\n                      <div class=\"info\">\n                      <div class=\"modal\">\n                          <p>" + information.title + "</p>\n                          <p>" + information.place + "</p>\n                          <p>" + information.date + "</p>\n                        <button>Close</button>\n                       </div>\n                       <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + information.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + information.genre + "\n                          </div>\n                           <div class=\"data-time-location\">\n                              " + information.time + ", " + information.place + "<br>\n                              " + information.date + "\n                            </div>\n                     </div>\n                      <div class=\"button-all\"></div>\n</div>\n                ";
+                    infoWrap.innerHTML = "\n                      <div class=\"container\">\n                        <div class=\"modal\">\n                            <div class=\"btn-close\">close</div>\n                            <div class = \"infoEventModal\">\n                                <div class=\"info-modal\">\n                                  <strong>" + information.title + "</strong><br>\n                                  " + information.date + "\n                                  <div class=\"price\">Price: 12</div>\n                                </div>\n                            </div>\n                            <div class = \"payModal\">" + payBlock + "</div>\n                        </div>\n                      </div>\n\n                      <div class=\"info\">\n                       <div class=\"main-info\">\n                          <div class=\"title\">\n                            " + information.title + "\n                          </div>\n                          <div class=\"description\">\n                            " + information.genre + "\n                          </div>\n                           <div class=\"data-time-location\">\n                              " + information.time + ", " + information.place + "<br>\n                              " + information.date + "\n                            </div>\n                          </div>\n                        <div class=\"button-all\"></div>\n                      </div>\n                ";
                     dateWrap = document.querySelector('.data-time-location');
                     buttonWrapper = document.querySelector('.button-all');
                     if (information.online) {
                         dateWrap.innerHTML = information.date;
+                        buttonWrapper.innerHTML = "";
                         buttonWrapper.innerHTML = "<div id=\"watch" + li.id.slice(2) + "\" class=\"button watch\">Watch now</div>";
                     }
                     else {
                         dateWrap.innerHTML = information.time + ", " + information.place + "<br>\n                                                                                    " + information.date;
-                        buttonWrapper.innerHTML = " \n                                 <div id=\"buy" + li.id.slice(2) + "\" class=\"button buy\">Buy now</div>\n                                 <div id=\"more-info" + li.id.slice(2) + "\" class=\"button more-info\">More info</div>\n                                ";
+                        /*  buttonWrapper.innerHTML = `
+                                                <div id="buy${li.id.slice(2)}" class="button buy">Buy now</div>
+                                                <div id="more-info${li.id.slice(2)}" class="button more-info">More info</div>
+                                               `; */
+                        buyButton = document.createElement('div');
+                        buyButton.id = "buy" + li.id.slice(2);
+                        buyButton.classList.add("button");
+                        buyButton.classList.add("buy");
+                        buyButton.innerHTML = "Buy now";
+                        moreButton = document.createElement('div');
+                        moreButton.id = "buy" + li.id.slice(2);
+                        moreButton.classList.add("button");
+                        moreButton.classList.add("more-info");
+                        moreButton.innerHTML = "More info";
+                        buttonWrapper.innerHTML = "";
+                        buttonWrapper.append(buyButton, moreButton);
                     }
-                    document.querySelector('.buy').addEventListener('click', function () {
-                        document.querySelector('.modal').style.display = 'block';
-                    });
+                    currentEvent = information;
                     return [2 /*return*/];
                 });
             }); });
@@ -213,6 +231,18 @@ var EventsPage = /** @class */ (function () {
             }
             position -= 190;
             ul.style.marginTop = position + 'px';
+        });
+        var rootEvent = document.querySelector("#root");
+        rootEvent.addEventListener('click', function (event) {
+            var container = document.querySelector('.container');
+            var modal = document.querySelector('.modal');
+            var target = event.target;
+            if (target.classList.contains('buy')) {
+                container.classList.add('modal-open');
+            }
+            else if (target.classList.contains('btn-close')) {
+                container.classList.remove('modal-open');
+            }
         });
     };
     return EventsPage;
