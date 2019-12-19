@@ -21,8 +21,9 @@ export default class SupportUs {
             </div>
           </div>
         </header>
-        <div class="titleSupport"> Support Us</div>
+        <div class="contentSupport">
         <form class="formSupport">
+        <div class="titleSupport"> Support Us</div>
             <label for="name">Your name</label>
             <input type="text" name="name" class="input">
              <label for="name">Your last name</label>
@@ -36,7 +37,7 @@ export default class SupportUs {
          <p class="contacts"><b>Phone:</b> ${data.phone}</p>
          <p class="contacts"><b>Email:</b> ${data.email}</p>
          <p class="contacts"><b>Address:</b> ${data.address}</p>
-
+    </div>
 </div>
         `
 
