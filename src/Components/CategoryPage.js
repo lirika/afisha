@@ -44,7 +44,9 @@ var CategoryPage = /** @class */ (function () {
     CategoryPage.prototype.renderCategory = function (category) {
         var _this = this;
         var root = document.querySelector('#root');
-        root.innerHTML = "<div class=\"main\">\n                        <div class=\"dark-back\"></div>\n                        <div class=\"menu-wrap\">\n                          <div class=\"menu\">\n                            <div class=\"bgr\"></div>\n                          </div>\n                        </div>\n                        <div class=\"changeCategories up\"></div>\n                        <div class=\"changeCategories down\"></div>\n                      </div>";
+        root.innerHTML = "<div class=\"main\">\n\n\n<div class='snowContainer'><div id=\"snow\"></div></div>\n  <div class=\"icons-help\">\n    <form id=\"icon-form\">\n      <div class=\"tooltip\">\n        <input type=\"text\" placeholder=\"Search subcategory...\">\n        <span class=\"tooltiptext\">No such subcategory :(</span>\n      </div>\n      <button type=\"submit\" class=\"button-search\"></button>\n        \n      <div class=\"tooltip tooltip-q\">\n      <button type=\"button\" class=\"button-question\"></button>\n        <span class=\"tooltiptext tooltiptext-q\">\n          <strong>Hi!</strong><br>Just choose subcategory and click on it to see available events!\n        </span>\n      </div>\n      <button type=\"button\" class=\"button-settings\"></button>\n    </form>\n\n\n\n\n\n                        <div class=\"dark-back\"></div>\n                        <div class=\"menu-wrap\">\n                          <div class=\"menu\">\n                            <div class=\"bgr\"></div>\n                          </div>\n                        </div>\n                        <div class=\"changeCategories up\"></div>\n                        <div class=\"changeCategories down\"></div>\n                      </div>";
+        var btn_q = document.querySelector('.button-question');
+        var tooltip_q = document.querySelector('.tooltiptext-q');
         var menu = document.querySelector('.menu');
         var Category = new DataService_1["default"]();
         var first = 0;
@@ -173,6 +175,40 @@ var CategoryPage = /** @class */ (function () {
             bgr.setAttribute('style', "display: inline; top: " + arrCategories[block4].offsetTop + "px;");
             pos -= 441;
             menu.style.marginTop = pos + 'px';
+        });
+        /*     const btn_search = document.querySelector('.button-search') as HTMLButtonElement;
+        const input_search = document.querySelector('.icons-help input') as HTMLInputElement;
+        let form_help = document.querySelector('.icons-help form') as HTMLFormElement;
+    
+        form_help.addEventListener('submit', async() => {
+          let subCategTitle:string = input_search.value;
+    
+          const dataSubCategory = new DataService();
+          const subCategoryByTitle: T[] = await dataSubCategory.getSubCategoryByTitle(subCategTitle);
+          
+          if(!subCategoryByTitle[0]){
+          let tooltip = document.querySelector('.tooltiptext') as HTMLSpanElement;
+          let inputEl = document.querySelector('.tooltip input') as HTMLInputElement;
+           tooltip.style.visibility = 'visible';
+            inputEl.style.cssText = `
+            width: 300px;
+            z-index: 1;
+            border-bottom: 2px solid rgba(245, 242, 242, 0.9);
+           `;
+            inputEl.value = subCategTitle;
+            return;
+          }
+    
+          alert(subCategoryByTitle[0].id);
+          root.innerHTML = ``;
+          await renderEventsPage(subCategoryByTitle[0].id, subCategTitle);
+        }); */
+        btn_q.addEventListener('click', function () {
+            if (tooltip_q.style.visibility == 'visible') {
+                tooltip_q.style.visibility = 'hidden';
+                return;
+            }
+            tooltip_q.style.visibility = 'visible';
         });
     };
     return CategoryPage;

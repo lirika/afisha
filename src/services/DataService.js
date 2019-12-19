@@ -56,6 +56,14 @@ var DataService = /** @class */ (function () {
             return response.json();
         });
     };
+    DataService.prototype.getSubCategoryByTitle = function (title) {
+        return fetch(this.baseUrl + 'subCategories?title=' + title).then(function (response) {
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            return response.json();
+        });
+    };
     DataService.prototype.getAllSubCategory = function () {
         return fetch(this.baseUrl + 'subCategories').then(function (response) {
             if (!response.ok) {

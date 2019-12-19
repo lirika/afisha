@@ -5,6 +5,8 @@ import renderAdminPage from "./services/renderAdminPage";
 import TodoApp from "./Components/TodoApp";
 import renderSupportUsPage from "./services/renderSupportUsPage";
 
+import DataService from './services/DataService';
+
 window.addEventListener('load', init);
 
 async function init() {
@@ -48,11 +50,24 @@ root.addEventListener('click', async event => {
             init();
             break;
 
+        case 'button-search':
+            event.preventDefault();
+            const input_search = document.querySelector('.icons-help input') as HTMLInputElement;
+            const tooltipText = document.querySelector('.icons-help .tooltiptext') as HTMLInputElement;
+            const dataS = new DataService();
+            const subC: T[] = await dataS.getSubCategoryByTitle(input_search.value);
 
-        // case 'button buy':
-        //  await  console.log(document.querySelector('.modal'))
-        //     break;
-        
+            if(!subC[0]){
+                tooltipText.style.visibility = 'visible';
+                return;
+            }
 
-    }
+         /*    console.log(subC[0].id); */
+            root.innerHTML = ``;
+            await renderEventsPage(subC[0].id, input_search.value);
+            break; 
+        case 'button-settings':
+            const buttonSnow = document.querySelector('.snowContainer') as HTMLInputElement;
+            buttonSnow.classList.toggle('snowVisible');
+        }
 });

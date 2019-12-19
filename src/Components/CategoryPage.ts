@@ -7,6 +7,30 @@ export default class CategoryPage {
   renderCategory(category:Array<Event>): void {
     const root = document.querySelector('#root') as HTMLDivElement;
     root.innerHTML = `<div class="main">
+
+
+<div class='snowContainer'><div id="snow"></div></div>
+  <div class="icons-help">
+    <form id="icon-form">
+      <div class="tooltip">
+        <input type="text" placeholder="Search subcategory...">
+        <span class="tooltiptext">No such subcategory :(</span>
+      </div>
+      <button type="submit" class="button-search"></button>
+        
+      <div class="tooltip tooltip-q">
+      <button type="button" class="button-question"></button>
+        <span class="tooltiptext tooltiptext-q">
+          <strong>Hi!</strong><br>Just choose subcategory and click on it to see available events!
+        </span>
+      </div>
+      <button type="button" class="button-settings"></button>
+    </form>
+
+
+
+
+
                         <div class="dark-back"></div>
                         <div class="menu-wrap">
                           <div class="menu">
@@ -17,6 +41,9 @@ export default class CategoryPage {
                         <div class="changeCategories down"></div>
                       </div>`;
 
+    const btn_q = document.querySelector('.button-question') as HTMLButtonElement;
+    const tooltip_q = document.querySelector('.tooltiptext-q') as HTMLSpanElement;
+                      
     const menu = document.querySelector('.menu') as HTMLDivElement;
     const Category = new DataService();
     let first:number = 0;
@@ -168,5 +195,44 @@ export default class CategoryPage {
       pos -= 441;
       menu.style.marginTop = pos + 'px';
     }); 
+
+
+    /*     const btn_search = document.querySelector('.button-search') as HTMLButtonElement;
+    const input_search = document.querySelector('.icons-help input') as HTMLInputElement;
+    let form_help = document.querySelector('.icons-help form') as HTMLFormElement;     
+
+    form_help.addEventListener('submit', async() => {
+      let subCategTitle:string = input_search.value;
+
+      const dataSubCategory = new DataService();
+      const subCategoryByTitle: T[] = await dataSubCategory.getSubCategoryByTitle(subCategTitle);
+      
+      if(!subCategoryByTitle[0]){
+      let tooltip = document.querySelector('.tooltiptext') as HTMLSpanElement;
+      let inputEl = document.querySelector('.tooltip input') as HTMLInputElement;
+       tooltip.style.visibility = 'visible';
+        inputEl.style.cssText = `
+        width: 300px;
+        z-index: 1;
+        border-bottom: 2px solid rgba(245, 242, 242, 0.9);
+       `; 
+        inputEl.value = subCategTitle;
+        return;
+      } 
+
+      alert(subCategoryByTitle[0].id);
+      root.innerHTML = ``;
+      await renderEventsPage(subCategoryByTitle[0].id, subCategTitle);
+    }); */
+    
+    
+    btn_q.addEventListener('click', () => {
+      if(tooltip_q.style.visibility == 'visible'){
+       tooltip_q.style.visibility = 'hidden';
+       return;
+      }
+ 
+       tooltip_q.style.visibility = 'visible';
+     });
   }
 }
