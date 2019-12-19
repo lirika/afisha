@@ -1,0 +1,52 @@
+.titleSupport {
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  margin-top: 70px;
+}
+
+.contacts {
+  text-align: center;
+  font-size: 20px;
+}
+
+.formSupport {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formSupport .button {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background-color: #4444ff;
+  color: white;
+}
+.formSupport .button:hover {
+  background-color: #130080;
+}
+.formSupport .input {
+  padding: 5px;
+  font-size: 22px;
+  color: white;
+  width: 200px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background: none;
+}
+.formSupport .input:focus {
+  outline: 0;
+}
+.formSupport label {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=supportUs.css.map */
