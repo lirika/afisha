@@ -31,7 +31,7 @@ export default class AboutPage {
 
         <div class="title-about">
             <div class="rotating-text">
-                <p>Out team:</p>
+                <p>Our team:</p>
                 <p>
                 <span class="word alizarin">Yana.</span>
                 <span class="word wisteria">Sasha.</span>

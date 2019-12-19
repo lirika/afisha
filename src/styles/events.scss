@@ -567,7 +567,7 @@ header {
   position: fixed;
   left: 0;
   text-align: left;
-  background-color: rgb(71, 71, 71);
+  background-color: rgba(0,0,0,.9);
 
   .infoEventModal {
     width: 70%;
@@ -575,7 +575,7 @@ header {
     color: white;
     font-size: 25px;
     position: relative;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
   }
 
@@ -583,18 +583,25 @@ header {
     height: 95%;
     width: 100%;
     border: 2px solid white;
-    padding: 20px;
-    font-size: 20px;
+    padding-top: 8px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    font-size: 16px;
 
     strong {
       font-size: 30px;
     }
 
     .price {
+      position: absolute;
       /*     background: khaki; */
       text-align: end;
       text-transform: uppercase;
       font-weight: 700;
+      font-size: 25px;
+      padding-bottom: 80px;
+      margin-left: 60vw;
+      color: #e92d2d;
       text-decoration: underline;
     }
   }
@@ -700,7 +707,7 @@ header {
   z-index: 1001;
   font-size: 20px;
   //margin-top: -380px;
-  margin-top: 10px;
+  margin-top: -310px;
   margin-left: 42%;
   background: rgb(223, 44, 44);
   border-radius: 3px;
@@ -723,9 +730,23 @@ header {
 .container-info {
   .modal {
     background: rgba(0,0,0,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .infoEventModal {
+
       .info-modal {
-        border:none
+        border:none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .description{
+          margin-top: 20px;
+          font-size: 20px;
+        }
       }
     }
   }

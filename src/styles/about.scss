@@ -388,9 +388,10 @@ body{
   position: relative;
   outline: none;
   transform: translateY(50px);
-  animation: slideUp .8s ease-in-out  forwards 1s;
   margin-top: -40px;
   margin-left: -40px;
+  transition: .7s;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 690px) {
