@@ -14,9 +14,9 @@ export default class SupportUs {
               <div class="item homePage">HOME PAGE</div>
               <div class="item TodoApp">PLAN YOUR VISIT</div>
               <div class="item eventPage">Events</div>
-              <div class="item support">SUPPORT US</div>
+              <div class="item support active">SUPPORT US</div>
               <div class="item aboutPage">ABOUT US</div>
-              <div class="item adminPage active">ADMIN PAGE</div>
+              <div class="item adminPage ">ADMIN PAGE</div>
             </div>
           </div>
         </header>
