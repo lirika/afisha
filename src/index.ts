@@ -3,6 +3,7 @@ import renderEventsPage from './services/renderEventsPage';
 import renderAboutPage from './services/renderAboutPage';
 import renderAdminPage from "./services/renderAdminPage";
 import TodoApp from "./Components/TodoApp";
+import renderSupportUsPage from "./services/renderSupportUsPage";
 
 window.addEventListener('load', init);
 
@@ -22,7 +23,10 @@ root.addEventListener('click', async event => {
             root.innerHTML = ``;
             await renderEventsPage(subIdStr, target.innerHTML);
             break;
-
+        case 'item support':
+            root.innerHTML = ``;
+            await renderSupportUsPage()
+            break;
         case 'item eventPage':
             root.innerHTML = ``;
             await renderEventsPage('0', 'rock');

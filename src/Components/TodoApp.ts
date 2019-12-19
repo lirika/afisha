@@ -1,3 +1,4 @@
+import '../styles/todo.css'
 
 export default class TodoApp {
     render() {
@@ -56,92 +57,84 @@ export default class TodoApp {
         const toDoUl = document.querySelector(".todo-list ul") as HTMLLIElement;
         const completeUl =  document.querySelector(".complete-list ul") as HTMLLIElement;
 
-        addTaskBtn.addEventListener('click', addTodo)
 
-        function addTodo() {
-            const task = newTask.value;
-            if (task) {
-                localStorage.setItem(task, task);
-            }
+        function createNewTask(task:string){
+            const listItem = document.createElement("li") as HTMLLIElement;
+            const checkBox = document.createElement("input")  as HTMLInputElement;
+            const label = document.createElement("label") as HTMLLabelElement;
+            label.innerText = <string>localStorage.getItem(task);
+            listItem.id = task;
+            checkBox.type = "checkbox";
+            listItem.appendChild(checkBox);
+            listItem.appendChild(label);
+            return listItem;
+
         }
 
-    //     function createNewTask(task:string){
-    //         const listItem = document.createElement("li") as HTMLLIElement;
-    //         const checkBox = document.createElement("input")  as HTMLInputElement;
-    //         const label = document.createElement("label") as HTMLLabelElement;
-    //         label.innerText = <string>localStorage.getItem(task);
-    //         listItem.id = task;
-    //         checkBox.type = "checkbox";
-    //         listItem.appendChild(checkBox);
-    //         listItem.appendChild(label);
-    //         return listItem;
-    //
-    //     }
-    //
-    //     function addTask(){
-    //         if (newTask.value) {
-    //             localStorage.setItem(newTask.value, newTask.value);
-    //             const listItem = createNewTask(newTask.value);
-    //             toDoUl.appendChild(listItem);
-    //             newTask.value="";
-    //             bindIncompleteItems(listItem, completeTask as () => {});
-    //         }
-    //
-    //     }
-    //
-    //     function completeTask(this: HTMLLIElement){
-    //         let listItem = this.parentNode as HTMLLIElement;
-    //
-    //         const deleteBtn = document.createElement("button");
-    //         deleteBtn.innerText ="Delete";
-    //         deleteBtn.className = "delete";
-    //         listItem!.appendChild(deleteBtn);
-    //
-    //         const checkBox = listItem!.querySelector("input[type=checkbox]");
-    //         checkBox!.remove();
-    //
-    //         completeUl.appendChild(listItem as HTMLLIElement);
-    //
-    //
-    //         bindCompleteItems(listItem, deleteTask as () => {});
-    //
-    //     }
-    //
-    //     function deleteTask(this:HTMLLIElement){
-    //
-    //         const listItem = this.parentNode as HTMLLIElement;
-    //         console.log(listItem)
-    //         const ul = listItem!.parentNode;
-    //
-    //         ul!.removeChild(listItem as HTMLLIElement);
-    //
-    //     }
-    //
-    //     function bindIncompleteItems(taskItem: Element, checkBoxClick: (this: GlobalEventHandlers) => void){
-    //         const checkBox = taskItem.querySelector("input[type=checkbox]") as HTMLInputElement;
-    //
-    //         checkBox.onchange = checkBoxClick;
-    //     }
-    //
-    //     const bindCompleteItems = function (taskItem: Element, deleteButtonPress: (this: GlobalEventHandlers) => void){
-    //         const deleteButton = taskItem.querySelector(".delete") as HTMLButtonElement;
-    //         deleteButton.onclick = deleteButtonPress;
-    //
-    //     };
-    //
-    //
-    //     for(let i=0; i < toDoUl.children.length; i++) {
-    //         bindIncompleteItems(toDoUl.children[i], completeTask as () => {});
-    //     }
-    //
-    //     for(let i=0; i < completeUl.children.length; i++) {
-    //         bindCompleteItems(completeUl.children[i], deleteTask as () =>{});
-    //     }
-    //
-    //
-    //     addTaskBtn.addEventListener("click", addTask);
-    //
-    // }
+        function addTask(){
+            if (newTask.value) {
+                localStorage.setItem(newTask.value, newTask.value);
+                const listItem = createNewTask(newTask.value);
+                toDoUl.appendChild(listItem);
+                newTask.value="";
+                bindIncompleteItems(listItem, completeTask as () => {});
+            }
+
+        }
+
+        function completeTask(this: HTMLLIElement){
+            let listItem = this.parentNode as HTMLLIElement;
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.innerText ="Delete";
+            deleteBtn.className = "delete";
+            listItem!.appendChild(deleteBtn);
+
+            const checkBox = listItem!.querySelector("input[type=checkbox]");
+            checkBox!.remove();
+
+            completeUl.appendChild(listItem as HTMLLIElement);
+
+
+            bindCompleteItems(listItem, deleteTask as () => {});
+
+        }
+
+        function deleteTask(this:HTMLLIElement){
+
+            const listItem = this.parentNode as HTMLLIElement;
+            console.log(listItem)
+            const ul = listItem!.parentNode;
+
+            ul!.removeChild(listItem as HTMLLIElement);
+
+        }
+
+        function bindIncompleteItems(taskItem: Element, checkBoxClick: (this: GlobalEventHandlers) => void){
+            const checkBox = taskItem.querySelector("input[type=checkbox]") as HTMLInputElement;
+
+            checkBox.onchange = checkBoxClick;
+        }
+
+        const bindCompleteItems = function (taskItem: Element, deleteButtonPress: (this: GlobalEventHandlers) => void){
+            const deleteButton = taskItem.querySelector(".delete") as HTMLButtonElement;
+            deleteButton.onclick = deleteButtonPress;
+
+        };
+
+
+        for(let i=0; i < toDoUl.children.length; i++) {
+            bindIncompleteItems(toDoUl.children[i], completeTask as () => {});
+        }
+
+        for(let i=0; i < completeUl.children.length; i++) {
+            bindCompleteItems(completeUl.children[i], deleteTask as () =>{});
+        }
+
+
+        addTaskBtn.addEventListener("click", addTask);
+
+    }
 
 
 

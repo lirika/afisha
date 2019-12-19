@@ -49,6 +49,15 @@ export default class DataService {
     }
 
 
+    getContacts<T>(): Promise<T> {
+        return fetch(this.baseUrl + 'contacts').then(response => {
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            return response.json();
+        });
+    }
+
     async sendEvents<T>(id: string, value: Event): Promise<void> {
         try {
             const response = await fetch(this.baseUrl + 'subCategories/' + id + '/events', {

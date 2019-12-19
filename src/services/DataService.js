@@ -80,6 +80,14 @@ var DataService = /** @class */ (function () {
             return response.json();
         });
     };
+    DataService.prototype.getContacts = function () {
+        return fetch(this.baseUrl + 'contacts').then(function (response) {
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            return response.json();
+        });
+    };
     DataService.prototype.sendEvents = function (id, value) {
         return __awaiter(this, void 0, void 0, function () {
             var response, json, e_1;

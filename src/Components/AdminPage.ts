@@ -72,7 +72,7 @@ export default class AdminPage {
           <div class="item homePage">HOME PAGE</div>
           <div class="item TodoApp">PLAN YOUR VISIT</div>
           <div class="item eventPage">Events</div>
-          <div class="item">SUPPORT US</div>
+          <div class="item support">SUPPORT US</div>
           <div class="item aboutPage">ABOUT US</div>
           <div class="item adminPage active">ADMIN PAGE</div>
         </div>
@@ -102,6 +102,8 @@ export default class AdminPage {
             const inputPlace = (document.querySelector('#place') as HTMLInputElement).value;
             const inputImg = (document.querySelector('#img') as HTMLInputElement).value;
             const inputOnline = (document.querySelector('#online') as HTMLInputElement).value;
+            const inputDescr = (document.querySelector('#description') as HTMLInputElement).value;
+            const inputPrice = (document.querySelector('#price') as HTMLInputElement).value;
             let value: Event = {
                 id: inputId,
                 title: inpTitle,
@@ -111,7 +113,9 @@ export default class AdminPage {
                 time: inputTime,
                 place: inputPlace,
                 img: inputImg,
-                online: !!inputOnline
+                online: !!inputOnline,
+                description: inputDescr,
+                price: inputPrice
             };
             // @ts-ignore
             this.sendEvents(id, value)

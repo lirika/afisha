@@ -97,12 +97,12 @@ var AdminPage = /** @class */ (function () {
                             select.appendChild(option);
                         });
                         root = document.getElementById('root');
-                        root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item TodoApp\">PLAN YOUR VISIT</div>\n          <div class=\"item eventPage\">Events</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
+                        root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item TodoApp\">PLAN YOUR VISIT</div>\n          <div class=\"item eventPage\">Events</div>\n          <div class=\"item support\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
                         root.appendChild(mainWrapper);
                         optionInSelect = document.querySelectorAll('select option');
                         ///////////////////////////////// SEN Inputs values////////////////////////////////////////
                         addForm.addEventListener('submit', function (e) { return __awaiter(_this, void 0, void 0, function () {
-                            var id, inputId, inpTitle, inputStatus, inputGenre, inputDate, inputTime, inputPlace, inputImg, inputOnline, value;
+                            var id, inputId, inpTitle, inputStatus, inputGenre, inputDate, inputTime, inputPlace, inputImg, inputOnline, inputDescr, inputPrice, value;
                             return __generator(this, function (_a) {
                                 e.preventDefault();
                                 optionInSelect.forEach(function (option) {
@@ -120,6 +120,8 @@ var AdminPage = /** @class */ (function () {
                                 inputPlace = document.querySelector('#place').value;
                                 inputImg = document.querySelector('#img').value;
                                 inputOnline = document.querySelector('#online').value;
+                                inputDescr = document.querySelector('#description').value;
+                                inputPrice = document.querySelector('#price').value;
                                 value = {
                                     id: inputId,
                                     title: inpTitle,
@@ -129,7 +131,9 @@ var AdminPage = /** @class */ (function () {
                                     time: inputTime,
                                     place: inputPlace,
                                     img: inputImg,
-                                    online: !!inputOnline
+                                    online: !!inputOnline,
+                                    description: inputDescr,
+                                    price: inputPrice
                                 };
                                 // @ts-ignore
                                 this.sendEvents(id, value);

@@ -41,6 +41,7 @@ var renderEventsPage_1 = require("./services/renderEventsPage");
 var renderAboutPage_1 = require("./services/renderAboutPage");
 var renderAdminPage_1 = require("./services/renderAdminPage");
 var TodoApp_1 = require("./Components/TodoApp");
+var renderSupportUsPage_1 = require("./services/renderSupportUsPage");
 window.addEventListener('load', init);
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -67,45 +68,52 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                 _a = target.className;
                 switch (_a) {
                     case 'subcategoryHomePage': return [3 /*break*/, 1];
-                    case 'item eventPage': return [3 /*break*/, 3];
-                    case 'item TodoApp': return [3 /*break*/, 5];
-                    case 'item aboutPage': return [3 /*break*/, 6];
-                    case 'item adminPage': return [3 /*break*/, 8];
-                    case 'item homePage': return [3 /*break*/, 10];
-                    case 'btns_more': return [3 /*break*/, 10];
+                    case 'item support': return [3 /*break*/, 3];
+                    case 'item eventPage': return [3 /*break*/, 5];
+                    case 'item TodoApp': return [3 /*break*/, 7];
+                    case 'item aboutPage': return [3 /*break*/, 8];
+                    case 'item adminPage': return [3 /*break*/, 10];
+                    case 'item homePage': return [3 /*break*/, 12];
+                    case 'btns_more': return [3 /*break*/, 12];
                 }
-                return [3 /*break*/, 11];
+                return [3 /*break*/, 13];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 11];
+                return [3 /*break*/, 13];
             case 3:
                 root.innerHTML = "";
-                return [4 /*yield*/, renderEventsPage_1["default"]('0', 'rock')];
+                return [4 /*yield*/, renderSupportUsPage_1["default"]()];
             case 4:
                 _b.sent();
-                return [3 /*break*/, 11];
+                return [3 /*break*/, 13];
             case 5:
+                root.innerHTML = "";
+                return [4 /*yield*/, renderEventsPage_1["default"]('0', 'rock')];
+            case 6:
+                _b.sent();
+                return [3 /*break*/, 13];
+            case 7:
                 todo = new TodoApp_1["default"]();
                 todo.render();
-                return [3 /*break*/, 11];
-            case 6: return [4 /*yield*/, renderAboutPage_1["default"]()];
-            case 7:
-                _b.sent();
-                return [3 /*break*/, 11];
-            case 8:
-                root.innerHTML = "";
-                return [4 /*yield*/, renderAdminPage_1["default"]()];
+                return [3 /*break*/, 13];
+            case 8: return [4 /*yield*/, renderAboutPage_1["default"]()];
             case 9:
                 _b.sent();
-                return [3 /*break*/, 11];
+                return [3 /*break*/, 13];
             case 10:
+                root.innerHTML = "";
+                return [4 /*yield*/, renderAdminPage_1["default"]()];
+            case 11:
+                _b.sent();
+                return [3 /*break*/, 13];
+            case 12:
                 init();
-                return [3 /*break*/, 11];
-            case 11: return [2 /*return*/];
+                return [3 /*break*/, 13];
+            case 13: return [2 /*return*/];
         }
     });
 }); });
