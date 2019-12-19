@@ -3,40 +3,79 @@
 }
 
 .container-todo {
-  background: #d3efdf;
+  background: #f3f3f3;
   padding: 25px;
   max-width: 760px;
   margin: 25px auto;
   overflow: hidden;
-  border-radius: 10px;
-  border: 4px solid #b1c9bb;
-  font-family: sans-serif;
+  border-radius: 2px;
+  border: 1px solid white;
   color: #000;
 }
-
-h1, h2 {
+.container-todo h1 {
+  font-size: 40px;
+  color: #000000;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
-
-h2 {
+.container-todo h1:hover {
+  opacity: 1;
+}
+.container-todo .delete {
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: #df2c2c;
+  border-radius: 50px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.container-todo .delete:focus {
+  outline: 0;
+}
+.container-todo #addTask {
+  transition: 0.6s;
+  font-size: 18px;
+  border: none;
+  margin: 0;
+  color: white;
+  border-radius: 50px;
+  padding: 15px;
+  background-color: #4444ff;
+  cursor: pointer;
+}
+.container-todo #addTask:focus {
+  outline: 0;
+}
+.container-todo #addTask:hover {
+  transition: 0.6s;
+  background-color: #130080;
+}
+.container-todo h2 {
   font-size: 20px;
   text-align: center;
-  border-bottom: 1px solid #b1c9bb;
+  border-bottom: 1px solid #121212;
   padding: 0 0 10px;
-  color: #57635c;
+  color: black;
+}
+.container-todo #new-task {
+  color: gray;
+}
+.container-todo label {
+  font-size: 19px;
+  color: black;
 }
 
 .new-task-container {
   text-align: center;
+  background-color: white;
 }
 
 .box {
   padding: 10px 15px;
-  border: 2px solid #b1c9bb;
   border-radius: 5px;
-  background: #FFF;
+  background-color: #fff;
   margin: 15px 0;
 }
 
