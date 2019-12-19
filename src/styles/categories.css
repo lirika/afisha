@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 *,
 *:before,
 * after {
@@ -19,7 +21,7 @@ body {
   height: 100%;
   background-color: #121212;
   z-index: -4;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 /* ::-webkit-scrollbar{
@@ -189,5 +191,213 @@ h1:hover {
     margin-right: 45.5vw;
   }
 } */
+.icons-help {
+  position: fixed;
+  width: 100%;
+  height: 29%;
+  z-index: 300;
+}
+
+.icons-help form {
+  position: absolute;
+  width: 95%;
+  height: 150px;
+  box-sizing: border-box;
+  font-size: 30px;
+  margin-top: 45px;
+  margin-right: 20px;
+}
+
+.icons-help input {
+  height: 40px;
+  width: 0;
+  padding: 0 42px 0 15px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.icons-help input:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 2px solid rgba(245, 242, 242, 0.9);
+}
+
+.icons-help input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 17px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-search {
+  background: #d12424;
+  border: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.button-search:before {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 25px;
+  color: #F9F0DA;
+}
+
+.button-settings {
+  background: #19a519;
+  border: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s;
+  bottom: 0px;
+  right: 0;
+}
+
+.button-settings:before {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 27px;
+  color: #F9F0DA;
+}
+
+.button-question {
+  position: relative;
+  background: #e4d238;
+  border: none;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: -10px;
+  transition: 0.5s;
+  top: 62px;
+  right: 0;
+}
+
+.button-question:before {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #F9F0DA;
+}
+
+button:hover {
+  border-radius: 50%;
+}
+
+.tooltip .tooltiptext {
+  font-size: 17px;
+  visibility: hidden;
+  width: 230px;
+  background-color: #b61818;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  top: 55px;
+  right: 70px;
+  z-index: 1;
+  animation: updown 1s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  /* Абсолютное позиционирование */
+  border: 22px solid transparent;
+  border-bottom: 15px solid #b61818;
+  margin-top: -40px;
+  margin-left: -120px;
+}
+
+.tooltip-q .tooltiptext-q {
+  /*    z-index: 100; */
+  visibility: hidden;
+  background-color: rgba(228, 210, 56, 0.6);
+  width: 400px;
+  height: 80px;
+  top: 8px;
+  right: 70px;
+  padding: 5px;
+}
+
+.tooltiptext-q::after {
+  content: "";
+  position: absolute;
+  /* Абсолютное позиционирование */
+  border: 16px solid transparent;
+  border-left: 20px solid rgba(228, 210, 56, 0.6);
+  margin-top: -16px;
+  margin-left: 138.5px;
+}
+
+.snowContainer {
+  position: fixed;
+  z-index: -300;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+#snow {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://yraaa.ru/_pu/27/15825154.png"), url("https://yraaa.ru/_pu/27/89961317.png"), url("https://yraaa.ru/_pu/27/21791255.png");
+  animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
+.snowVisible {
+  display: block;
+}
+
+@keyframes lights {
+  0%, 50% {
+    background-position: 0 0;
+    /*Two zeros, not one !!*/
+  }
+  50.1%, 100% {
+    background-position: 0 -69px;
+  }
+}
+#lights {
+  height: 69px;
+  background: url(https://i.imgur.com/BdGY6tH.png);
+  animation: lights 1s infinite;
+}
 
 /*# sourceMappingURL=categories.css.map */

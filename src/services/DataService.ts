@@ -21,6 +21,15 @@ export default class DataService {
         });
     }
 
+    getSubCategoryByTitle<T>(title: string): Promise<T> {
+        return fetch(this.baseUrl + 'subCategories?title=' + title).then(response => {
+          if (!response.ok) {
+            throw new Error(response.statusText);
+          }
+          return response.json();
+        });
+      }
+
     getAllSubCategory<T>(): Promise<T> {
         return fetch(this.baseUrl + 'subCategories').then(response => {
             if (!response.ok) {
