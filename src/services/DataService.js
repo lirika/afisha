@@ -82,22 +82,32 @@ var DataService = /** @class */ (function () {
     };
     DataService.prototype.sendEvents = function (id, value) {
         return __awaiter(this, void 0, void 0, function () {
-            var response, data;
+            var response, json, e_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, fetch(this.baseUrl + 'subCategories/' + id + '/events', {
-                            method: 'POST',
-                            body: JSON.stringify(value),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        })];
+                    case 0:
+                        _a.trys.push([0, 3, , 4]);
+                        return [4 /*yield*/, fetch(this.baseUrl + 'subCategories/' + id + '/events', {
+                                method: 'POST',
+                                body: JSON.stringify(value),
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                }
+                            })];
                     case 1:
                         response = _a.sent();
                         return [4 /*yield*/, response.json()];
                     case 2:
-                        data = _a.sent();
-                        return [2 /*return*/];
+                        json = _a.sent();
+                        document.querySelector('.error').innerHTML = '';
+                        document.querySelector('.success').innerHTML = 'Success';
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_1 = _a.sent();
+                        document.querySelector('.success').innerHTML = '';
+                        document.querySelector('.error').innerHTML = "Error, " + e_1;
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
                 }
             });
         });

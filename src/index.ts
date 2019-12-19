@@ -1,8 +1,8 @@
 import renderCategoryPage from './services/renderCategoryPage';
 import renderEventsPage from './services/renderEventsPage';
-import renderBuyPage from './services/renderBuyPage';
 import renderAboutPage from './services/renderAboutPage';
 import renderAdminPage from "./services/renderAdminPage";
+import TodoApp from "./Components/TodoApp";
 
 window.addEventListener('load', init);
 
@@ -23,16 +23,14 @@ root.addEventListener('click', async event => {
             await renderEventsPage(subIdStr, target.innerHTML);
             break;
 
-     
-        case 'item homePage':
-        case 'btns_more':
-            init();
+        case 'item eventPage':
+            root.innerHTML = ``;
+            await renderEventsPage('0', 'rock');
             break;
-
-        // case 'button buy':
-        //  await  console.log(document.querySelector('.modal'))
-        //     break;
-        
+        case 'item TodoApp':
+            const todo = new TodoApp();
+            todo.render();
+            break;
         case 'item aboutPage':
             await renderAboutPage();
             break;
@@ -40,5 +38,17 @@ root.addEventListener('click', async event => {
             root.innerHTML = ``;
             await renderAdminPage();
             break
+        case 'item homePage':
+
+        case 'btns_more':
+            init();
+            break;
+
+
+        // case 'button buy':
+        //  await  console.log(document.querySelector('.modal'))
+        //     break;
+        
+
     }
 });

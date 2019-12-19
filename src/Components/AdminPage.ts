@@ -6,6 +6,7 @@ import Event from '../model/Event'
 
 export default class AdminPage {
     async renderPage(data: Array<SubCategory>) {
+        console.log(data)
         const mainWrapper = document.createElement('div');
         mainWrapper.classList.add('main-wrapper');
         ///////////////////////// create add events form's elements//////////////////////////
@@ -45,7 +46,12 @@ export default class AdminPage {
             inputWrapper.appendChild(input);
             inputDiv.appendChild(inputWrapper)
         });
-
+        const erroSpan = document.createElement('span');
+        erroSpan.classList.add('error')
+        const successSpan = document.createElement('span')
+        successSpan.classList.add('success')
+        addForm.appendChild(erroSpan);
+        addForm.appendChild(successSpan);
         ////////////////render options//////////////////////////////
 
         data.forEach(item => {
@@ -64,8 +70,8 @@ export default class AdminPage {
       <div class="navbar" id="navbar">
         <div class="all-items">
           <div class="item homePage">HOME PAGE</div>
-          <div class="item">CONCERTS & TICKETS</div>
-          <div class="item">Events</div>
+          <div class="item TodoApp">PLAN YOUR VISIT</div>
+          <div class="item eventPage">Events</div>
           <div class="item">SUPPORT US</div>
           <div class="item aboutPage">ABOUT US</div>
           <div class="item adminPage active">ADMIN PAGE</div>

@@ -115,8 +115,8 @@ export default class EventsPage {
       <div class="navbar" id="navbar">
         <div class="all-items">
           <div class="item homePage">HOME PAGE</div>
-          <div class="item">CONCERTS & TICKETS</div>
-          <div class="item active">${subTitle}</div>
+          <div class="item TodoApp">PLAN YOUR VISIT</div>
+          <div class="item eventPage active">${subTitle}</div>
           <div class="item">SUPPORT US</div>
           <div class="item aboutPage">ABOUT US</div>
           <div class="item adminPage">ADMIN PAGE</div>

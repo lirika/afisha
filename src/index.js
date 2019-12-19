@@ -40,6 +40,7 @@ var renderCategoryPage_1 = require("./services/renderCategoryPage");
 var renderEventsPage_1 = require("./services/renderEventsPage");
 var renderAboutPage_1 = require("./services/renderAboutPage");
 var renderAdminPage_1 = require("./services/renderAdminPage");
+var TodoApp_1 = require("./Components/TodoApp");
 window.addEventListener('load', init);
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -58,7 +59,7 @@ function init() {
 }
 var root = document.querySelector('#root');
 root.addEventListener('click', function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var target, _a, subIdStr;
+    var target, _a, subIdStr, todo;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -66,33 +67,45 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                 _a = target.className;
                 switch (_a) {
                     case 'subcategoryHomePage': return [3 /*break*/, 1];
-                    case 'item homePage': return [3 /*break*/, 3];
-                    case 'btns_more': return [3 /*break*/, 3];
-                    case 'item aboutPage': return [3 /*break*/, 4];
-                    case 'item adminPage': return [3 /*break*/, 6];
+                    case 'item eventPage': return [3 /*break*/, 3];
+                    case 'item TodoApp': return [3 /*break*/, 5];
+                    case 'item aboutPage': return [3 /*break*/, 6];
+                    case 'item adminPage': return [3 /*break*/, 8];
+                    case 'item homePage': return [3 /*break*/, 10];
+                    case 'btns_more': return [3 /*break*/, 10];
                 }
-                return [3 /*break*/, 8];
+                return [3 /*break*/, 11];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 8];
+                return [3 /*break*/, 11];
             case 3:
-                init();
-                return [3 /*break*/, 8];
-            case 4: return [4 /*yield*/, renderAboutPage_1["default"]()];
-            case 5:
-                _b.sent();
-                return [3 /*break*/, 8];
-            case 6:
                 root.innerHTML = "";
-                return [4 /*yield*/, renderAdminPage_1["default"]()];
+                return [4 /*yield*/, renderEventsPage_1["default"]('0', 'rock')];
+            case 4:
+                _b.sent();
+                return [3 /*break*/, 11];
+            case 5:
+                todo = new TodoApp_1["default"]();
+                todo.render();
+                return [3 /*break*/, 11];
+            case 6: return [4 /*yield*/, renderAboutPage_1["default"]()];
             case 7:
                 _b.sent();
-                return [3 /*break*/, 8];
-            case 8: return [2 /*return*/];
+                return [3 /*break*/, 11];
+            case 8:
+                root.innerHTML = "";
+                return [4 /*yield*/, renderAdminPage_1["default"]()];
+            case 9:
+                _b.sent();
+                return [3 /*break*/, 11];
+            case 10:
+                init();
+                return [3 /*break*/, 11];
+            case 11: return [2 /*return*/];
         }
     });
 }); });

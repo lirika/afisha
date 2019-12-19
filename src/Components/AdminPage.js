@@ -43,11 +43,12 @@ var AdminPage = /** @class */ (function () {
     }
     AdminPage.prototype.renderPage = function (data) {
         return __awaiter(this, void 0, void 0, function () {
-            var mainWrapper, addForm, select, btn, inputDiv, events, results, root, optionInSelect;
+            var mainWrapper, addForm, select, btn, inputDiv, events, results, erroSpan, successSpan, root, optionInSelect;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        console.log(data);
                         mainWrapper = document.createElement('div');
                         mainWrapper.classList.add('main-wrapper');
                         addForm = document.createElement('form');
@@ -82,6 +83,12 @@ var AdminPage = /** @class */ (function () {
                             inputWrapper.appendChild(input);
                             inputDiv.appendChild(inputWrapper);
                         });
+                        erroSpan = document.createElement('span');
+                        erroSpan.classList.add('error');
+                        successSpan = document.createElement('span');
+                        successSpan.classList.add('success');
+                        addForm.appendChild(erroSpan);
+                        addForm.appendChild(successSpan);
                         ////////////////render options//////////////////////////////
                         data.forEach(function (item) {
                             var option = document.createElement('option');
@@ -90,7 +97,7 @@ var AdminPage = /** @class */ (function () {
                             select.appendChild(option);
                         });
                         root = document.getElementById('root');
-                        root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item\">CONCERTS & TICKETS</div>\n          <div class=\"item\">Events</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
+                        root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item TodoApp\">PLAN YOUR VISIT</div>\n          <div class=\"item eventPage\">Events</div>\n          <div class=\"item\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
                         root.appendChild(mainWrapper);
                         optionInSelect = document.querySelectorAll('select option');
                         ///////////////////////////////// SEN Inputs values////////////////////////////////////////
@@ -122,8 +129,9 @@ var AdminPage = /** @class */ (function () {
                                     time: inputTime,
                                     place: inputPlace,
                                     img: inputImg,
-                                    online: inputOnline
+                                    online: !!inputOnline
                                 };
+                                // @ts-ignore
                                 this.sendEvents(id, value);
                                 return [2 /*return*/];
                             });
@@ -135,14 +143,14 @@ var AdminPage = /** @class */ (function () {
     };
     AdminPage.prototype.sendEvents = function (id, value) {
         return __awaiter(this, void 0, void 0, function () {
-            var dataService, result;
+            var dataService;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         dataService = new DataService_1["default"]();
                         return [4 /*yield*/, dataService.sendEvents(id, value)];
                     case 1:
-                        result = _a.sent();
+                        _a.sent();
                         return [2 /*return*/];
                 }
             });
