@@ -1,7 +1,8 @@
 import Contacts from "../model/Contacts";
+import '../styles/supportUs.css';
 
 export default class SupportUs {
-    render(data:Contacts) {
+    render(data: Contacts) {
         const root = document.querySelector('#root');
         root!.innerHTML = `
             <div class="dark" id="dark"></div>
@@ -20,24 +21,24 @@ export default class SupportUs {
             </div>
           </div>
         </header>
-        <h1>Support Us</h1>
-        <form >
+        <div class="titleSupport"> Support Us</div>
+        <form class="formSupport">
             <label for="name">Your name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" class="input">
              <label for="name">Your last name</label>
-            <input type="text" name="last-name">
+            <input type="text" name="last-name" class="input">
              <label for="name">Your email</label>
-            <input type="email" name="email">
-            <input type="submit">
+            <input type="email" name="email" class="input">
+            <input type="submit" class ="button">
          </form>
          <div class="contacts-wrapper">
-         <h1>Our contacts</h1>
-         <p>Phone: ${data.phone}</p>
-         <p>Email: ${data.email}</p>
-         <p>Address: ${data.address}</p>
-  
+         <div class="titleSupport"> Our contacts</div>
+         <p class="contacts"><b>Phone:</b> ${data.phone}</p>
+         <p class="contacts"><b>Email:</b> ${data.email}</p>
+         <p class="contacts"><b>Address:</b> ${data.address}</p>
+
 </div>
         `
-        
+
     }
 }

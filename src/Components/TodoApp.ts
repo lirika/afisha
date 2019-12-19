@@ -14,7 +14,7 @@ export default class TodoApp {
           <div class="item homePage">HOME PAGE</div>
           <div class="item TodoApp active">PLAN YOUR VISIT</div>
           <div class="item eventPage">Events</div>
-          <div class="item">SUPPORT US</div>
+          <div class="item support">SUPPORT US</div>
           <div class="item aboutPage">ABOUT US</div>
           <div class="item adminPage">ADMIN PAGE</div>
         </div>
