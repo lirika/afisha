@@ -9,7 +9,10 @@ export default class CategoryPage {
     root.innerHTML = `<div class="main">
 
 
-<div class='snowContainer'><div id="snow"></div></div>
+<div class='snowContainer'>
+<div id="lights"></div>
+<div id="snow"></div>
+</div>
   <div class="icons-help">
     <form id="icon-form">
       <div class="tooltip">

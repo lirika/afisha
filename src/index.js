@@ -42,6 +42,7 @@ var renderAboutPage_1 = require("./services/renderAboutPage");
 var renderAdminPage_1 = require("./services/renderAdminPage");
 var TodoApp_1 = require("./Components/TodoApp");
 var renderSupportUsPage_1 = require("./services/renderSupportUsPage");
+var DataService_1 = require("./services/DataService");
 window.addEventListener('load', init);
 function init() {
     return __awaiter(this, void 0, void 0, function () {
@@ -60,7 +61,7 @@ function init() {
 }
 var root = document.querySelector('#root');
 root.addEventListener('click', function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var target, _a, subIdStr, todo;
+    var target, _a, subIdStr, todo, input_search, tooltipText, dataS, subC, buttonSnow;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -75,45 +76,69 @@ root.addEventListener('click', function (event) { return __awaiter(void 0, void 
                     case 'item adminPage': return [3 /*break*/, 10];
                     case 'item homePage': return [3 /*break*/, 12];
                     case 'btns_more': return [3 /*break*/, 12];
+                    case 'button-search': return [3 /*break*/, 13];
+                    case 'button-settings': return [3 /*break*/, 16];
                 }
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 1:
                 subIdStr = target.id.slice(4);
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"](subIdStr, target.innerHTML)];
             case 2:
                 _b.sent();
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 3:
                 root.innerHTML = "";
                 return [4 /*yield*/, renderSupportUsPage_1["default"]()];
             case 4:
                 _b.sent();
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 5:
                 root.innerHTML = "";
                 return [4 /*yield*/, renderEventsPage_1["default"]('0', 'rock')];
             case 6:
                 _b.sent();
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 7:
                 todo = new TodoApp_1["default"]();
                 todo.render();
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 8: return [4 /*yield*/, renderAboutPage_1["default"]()];
             case 9:
                 _b.sent();
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 10:
                 root.innerHTML = "";
                 return [4 /*yield*/, renderAdminPage_1["default"]()];
             case 11:
                 _b.sent();
-                return [3 /*break*/, 13];
+                return [3 /*break*/, 17];
             case 12:
                 init();
-                return [3 /*break*/, 13];
-            case 13: return [2 /*return*/];
+                return [3 /*break*/, 17];
+            case 13:
+                event.preventDefault();
+                input_search = document.querySelector('.icons-help input');
+                tooltipText = document.querySelector('.icons-help .tooltiptext');
+                dataS = new DataService_1["default"]();
+                return [4 /*yield*/, dataS.getSubCategoryByTitle(input_search.value)];
+            case 14:
+                subC = _b.sent();
+                if (!subC[0]) {
+                    tooltipText.style.visibility = 'visible';
+                    return [2 /*return*/];
+                }
+                /*    console.log(subC[0].id); */
+                root.innerHTML = "";
+                return [4 /*yield*/, renderEventsPage_1["default"](subC[0].id, input_search.value)];
+            case 15:
+                _b.sent();
+                return [3 /*break*/, 17];
+            case 16:
+                buttonSnow = document.querySelector('.snowContainer');
+                buttonSnow.classList.toggle('snowVisible');
+                _b.label = 17;
+            case 17: return [2 /*return*/];
         }
     });
 }); });

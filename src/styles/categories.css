@@ -21,7 +21,7 @@ body {
   height: 100%;
   background-color: #121212;
   z-index: -4;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 /* ::-webkit-scrollbar{
@@ -195,7 +195,6 @@ h1:hover {
   position: fixed;
   width: 100%;
   height: 29%;
-  z-index: 100;
   z-index: 300;
 }
 
@@ -205,7 +204,7 @@ h1:hover {
   height: 150px;
   box-sizing: border-box;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 45px;
   margin-right: 20px;
 }
 
@@ -363,7 +362,7 @@ button:hover {
   position: fixed;
   z-index: -300;
   width: 100%;
-  height: 30vh;
+  height: 100vh;
   display: none;
 }
 
@@ -384,6 +383,21 @@ button:hover {
 }
 .snowVisible {
   display: block;
+}
+
+@keyframes lights {
+  0%, 50% {
+    background-position: 0 0;
+    /*Two zeros, not one !!*/
+  }
+  50.1%, 100% {
+    background-position: 0 -69px;
+  }
+}
+#lights {
+  height: 69px;
+  background: url(https://i.imgur.com/BdGY6tH.png);
+  animation: lights 1s infinite;
 }
 
 /*# sourceMappingURL=categories.css.map */
