@@ -13,9 +13,9 @@ body{
 .main-about{
       font-family: Lato, sans-serif;
       height: 100vh;
-      width: 80vw;
+      width: 78vw;
       float:left;
-/*       border: 2px solid red; */
+      border: 2px solid red;
 
       position: relative;
 
@@ -32,7 +32,7 @@ body{
           .aboutContent{
             height: 95%;
             width: 40%;
-         /*    border: 2px solid rgb(32, 7, 143); */
+            border: 2px solid rgb(32, 7, 143);
             position: relative;
             text-align: right;
             font-weight: bold;
@@ -51,7 +51,7 @@ body{
               font-size: 5rem;
               text-transform: uppercase;
               color: $neon;
-     /*          border: 2px solid rgb(32, 7, 143); */
+              border: 2px solid rgb(32, 7, 143);
               
               @media screen and (max-width: 1350px) {
                 font-size: 3rem;
@@ -64,7 +64,7 @@ body{
 
             }
             .contentText{
-/*               border: 2px solid rgb(32, 7, 143); */
+              border: 2px solid rgb(32, 7, 143);
               padding-left: 20%;
               font-size: 2rem;
 
@@ -338,7 +338,7 @@ body{
 .side-bar{
     height: 100vh;
     width: 20vw;
-/*     border: 2px solid red; */
+    border: 2px solid red;
     float: right;
     position: relative;
     display: flex;

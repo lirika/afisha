@@ -51,7 +51,7 @@ body {
 }
 
 .menu-wrap {
-  margin-top: 30vh;
+  margin-top: 25vh;
   display: flex;
   flex-direction: column;
   border: 2px solid #130080 transparent;
@@ -69,6 +69,7 @@ body {
   /* overflow: auto; */
   position: relative;
   transition: 0.5s;
+  font-size: 14px;
 }
 .menu .category {
   border: 1px solid #b1b132 transparent;
@@ -85,9 +86,8 @@ body {
 }
 .menu .category h1 {
   /*       border: 1px solid rgb(10, 187, 89); */
-  font-size: 40px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   transition: 0.2s;
   cursor: pointer;
   z-index: 2;
@@ -108,7 +108,7 @@ body {
 }
 .menu .selected {
   height: 40%;
-  font-size: 1.6em;
+  font-size: 1.8em;
   /*  background: rgba(59, 54, 38, 0.4); */
 }
 .menu .bgr {
@@ -153,13 +153,13 @@ body {
 }
 
 .up {
-  margin-top: 14vh;
+  margin-top: 8vh;
   transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
 
 .down {
-  margin-top: 75vh;
+  margin-top: 80vh;
   transform: rotate(45deg);
   transform: rotate(45deg);
 }
