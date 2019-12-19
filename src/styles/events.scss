@@ -699,7 +699,8 @@ header {
 .btn-close {
   z-index: 1001;
   font-size: 20px;
-  margin-top: -380px;
+  //margin-top: -380px;
+  margin-top: 10px;
   margin-left: 42%;
   background: rgb(223, 44, 44);
   border-radius: 3px;
@@ -714,7 +715,29 @@ header {
   }
 }
 
+
 .container.modal-open .modal {
   top: 0;
 }
+
+.container-info {
+  .modal {
+    background: rgba(0,0,0,.9);
+    .infoEventModal {
+      .info-modal {
+        border:none
+      }
+    }
+  }
+}
+
+.container-info.modal-open{
+
+  .modal{
+    top:0;
+  }
+
+}
+
+
 

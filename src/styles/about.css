@@ -4,15 +4,15 @@ body {
   background: grey;
   background-color: #191929;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .main-about {
   font-family: Lato, sans-serif;
   height: 100vh;
-  width: 78vw;
+  width: 75vw;
   float: left;
-  border: 2px solid red;
+  /*      border: 2px solid red; */
   position: relative;
 }
 .main-about .aboutContent-photo {
@@ -29,7 +29,7 @@ body {
 .main-about .aboutContent-photo .aboutContent {
   height: 95%;
   width: 40%;
-  border: 2px solid #20078f;
+  /*         border: 2px solid rgb(32, 7, 143); */
   position: relative;
   text-align: right;
   font-weight: bold;
@@ -49,32 +49,32 @@ body {
   font-size: 5rem;
   text-transform: uppercase;
   color: #66E8E4;
-  border: 2px solid #20078f;
+  /*        border: 2px solid rgb(32, 7, 143); */
 }
 @media screen and (max-width: 1350px) {
   .main-about .aboutContent-photo .aboutContent .contentTitle {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 690px) {
   .main-about .aboutContent-photo .aboutContent .contentTitle {
-    font-size: 3rem;
+    font-size: 2rem;
     width: 100%;
   }
 }
 .main-about .aboutContent-photo .aboutContent .contentText {
-  border: 2px solid #20078f;
+  /*             border: 2px solid rgb(32, 7, 143); */
   padding-left: 20%;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 @media screen and (max-width: 1350px) {
   .main-about .aboutContent-photo .aboutContent .contentText {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 785px) {
   .main-about .aboutContent-photo .aboutContent .contentText {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 690px) {
@@ -179,24 +179,24 @@ body {
   opacity: 0;
 }
 .main-about .title-about {
-  height: 10%;
+  height: 5%;
   /*     border: 2px solid rgb(48, 85, 24); */
   display: flex;
   /*  justify-content: center; */
   /*      align-items: center; */
   /*  background: rgba(255, 255, 255, 0.1); */
-  font-size: 40px;
+  font-size: 30px;
   padding-left: 62%;
 }
 @media screen and (max-width: 785px) {
   .main-about .title-about {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 690px) {
   .main-about .title-about {
     height: 5%;
-    font-size: 27px;
+    font-size: 20px;
   }
 }
 .main-about .title-about * {
@@ -255,9 +255,10 @@ body {
   /*         border: 2px solid rgb(48, 85, 24); */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
   padding: 10px 60px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 690px) {
   .main-about .members-wrap {
@@ -267,14 +268,14 @@ body {
 .main-about .members-wrap .member {
   font-family: Lato, sans-serif;
   border-radius: 5px;
-  /*      border: 2px solid $neon; */
+  /*    border: 2px solid $neon; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .main-about .members-wrap .member .member-photo {
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border: 2px solid #66E8E4;
   margin-right: 20px;
   border-radius: 50%;
@@ -289,7 +290,7 @@ body {
 }
 .main-about .members-wrap .member .member-info {
   width: 60%;
-  height: 110px;
+  height: 100px;
   /*      border: 2px solid $neon; */
   padding-top: 20px;
 }
@@ -306,7 +307,7 @@ body {
 .side-bar {
   height: 100vh;
   width: 20vw;
-  border: 2px solid red;
+  /*     border: 2px solid red; */
   float: right;
   position: relative;
   display: flex;
@@ -345,15 +346,25 @@ body {
   border-radius: 50px;
   padding: 8px 12px;
   color: #66E8E4;
-  font-size: 25px;
+  font-size: 18px;
   text-transform: uppercase;
   position: relative;
   outline: none;
   transform: translateY(50px);
   animation: slideUp 0.8s ease-in-out forwards 1s;
   margin-top: -40px;
+  margin-left: -40px;
 }
 
+@media screen and (max-width: 690px) {
+  .side-bar {
+    display: none;
+  }
+
+  .main-about {
+    width: 95vw;
+  }
+}
 .photo1 {
   background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
 }

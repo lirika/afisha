@@ -2,9 +2,9 @@ $fontH: 'Roboto', sans-serif;
 .input-wrapper {
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .add-form {
@@ -13,7 +13,6 @@ $fontH: 'Roboto', sans-serif;
   align-items: center;
   font-family: $fontH;
   margin-left: 40px;
-  border: 1px solid white;
   padding: 30px;
   border-radius: 2px;
 

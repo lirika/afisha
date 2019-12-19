@@ -9,4 +9,6 @@ export default interface Event {
   img: string;
   subCategoryId?: string;
   online:boolean,
+  price:string,
+  description:string
 }

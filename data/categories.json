@@ -120,7 +120,7 @@
   ],
   "events": [
     {
-      "id": "0",
+      "id": "mr0",
       "title": "Nickelback",
       "status": "visiting artist",
       "genre": "Guitar,rock",
@@ -129,10 +129,12 @@
       "place": "Re:public ,Minsk",
       "img": "https://www.trzcacak.rs/myfile/full/271-2712834_nickelback-2017.png",
       "subCategoryId": "0",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "1",
+      "id": "mr1",
       "title": "Linkin Park",
       "status": "live stream",
       "genre": "Guitar,rock",
@@ -141,10 +143,12 @@
       "place": "Minsk Arena ,Minsk",
       "img": "https://liganews.net/images/news/1a4f1224051be53c9dd60a46c2dd57ac.jpg",
       "subCategoryId": "0",
-      "online": true
+      "online": true,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "2",
+      "id": "mr2",
       "title": "AC/DC",
       "status": "visiting artist",
       "genre": "Guitar,rock",
@@ -153,10 +157,12 @@
       "place": "Royal Festival Hall, Moscow",
       "img": "https://static.tunnel.ru//media/images/2016-09/post/98152/acdc.jpg",
       "subCategoryId": "0",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "3",
+      "id": "mr3",
       "title": "Classic rock",
       "status": "visiting artist",
       "genre": "Guitar,rock",
@@ -165,10 +171,12 @@
       "place": "Madison Square Garden, New York",
       "img": "https://si.wsj.net/public/resources/images/B3-BY031_TRUCKE_IM_20181002114854.jpg",
       "subCategoryId": "0",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "4",
+      "id": "mr4",
       "title": "Led Zeppelin",
       "status": "visiting artist",
       "genre": "Guitar,rock",
@@ -177,10 +185,12 @@
       "place": "Royal Festival Hall, Moscow",
       "img": "https://stoneforest.ru/wp-content/uploads/2019/06/Led-Zeppelin-1.jpg",
       "subCategoryId": "0",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "5",
+      "id": "mr5",
       "title": "The Beatles",
       "status": "visiting artist",
       "genre": "Guitar,rock",
@@ -189,10 +199,12 @@
       "place": "Madison Square Garden, New York",
       "img": "https://corp.lingualeo.com/ru/wp-content/uploads/sites/4/2019/01/1_OU0I3b6SoXyvAGfTQnGoLg.jpeg",
       "subCategoryId": "0",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "6",
+      "id": "mr6",
       "title": "The Rolling Stones",
       "status": "visiting artist",
       "genre": "Guitar,rock",
@@ -201,10 +213,12 @@
       "place": "Dinamo staduim, Minsk",
       "img": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492195712/articles/2014/09/05/the-bizarre-history-of-london-s-rock-n-roll-island/140904-Strochlic-rolling-stones-island-tease_tbhyw3",
       "subCategoryId": "0",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "mc0",
       "title": "Charles Mingus",
       "status": "visiting artist",
       "genre": "classical music",
@@ -213,20 +227,24 @@
       "place": "Concert Hall, Minsk",
       "img": "https://www.sydneyoperahouse.com/content/dam/soh/events/performing-companies/sohp/classical-sohp/LSO_Prudence_Upton_1600x1200.jpg",
       "subCategoryId": "1",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "1",
+      "id": "mc1",
       "title": "Beethoven Piano Concerto Cycle",
       "status": "live stream",
       "genre": "Javier Perianes performs Beethoven’s piano concertos",
       "date": "RIGHT NOW, ON YOUTUBE",
       "img": "https://i.ytimg.com/vi/rOjHhS5MtvA/maxresdefault.jpg",
       "subCategoryId": "1",
-      "online": true
+      "online": true,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "2",
+      "id": "mc2",
       "title": "The Emperor",
       "status": "classical music",
       "genre": "Beethoven Piano Concerto Cycle",
@@ -235,10 +253,12 @@
       "place": "Royal Festival Hall, Moscow",
       "img": "https://i.ytimg.com/vi/1FMzS7QA7-0/maxresdefault.jpg",
       "subCategoryId": "1",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "3",
+      "id": "mc3",
       "title": "Poetry and passion",
       "status": "classical music",
       "genre": "Beethoven Piano in Dance",
@@ -247,10 +267,12 @@
       "place": "Royal Festival Hall, Moscow",
       "img": "https://i.ytimg.com/vi/yyeR-gPakWo/maxresdefault.jpg",
       "subCategoryId": "1",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "mp0",
       "title": "Beyonce",
       "status": "visiting artist",
       "genre": "Pop",
@@ -259,10 +281,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://media.npr.org/assets/img/2019/10/11/gettyimages-970624980-ee760d3800ce154b25f252d9e165abbcf6361b36-s800-c85.jpg",
       "subCategoryId": "2",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "1",
+      "id": "mp1",
       "title": "Black Eyed Peas ",
       "status": "live stream",
       "genre": "Rock",
@@ -271,10 +295,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://ua.news/wp-content/uploads/2019/03/blackeyedpeas-hero-108801906.jpg",
       "subCategoryId": "2",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "fc0",
       "title": "Scary movie",
       "status": "comedy",
       "genre": "comedy",
@@ -283,10 +309,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://occ-0-586-590.1.nflxso.net/dnm/api/v6/5e0byrbbfBPBmtxyXMpKqMuqOQY/AAAABX97yMs-QGIE-VETU7rUsMZIla5L-z7bT5ooLmvHe5D0EFi9mBE5IWZHySzsOaHf3o1Gf8NFM7Grl9awythgmLbIF-X4r-euY-qD.png?r=946",
       "subCategoryId": "3",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "1",
+      "id": "fc1",
       "title": "Hangover",
       "status": "comedy",
       "genre": "comedy",
@@ -295,10 +323,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://thenypost.files.wordpress.com/2015/12/hangover1a.jpg?quality=80&strip=all",
       "subCategoryId": "3",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "fh0",
       "title": "It",
       "status": "horror",
       "genre": "horror",
@@ -307,10 +337,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://img5.goodfon.ru/wallpaper/nbig/8/30/it-it-chapter-two-ono-2.jpg",
       "subCategoryId": "4",
-      "online": false
+      "online": false,
+      "price": "150$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "1",
+      "id": "fh1",
       "title": "INSIDIOUS",
       "status": "horror",
       "genre": "horror",
@@ -319,10 +351,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "http://straightfromamovie.com/wp-content/uploads/2018/01/Insidious-4.jpg",
       "subCategoryId": "4",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "fd0",
       "title": "Apollo",
       "status": "Documentary",
       "genre": "Documentary",
@@ -331,10 +365,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://www.indiewire.com/wp-content/uploads/2017/01/national-geographic-documentary-films.jpg?w=780",
       "subCategoryId": "5",
-      "online": false
+      "online": false,
+      "price": "150$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "1",
+      "id": "fd1",
       "title": "Documentary2",
       "status": "Documentary",
       "genre": "Documentary",
@@ -343,30 +379,36 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://cardiff.imgix.net/__data/assets/image/0009/1434096/Janet_Iraq_Documentary.jpg?w=570&h=321&fit=crop&q=60&auto=format",
       "subCategoryId": "5",
-      "online": true
+      "online": true,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "pa0",
       "title": "Photography",
       "status": "Photography",
       "genre": "Photography",
       "date": "RIGHT NOW, ON YOUTUBE",
       "img": "https://iso.500px.com/wp-content/uploads/2016/10/stock-photo-159358357.jpg",
       "subCategoryId": "6",
-      "online": true
+      "online": true,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "as0",
       "title": "Sculpture",
       "status": "Sculpture",
       "genre": "Sculpture",
       "date": "RIGHT NOW, ON YOUTUBE",
       "img": "https://www.lotussculpture.com/mm5/graphics/00000001/1-Stone-Ganesh-Standing-On-Rat_2.jpg",
       "subCategoryId": "7",
-      "online": true
+      "online": true,
+      "price": "170$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "ap0",
       "title": "Painting",
       "status": "Painting",
       "genre": "Painting",
@@ -375,10 +417,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://afremov.com/images/product/image_2347.jpeg",
       "subCategoryId": "8",
-      "online": false
+      "online": false,
+      "price": "120$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "sb0",
       "title": "Boxing",
       "status": "Boxing",
       "genre": "Boxing",
@@ -387,10 +431,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://www.boxingnews24.com/wp-content/uploads/2019/10/0-prograis-taylor6-1300x903.jpg",
       "subCategoryId": "9",
-      "online": true
+      "online": true,
+      "price": "80$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "sf0",
       "title": "Football",
       "status": "Football",
       "genre": "Football",
@@ -399,10 +445,12 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg",
       "subCategoryId": "10",
-      "online": false
+      "online": false,
+      "price": "80$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     },
     {
-      "id": "0",
+      "id": "ss0",
       "title": "Swimming",
       "status": "Swimming",
       "genre": "Swimming",
@@ -411,56 +459,11 @@
       "place": "Royal Festival Hall,Moscow",
       "img": "https://cdn.swimswam.com/wp-content/uploads/2019/07/20190706_GSca_KA17442-1.jpg",
       "subCategoryId": "11",
-      "online": true
-    },
-    {
-      "id": "7",
-      "title": "Верстка сайтов | HTML5 \\ CSS3 \\ JS(JQuery).",
-      "status": "ok",
-      "genre": "rock",
-      "date": "2019-09-28",
-      "time": "10.30pm",
-      "place": "Minsk",
-      "img": "http://htmlbook.ru/files/images/html/tag_input_1.png",
-      "online": "true",
-      "subCategoryId": "0"
-    },
-    {
-      "id": "1",
-      "title": "Веб-разработчик",
-      "status": "ok",
-      "genre": "rock",
-      "date": "2019-09-28",
-      "time": "10.30pm",
-      "place": "Minsk",
-      "img": "http://htmlbook.ru/files/images/html/tag_input_1.png",
-      "online": "true",
-      "subCategoryId": "8"
-    },
-    {
-      "id": "8",
-      "title": "ugol 72",
-      "status": "ok",
-      "genre": "dasdasdas",
-      "date": "2019-09-08",
-      "time": "dasdas",
-      "place": "dasdas",
-      "img": "https://st.depositphotos.com/2452105/2733/v/600/depositphotos_27334525-stock-video-abstract-aura-star-shine-bg.jpg",
-      "online": "false",
-      "subCategoryId": "0"
-    },
-    {
-      "id": "9",
-      "title": "footbal",
-      "status": "dasdas",
-      "genre": "dasdasdas",
-      "date": "2019-09-30",
-      "time": "10.30pm",
-      "place": "dasdas",
-      "img": "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-      "online": "true",
-      "subCategoryId": "0"
+      "online": true,
+      "price": "100$",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
     }
+
   ],
   "contacts": {
     "tel": "+6529212121",
