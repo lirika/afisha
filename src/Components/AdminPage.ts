@@ -47,9 +47,9 @@ export default class AdminPage {
             inputDiv.appendChild(inputWrapper)
         });
         const erroSpan = document.createElement('span');
-        erroSpan.classList.add('error')
-        const successSpan = document.createElement('span')
-        successSpan.classList.add('success')
+        erroSpan.classList.add('error');
+        const successSpan = document.createElement('span');
+        successSpan.classList.add('success');
         addForm.appendChild(erroSpan);
         addForm.appendChild(successSpan);
         ////////////////render options//////////////////////////////

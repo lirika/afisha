@@ -124,9 +124,23 @@ export default class EventsPage {
       </div>
     </header>
     <div class="screen"><img src=${defaultBg}  alt=img class="bg-event-img" style="display: block;"></div>
+    
+    
+
 
     <div class="event-info">
-    
+    <div class="container-info">
+                      <div class="modal">
+                      <div class="btn-close">close</div>
+                       <div class = "infoEventModal">
+                                <div class="info-modal">
+                                  <strong>${events[0].title}</strong><br>
+                                  ${events[0].date}
+                                  <div class="description">${events[0].description}</div>
+                                </div>
+                            </div>
+                        </div>
+       </div>
       <div class="container">
         <div class="modal">
             <div class="btn-close">close</div>
@@ -135,7 +149,7 @@ export default class EventsPage {
               <div class="info-modal">
                 <strong>${events[0].title}</strong><br>
                 ${events[0].date}
-                <div class="price">Price: 12</div>
+                <div class="price">${events[0].price}</div>
               </div>
 
             </div>
@@ -169,7 +183,7 @@ export default class EventsPage {
         const screen = document.querySelector('.screen');
         events.forEach((event) => {
             let liHTMLelem = document.createElement('li');
-            liHTMLelem.id = `li${event.id}`;
+            liHTMLelem.id = `${event.id}`;
             liHTMLelem.classList.add('event-item');
             let liContent: string = `<div class="event-type">`;
             if (!event.online) {
@@ -320,12 +334,25 @@ export default class EventsPage {
                                 <div class="info-modal">
                                   <strong>${information.title}</strong><br>
                                   ${information.date}
-                                  <div class="price">Price: 12</div>
+                                  <div class="price">${information.price}</div>
                                 </div>
                             </div>
                             <div class = "payModal">${payBlock}</div>
                         </div>
                       </div>
+                      
+                      <div class="container-info">
+                      <div class="modal">
+                      <div class="btn-close">close</div>
+                       <div class = "infoEventModal">
+                                <div class="info-modal">
+                                  <strong>${information.title}</strong><br>
+                                  ${information.date}
+                                  <div class="description">${information.description}</div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
 
                       <div class="info">
                        <div class="main-info">
@@ -396,9 +423,15 @@ export default class EventsPage {
 
         rootEvent.addEventListener('click', (event) => {
             let container = document.querySelector('.container') as HTMLDivElement;
-            // let modal = document.querySelector('.modal') as HTMLDivElement;
+            let containerInfo = document.querySelector('.container-info') as HTMLDivElement;
 
             let target = event.target as HTMLElement;
+
+            if (target.classList.contains('more-info')) {
+                containerInfo.classList.add('modal-open')
+            } else if (target.classList.contains('btn-close')) {
+                containerInfo.classList.remove('modal-open')
+            }
 
             if (target.classList.contains('buy')) {
                 container.classList.add('modal-open');
