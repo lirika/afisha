@@ -7,6 +7,50 @@ var TodoApp = /** @class */ (function () {
     TodoApp.prototype.render = function () {
         var root = document.querySelector('#root');
         root.innerHTML = "\n<div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item TodoApp active\">PLAN YOUR VISIT</div>\n          <div class=\"item eventPage\">Events</div>\n          <div class=\"item support\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>\n        <section class=\"container-todo\">\n              <h1>Plan Your Visit</h1>\n              \n              <div class=\"new-task-container box\">\n              \n              <label for=\"new-task\">Add New Task:</label>\n              <input type=\"text\" id=\"new-task\">\n                <button id=\"addTask\">Add Task</button>\n              \n              </div>\n              \n              <div class=\"todo-list box\">\n              \n                <h2>Incomplete Tasks</h2>\n                <ul>\n                </ul>\n              \n              </div><!--/todo-list-->\n              \n              <div class=\"complete-list box\">\n                \n                <h2>Completed Tasks</h2>\n                <ul>\n                </ul>\n                \n                \n              </div>\n             \n        </section>\n        ";
+        var burger = document.getElementById('burger');
+        var header = document.getElementById('header');
+        var dark = document.getElementById('dark');
+        var navbar = document.getElementById('navbar');
+        var subTitleActive = document.querySelector('.active');
+        var burgerActive = false;
+        function setNavbar() {
+            var selected = subTitleActive;
+            navbar.addEventListener('click', function (ev) {
+                var targetItem = ev.target;
+                if (targetItem.className !== 'item') {
+                    return;
+                }
+                active(targetItem);
+            });
+            function active(item) {
+                if (selected) {
+                    selected.classList.remove('active');
+                }
+                selected = item;
+                selected.classList.add('active');
+            }
+        }
+        setNavbar();
+        function burgerHide() {
+            burger.classList.remove('burger-active');
+            header.classList.remove('header-animation');
+            burgerActive = false;
+            dark.style.display = 'none';
+        }
+        burger.addEventListener('click', function () {
+            if (!burgerActive) {
+                burger.classList.add('burger-active');
+                burgerActive = true;
+                header.classList.add('header-animation');
+                dark.style.display = 'block';
+            }
+            else {
+                burgerHide();
+            }
+        });
+        dark.addEventListener('click', function () {
+            burgerHide();
+        });
         var newTask = document.querySelector('#new-task');
         var addTaskBtn = document.querySelector('#addTask');
         var toDoUl = document.querySelector(".todo-list ul");

@@ -462,8 +462,21 @@
       "online": true,
       "price": "100$",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eum fuga, iure mollitia quaerat ullam!"
+    },
+    {
+      "id": "sb1",
+      "title": "box",
+      "status": "ok",
+      "genre": "sport",
+      "date": "2019-09-28",
+      "time": "10.30pm",
+      "place": "Minsk",
+      "img": "https://www.boxingnewsonline.net/bn/wp-content/uploads/2019/10/JOSHTAYLOR1-990x557.jpg",
+      "online": true,
+      "description": "sports ivents",
+      "price": "$150",
+      "subCategoryId": "9"
     }
-
   ],
   "contacts": {
     "phone": "+6529212121",

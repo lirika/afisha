@@ -11,7 +11,6 @@ import DataService from './services/DataService';
 window.addEventListener('load', init);
 
 async function init() {
-/*     await renderEventsPage(1, "ht"); */
     await renderCategoryPage();
 }
 

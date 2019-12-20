@@ -43,7 +43,30 @@ var AdminPage = /** @class */ (function () {
     }
     AdminPage.prototype.renderPage = function (data) {
         return __awaiter(this, void 0, void 0, function () {
-            var mainWrapper, addForm, select, btn, inputDiv, events, results, erroSpan, successSpan, root, optionInSelect;
+            function setNavbar() {
+                var selected = subTitleActive;
+                navbar.addEventListener('click', function (ev) {
+                    var targetItem = ev.target;
+                    if (targetItem.className !== 'item') {
+                        return;
+                    }
+                    active(targetItem);
+                });
+                function active(item) {
+                    if (selected) {
+                        selected.classList.remove('active');
+                    }
+                    selected = item;
+                    selected.classList.add('active');
+                }
+            }
+            function burgerHide() {
+                burger.classList.remove('burger-active');
+                header.classList.remove('header-animation');
+                burgerActive = false;
+                dark.style.display = 'none';
+            }
+            var mainWrapper, addForm, select, btn, inputDiv, events, results, erroSpan, successSpan, root, optionInSelect, burger, header, dark, navbar, subTitleActive, burgerActive;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -100,6 +123,27 @@ var AdminPage = /** @class */ (function () {
                         root.innerHTML = " <div class=\"dark\" id=\"dark\"></div>\n    <div class=\"burger-icon\" id=\"burger\">\n      <div class=\"burger-line\"></div>\n    </div>\n    <header id=\"header\">\n      <div class=\"navbar\" id=\"navbar\">\n        <div class=\"all-items\">\n          <div class=\"item homePage\">HOME PAGE</div>\n          <div class=\"item TodoApp\">PLAN YOUR VISIT</div>\n          <div class=\"item eventPage\">Events</div>\n          <div class=\"item support\">SUPPORT US</div>\n          <div class=\"item aboutPage\">ABOUT US</div>\n          <div class=\"item adminPage active\">ADMIN PAGE</div>\n        </div>\n      </div>\n    </header>";
                         root.appendChild(mainWrapper);
                         optionInSelect = document.querySelectorAll('select option');
+                        burger = document.getElementById('burger');
+                        header = document.getElementById('header');
+                        dark = document.getElementById('dark');
+                        navbar = document.getElementById('navbar');
+                        subTitleActive = document.querySelector('.active');
+                        burgerActive = false;
+                        setNavbar();
+                        burger.addEventListener('click', function () {
+                            if (!burgerActive) {
+                                burger.classList.add('burger-active');
+                                burgerActive = true;
+                                header.classList.add('header-animation');
+                                dark.style.display = 'block';
+                            }
+                            else {
+                                burgerHide();
+                            }
+                        });
+                        dark.addEventListener('click', function () {
+                            burgerHide();
+                        });
                         ///////////////////////////////// SEN Inputs values////////////////////////////////////////
                         addForm.addEventListener('submit', function (e) { return __awaiter(_this, void 0, void 0, function () {
                             var id, inputId, inpTitle, inputStatus, inputGenre, inputDate, inputTime, inputPlace, inputImg, inputOnline, inputDescr, inputPrice, value;

@@ -2,46 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48689f57-aa0d-499d-9afe-9608e89af958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ts/events.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ts/events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/events.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/events.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/events.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/events.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-    </list>
-    <list default="true" id="48689f57-aa0d-499d-9afe-9608e89af958" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/categories.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CategoryPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CategoryPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/CategoryPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CategoryPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AdminPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AdminPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SupportUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SupportUs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SupportUs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SupportUs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TodoApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TodoApp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoApp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/DataService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/DataService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/DataService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/DataService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/renderCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/renderCategoryPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/renderCategoryPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/renderCategoryPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/renderAboutPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/renderAboutPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/buyPop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/buyPop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/buyPop.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/buyPop.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="afisha" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,22 +33,84 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="E:\Новая папка\Project-init_project\node_modules\prettier" />
-    <property name="ts.external.directory.path" value="C:\afisha\afisha\node_modules\typescript\lib" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="E:\WebStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\af\afisha" />
-      <recent name="C:\af\afisha\src\styles\scss" />
       <recent name="E:\Новая папка\Project-init_project\src\ts" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="about-js" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="about-js" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="buyPop-css" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="buyPop-css" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="index-js" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="index-js" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.index-js" />
+        <item itemvalue="npm.buyPop-css" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.about-js" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -96,15 +137,6 @@
       <updated>1575904624906</updated>
       <workItem from="1575904626862" duration="418000" />
       <workItem from="1575909189392" duration="5432000" />
-      <workItem from="1576051478112" duration="4793000" />
-      <workItem from="1576171610453" duration="7000" />
-      <workItem from="1576171618542" duration="108000" />
-      <workItem from="1576087315405" duration="2638000" />
-      <workItem from="1576092158020" duration="448000" />
-      <workItem from="1576092647787" duration="350000" />
-      <workItem from="1576093954192" duration="4001000" />
-      <workItem from="1576164610319" duration="920000" />
-      <workItem from="1576168255925" duration="5828000" />
     </task>
     <servers />
   </component>
@@ -112,21 +144,9 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/services/renderCategoryPage.js" />
+        <option value="$PROJECT_DIR$/src/ts/index.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
-    </option>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
@@ -134,50 +154,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1575909230632" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576171616558">
-    <state x="714" y="190" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576097741271">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1576833401479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="714" y="190" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576097741271" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576169855900">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576833401479" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1576833401479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576169855900" />
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1576168836706">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576833401479" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1576833401479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576171616558" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1576171685113">
-    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
-    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1576168836706">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576833401479" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1576833401479">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576171685113" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1576171685113">
-    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
-    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1576168836706">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576171685113" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1576171685113">
-    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
-    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1576168836706">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576168836706" />
-    <state x="184" y="85" key="MergeDialog" timestamp="1576165527195">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576165527195" />
-    <state x="686" y="246" key="MultipleFileMergeDialog" timestamp="1576165527197">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="686" y="246" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576165527197" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576171685113" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1576171685113">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576171685113" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576833401479" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1575909869490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

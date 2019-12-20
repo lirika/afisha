@@ -51,6 +51,57 @@ export default class TodoApp {
         </section>
         `;
 
+        const burger = document.getElementById('burger') as HTMLDivElement;
+        const header = document.getElementById('header') as HTMLElement;
+        const dark = document.getElementById('dark') as HTMLDivElement;
+        const navbar = document.getElementById('navbar') as HTMLDivElement;
+        const subTitleActive = document.querySelector('.active') as HTMLDivElement;
+
+        let burgerActive = false;
+
+        function setNavbar() {
+            let selected: HTMLElement = subTitleActive;
+            navbar.addEventListener('click', (ev) => {
+                const targetItem = ev.target as HTMLElement;
+                if (targetItem.className !== 'item') {
+                    return;
+                }
+                active(targetItem);
+            });
+
+            function active(item: HTMLElement) {
+                if (selected) {
+                    selected.classList.remove('active');
+                }
+                selected = item;
+                selected.classList.add('active');
+            }
+        }
+
+        setNavbar();
+
+        function burgerHide() {
+            burger.classList.remove('burger-active');
+            header.classList.remove('header-animation');
+            burgerActive = false;
+            dark.style.display = 'none';
+        }
+
+        burger.addEventListener('click', () => {
+            if (!burgerActive) {
+                burger.classList.add('burger-active');
+                burgerActive = true;
+                header.classList.add('header-animation');
+                dark.style.display = 'block';
+            } else {
+                burgerHide();
+            }
+        });
+
+        dark.addEventListener('click', () => {
+            burgerHide();
+        });
+
         const newTask = document.querySelector('#new-task') as HTMLInputElement;
         const addTaskBtn = document.querySelector('#addTask') as HTMLButtonElement;
 

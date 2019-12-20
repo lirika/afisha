@@ -48,11 +48,8 @@ function init() {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: 
-                /*     await renderEventsPage(1, "ht"); */
-                return [4 /*yield*/, renderCategoryPage_1["default"]()];
+                case 0: return [4 /*yield*/, renderCategoryPage_1["default"]()];
                 case 1:
-                    /*     await renderEventsPage(1, "ht"); */
                     _a.sent();
                     return [2 /*return*/];
             }
