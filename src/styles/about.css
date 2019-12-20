@@ -100,7 +100,7 @@ body {
   }
 }
 .main-about .aboutContent-photo .photo #image_01 {
-  background: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg") no-repeat center;
+  background: url("../assets/photo_2019-12-20_11-14-10.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -273,13 +273,21 @@ body {
   align-items: center;
   justify-content: center;
 }
+.main-about .members-wrap .member .yana {
+  background: url("../assets/photo_2019-12-20_11-32-42.jpg") left center;
+}
+.main-about .members-wrap .member .danik {
+  background: url("../assets/photo_2019-12-20_11-32-26.jpg") center center;
+}
+.main-about .members-wrap .member .sanya {
+  background: url("../assets/photo_2019-12-20_11-32-27.jpg") center center;
+}
 .main-about .members-wrap .member .member-photo {
   width: 80px;
   height: 80px;
   border: 2px solid #66E8E4;
   margin-right: 20px;
   border-radius: 50%;
-  background: url("https://cdn.patchcdn.com/assets/layout/contribute/user-default.png") no-repeat center;
   background-size: cover;
 }
 @media screen and (max-width: 690px) {
@@ -367,35 +375,36 @@ body {
   }
 }
 .photo1 {
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-14-09.jpg");
 }
 
 .photo2 {
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-14-11.jpg");
 }
 
 .photo3 {
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-32-42.jpg");
 }
 
 .photo4 {
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-14-11 (2).jpg");
+  background-position: center center;
 }
 
 .photo1:hover {
-  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("../assets/photo_2019-12-20_11-14-09.jpg");
 }
 
 .photo2:hover {
-  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("../assets/photo_2019-12-20_11-14-11.jpg");
 }
 
 .photo3:hover {
-  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("../assets/photo_2019-12-20_11-32-42.jpg");
 }
 
 .photo4:hover {
-  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: linear-gradient(to top, rgba(102, 232, 228, 0.3), rgba(102, 232, 228, 0.3)), url("../assets/photo_2019-12-20_11-14-11 (2).jpg");
 }
 
 /*# sourceMappingURL=about.css.map */

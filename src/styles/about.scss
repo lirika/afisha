@@ -98,7 +98,7 @@ body{
             }
 
             #image_01{
-              background: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg") no-repeat center;
+              background: url('../assets/photo_2019-12-20_11-14-10.jpg') no-repeat center;
               background-size: cover;
               width:100%;
               height:100%;
@@ -297,6 +297,15 @@ body{
           display: flex;
           align-items: center;
           justify-content: center;
+          .yana {
+            background: url("../assets/photo_2019-12-20_11-32-42.jpg") left center;
+          }
+          .danik {
+            background: url("../assets/photo_2019-12-20_11-32-26.jpg") center center;
+          }
+          .sanya {
+            background: url("../assets/photo_2019-12-20_11-32-27.jpg") center center;
+          }
         }
 
         .member .member-photo{
@@ -310,8 +319,6 @@ body{
             width: 90%;
            height: 90%;
           }
-
-          background: url("https://cdn.patchcdn.com/assets/layout/contribute/user-default.png") no-repeat center;
           background-size: cover;
         }
 
@@ -405,34 +412,35 @@ body{
 }
 
 .photo1{
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-14-09.jpg");
 }
 
 .photo2{
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-14-11.jpg");
 }
 
 .photo3{
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-32-42.jpg");
 }
 
 .photo4{
-  background-image: url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: url("../assets/photo_2019-12-20_11-14-11 (2).jpg");
+  background-position: center center;
 }
 
 .photo1:hover{
-  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: $dradient ,url("../assets/photo_2019-12-20_11-14-09.jpg");
 }
 
 .photo2:hover{
-  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: $dradient, url("../assets/photo_2019-12-20_11-14-11.jpg");
 }
 
 .photo3:hover{
-  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: $dradient, url("../assets/photo_2019-12-20_11-32-42.jpg");
 }
 
 .photo4:hover{
-  background-image: $dradient, url("https://static.tildacdn.com/tild3136-3338-4131-b538-376230363438/-9-_.jpg");
+  background-image: $dradient, url("../assets/photo_2019-12-20_11-14-11 (2).jpg");
 }
 

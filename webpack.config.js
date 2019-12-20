@@ -77,6 +77,13 @@ module.exports = env => {
             exclude: /node_modules/,
           },
           {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            use: [
+              'url-loader?limit=10000',
+              'img-loader'
+            ]
+          },
+          {
             test: /\.(s?)css$/,
             use: scssConfigs,
           },

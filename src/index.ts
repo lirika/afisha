@@ -4,6 +4,7 @@ import renderAboutPage from './services/renderAboutPage';
 import renderAdminPage from "./services/renderAdminPage";
 import TodoApp from "./Components/TodoApp";
 import renderSupportUsPage from "./services/renderSupportUsPage";
+import SubCategory from "./model/SubCategory";
 
 import DataService from './services/DataService';
 
@@ -55,7 +56,7 @@ root.addEventListener('click', async event => {
             const input_search = document.querySelector('.icons-help input') as HTMLInputElement;
             const tooltipText = document.querySelector('.icons-help .tooltiptext') as HTMLInputElement;
             const dataS = new DataService();
-            const subC: T[] = await dataS.getSubCategoryByTitle(input_search.value);
+            const subC: SubCategory = await dataS.getSubCategoryByTitle(input_search.value);
 
             if(!subC[0]){
                 tooltipText.style.visibility = 'visible';

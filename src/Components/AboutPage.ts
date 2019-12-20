@@ -43,7 +43,7 @@ export default class AboutPage {
 
         <div class="members-wrap">
             <div class="member">
-                <div class="member-photo"></div>
+                <div class="member-photo yana"></div>
                 <div class="member-info">
                     <strong class="name">Yana Karcheuskaya</strong><br>
                     Student, SamSolution worker.
@@ -51,21 +51,21 @@ export default class AboutPage {
             </div>
 
             <div class="member">
-            <div class="member-photo"></div>
+            <div class="member-photo sanya"></div>
                 <div class="member-info">
                     <strong>Aleksander Sluka</strong><br>
                     Student, SamSolution worker.
                 </div>
             </div>
             <div class="member">
-                <div class="member-photo"></div>
-                <div class="member-info">
+                <div class="member-photo danik"></div>
+                <div class="member-info ">
                     <strong>Daniil Lebedzev</strong><br>
                     Student, SamSolution worker.
                 </div>
             </div>
             <div class="member">
-                <div class="member-photo"></div>
+                <div class="member-photo zhenya"></div>
                 <div class="member-info">
                     <strong>Evgeniy Davydovsky</strong><br>
                     Student, SamSolution worker.
