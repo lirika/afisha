@@ -30,7 +30,7 @@ export default class SupportUs {
             <input type="text" name="last-name" class="input">
              <label for="name">Your email</label>
             <input type="email" name="email" class="input">
-            <input type="submit" class ="button">
+            <input type="submit" class ="button" value="send">
          </form>
          <div class="contacts-wrapper">
          <div class="titleSupport"> Our contacts</div>
@@ -40,6 +40,5 @@ export default class SupportUs {
     </div>
 </div>
         `
-
     }
 }

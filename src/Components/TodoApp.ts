@@ -25,7 +25,7 @@ export default class TodoApp {
               
               <div class="new-task-container box">
               
-              <label for="new-task">Add New Task</label>
+              <label for="new-task">Add New Task:</label>
               <input type="text" id="new-task">
                 <button id="addTask">Add Task</button>
               
@@ -68,7 +68,6 @@ export default class TodoApp {
             listItem.appendChild(checkBox);
             listItem.appendChild(label);
             return listItem;
-
         }
 
         function addTask(){

@@ -1,10 +1,29 @@
 $fontH: 'Roboto', sans-serif;
-.input-wrapper {
-  margin: 0 auto;
+
+
+.main-wrapper {
   display: flex;
   justify-content: center;
+}
+
+
+.input-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  height: 62vh;
+  width: 62vw;
+  padding-top: 370px;
+  justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+
+  h5{
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-right: 8px;
+  }
 }
 
 .add-form {
@@ -13,7 +32,6 @@ $fontH: 'Roboto', sans-serif;
   align-items: center;
   font-family: $fontH;
   margin-left: 40px;
-  padding: 30px;
   border-radius: 2px;
 
   h2 {
@@ -59,11 +77,6 @@ $fontH: 'Roboto', sans-serif;
   select:focus {
     outline: 0;
   }
-}
-
-.main-wrapper {
-  display: flex;
-  justify-content: center;
 }
 
 .field {

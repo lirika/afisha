@@ -1,9 +1,24 @@
-.input-wrapper {
-  margin: 0 auto;
+.main-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  height: 62vh;
+  width: 62vw;
+  padding-top: 370px;
+  justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+}
+.input-wrapper h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  padding-right: 8px;
 }
 
 .add-form {
@@ -12,7 +27,6 @@
   align-items: center;
   font-family: "Roboto", sans-serif;
   margin-left: 40px;
-  padding: 30px;
   border-radius: 2px;
 }
 .add-form h2 {
@@ -50,11 +64,6 @@
 }
 .add-form select:focus {
   outline: 0;
-}
-
-.main-wrapper {
-  display: flex;
-  justify-content: center;
 }
 
 .field {
